@@ -2,16 +2,19 @@
 \usepackage{iftex}
 \ifluatex
   \PassOptionsToPackage{quiet,no-math}{fontspec}
-  \usepackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
-  \setmainfont{Arial}[
-     Path = C:/Windows/Fonts/,
+  \usepackage[mathrm=sym,warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
+  \setmainfont{FiraSans}[
+     Path = C:/Users/Rafa/Documents/FS20-29-FSC/latex/fonts/,
      Extension = .ttf,
-     UprightFont = *,
-     BoldFont = *bd,
-     ItalicFont = *i,
-     BoldItalicFont = *bi
+     UprightFont = *-Regular,
+     BoldFont = *-SemiBold,
+     ItalicFont = *-Italic,
+     BoldItalicFont = *-SemiBoldItalic
   ]
-  \setmathfont{Cambria Math}
+  \setmathfont{FiraMath-Regular}[
+    Path = C:/Users/Rafa/Documents/FS20-29-FSC/latex/fonts/,
+    Extension = .otf
+  ]
 \else
   \usepackage[latin1,utf8]{inputenc}
   \usepackage[T1]{fontenc}
