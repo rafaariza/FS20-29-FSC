@@ -1,0 +1,94 @@
+\usepackage{mathtools,amssymb,amsfonts}
+\usepackage{iftex}
+\ifluatex
+  \PassOptionsToPackage{quiet,no-math}{fontspec}
+  \usepackage[warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
+  \setmainfont{Arial}[
+     Path = C:/Windows/Fonts/,
+     Extension = .ttf,
+     UprightFont = *,
+     BoldFont = *bd,
+     ItalicFont = *i,
+     BoldItalicFont = *bi
+  ]
+  \setmathfont{Cambria Math}
+\else
+  \usepackage[latin1,utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[scaled=0.95]{helvet}
+  \usepackage{sansmathfonts}
+  \renewcommand*{\familydefault}{\sfdefault}
+\fi
+\usepackage[english,spanish,es-tabla,es-noindentfirst,es-nodecimaldot]{babel}
+\usepackage{scrextend}
+\usepackage[activate={true,nocompatibility},factor=1100,stretch=10,shrink=10]{microtype}
+\linespread{1.25}
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=2cm]{geometry}
+\usepackage{xcolor,tikz,svg,graphicx,subfigure,float,appendix,titlesec}
+\usepackage[labelfont=bf,labelsep=period,font={footnotesize},hypcap=true]{caption}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\small pág. \thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{
+\fancyfoot[R]{\small{pág. \thepage}}
+}
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+\vfill
+\centering
+\includegraphics[width=\paperwidth,height=\paperheight]{img/fondo_portada.pdf}%
+\vfill
+}}}
+\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+\titleformat{\chapter}[display]
+  { \sffamily\bfseries\Large\color{blue}}
+  {\filleft\MakeUppercase{\chaptertitlename}\ \Huge\sffamily{\arabic{chapter}}\
+  }
+  {4ex}
+  {\titlerule
+   \vspace{2ex}%
+   \filright}
+  [\vspace{2ex}\hrule\vspace{2pt}%
+   \titlerule]
+
+   \titleformat{\section}[hang]
+{\large \scshape\bfseries}
+{\color{blue}  \thesection .}
+{1ex}{\color{blue}}[\quad]
+{}
+
+  \titleformat{\subsection}[runin]
+{ \scshape\bfseries}
+{\color{blue}  \thesubsection .}
+{1ex}{\color{blue}}[\quad]
+{}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    citecolor=webgreen,
+    filecolor=black,
+    linkcolor=webblue,
+    urlcolor=webtinto,
+    pdfauthor={\textcopyright\ Rafael Jurado Ariza},
+    pdftitle={},
+    pdfsubject={},
+    pdfkeywords={},
+    pdfproducer={Latex with hyperref},
+    pdfcreator={Visual Studio Code},
+    bookmarksopen=false,
+    pdfdisplaydoctitle=true,
+    pdfstartview={FitH}
+}
+\definecolor{azul}{rgb}{65,105,225}
+\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{webgray}{rgb}{.753,.753,.753}
+\definecolor{webblue}{rgb}{0,0,.8}
+\definecolor{webtinto}{rgb}{0.73,0.00,0.00}
+\definecolor{gray96}{gray}{.96}
+\usepackage{tocbibind}
+\graphicspath{{./img/}}

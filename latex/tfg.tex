@@ -1,0 +1,28 @@
+\documentclass[a4paper,twoside,fontsize=12bp]{report}
+\usepackage{TFGUCO}
+\newcommand{\titulacion}{Titulación}                  % Grado de Biolog�a
+                                                      % Grado de Bioqu�mica
+                                                      % Grado de Ciencias Ambientales
+                                                      % Grado de F�sica
+                                                      % Grado de Qu�mica
+
+\newcommand{\titulo}{Título del Trabajo Fin de Grado} % T�tulo
+\newcommand{\codigo}{Código asignado a este TFG}      % C�digo
+\newcommand{\tipo}{Tipología del trabajo}             % Trabajo te�rico--pr�ctico general
+                                          		     % Trabajo de iniciaci�n a la investigaci�n
+                                                      % Trabajo en empresa
+                                                      % Idea de negocio
+                                                      % Propuesta cient�fico--t�cnica
+                                                      % Trabajo docente
+
+\newcommand{\autor}{Nombre y apellidos del autor}     % Autor
+\newcommand{\fecha}{Fecha de entrega}                 % Fecha de entrega
+%--------------------------------------------------------------------------------------
+\begin{document}
+    \raggedbottom
+    \input{portada}
+    \input{indices}
+    \include{resumen}
+    \include{ch1}
+    \include{bib}
+\end{document}
