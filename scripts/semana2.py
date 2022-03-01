@@ -22,4 +22,6 @@ gfield = gfield - n.mean(gfield)
 gfield = gfield/n.std(gfield)
 
 plt.plot(k,gfield)
+plt.xlabel("$k$")
+plt.ylabel("Gaussian array")
 plt.show()
