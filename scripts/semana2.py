@@ -1,26 +1,32 @@
 """
 DOCSTRING
 """
-import numpy as n
+import numpy as np
 import matplotlib.pyplot as plt
 
-m=2**12
-k = n.arange(-m,m+1,1)
+m=2**10
+k = np.arange(-m,m+1,dtype=float)
 
-n.random.seed(32)
-values = list(n.random.normal(size=m)+1j*n.random.normal(size=m))
-valuesc = [n.conj(i) for i in values][::-1]
-center = [n.random.normal()]
+np.random.seed(32)
+values = list(np.random.normal(size=m)+1j*np.random.normal(size=m))
+valuesc = [np.conj(i) for i in values][::-1]
+center = [np.random.normal()]
 
-v = n.array(valuesc+center+values)
+v = np.array(valuesc+center+values)
 
-amplitude = n.sqrt(k**2)
+amplitude = np.sqrt(k**2)
 
-gfield = n.fft.ifft(v * amplitude).real
-gfield = gfield - n.mean(gfield)
-gfield = gfield/n.std(gfield)
+gfield = np.fft.ifft(v * amplitude)
+gfield = gfield - np.mean(gfield)
+gfield = gfield/np.std(gfield)
 
-plt.plot(k,gfield,'k')
-plt.xlabel("$k$")
+gfield2 = np.fft.fft(v * amplitude)
+gfield2 = gfield2 - np.mean(gfield2)
+gfield2 = gfield2/np.std(gfield2)
+
+plt.plot(k,gfield.real,'k',alpha=.5,label='IFFT')
+plt.plot(k,gfield2.real,'r',alpha=.5,label='FFT')
+plt.xlabel("$x$")
 plt.ylabel("Gaussian array")
+plt.legend(fontsize='x-large')
 plt.show()
