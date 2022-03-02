@@ -4,16 +4,15 @@ DOCSTRING
 import numpy as n
 import matplotlib.pyplot as plt
 
-m=256
+m=2**12
 
 k = n.arange(-m,m+1,1)
 
 values = list(n.random.normal(size=m)+1j*n.random.normal(size=m))
-valuesc = [n.conj(i) for i in values]
+valuesc = [n.conj(i) for i in values][::-1]
 center = [n.random.normal()]
 
 v = n.array(valuesc+center+values)
-v[0]=v[-1]
 
 amplitude = n.sqrt(k**2)
 
