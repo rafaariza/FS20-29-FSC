@@ -20,7 +20,7 @@ gfield = n.fft.ifft(v * amplitude).real
 gfield = gfield - n.mean(gfield)
 gfield = gfield/n.std(gfield)
 
-plt.plot(k,gfield,'r')
+plt.plot(k,gfield,'k')
 plt.xlabel("$k$")
 plt.ylabel("Gaussian array")
 plt.show()
