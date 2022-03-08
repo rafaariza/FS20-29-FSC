@@ -4,7 +4,7 @@ DOCSTRING
 import numpy as np
 import matplotlib.pyplot as plt
 
-m = 2**11
+m = 2**9
 k = np.arange(-m,m+1,dtype=float)
 
 np.random.seed(32)
