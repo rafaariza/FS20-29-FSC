@@ -51,15 +51,16 @@ class FS2029FSC():
         np.loadtxt("C:\\Users\\Rafa\\Documents\\FS20-29-FSC\\scripts\\colormap.txt")/255.)
         colombi1_cmap.set_bad("gray")
         cmap = colombi1_cmap
-        for kz in range(20):
-            ax.imshow(self._x_realize[kz], cmap=cmap)
-            fig.suptitle(f'Realización campo gaussiano espacio real XY con potencia -{self._power}')
-            ax.set_xlabel('x')
-            ax.set_ylabel('y')
-            plt.savefig(\
-                f"C:\\Users\\Rafa\\Documents\\FS20-29-FSC\\scripts64\\img\\{kz}.png",\
-                    dpi=300, bbox_inches='tight')
+#        for kz in range(20):
+        ax.imshow(self._x_realize, cmap=cmap)
+#            fig.suptitle(f'Realización campo gaussiano espacio real XY con potencia -{self._power}')
+#            ax.set_xlabel('x')
+#            ax.set_ylabel('y')
+#            plt.savefig(\
+#                f"C:\\Users\\Rafa\\Documents\\FS20-29-FSC\\scripts64\\img\\{kz}.png",\
+#                    dpi=300, bbox_inches='tight')
+        plt.show()
 
-test = FS2029FSC(amplitude=np.random.uniform(0, 10), size=9, power=4, dimensions=3)
+test = FS2029FSC(amplitude=np.random.uniform(0, 10), size=10, power=2, dimensions=2)
 test.generator()
 test.show_x_realize()
