@@ -50,11 +50,11 @@ class FS2029FSC():
         cmap = colombi1_cmap
         fig, ax = plt.subplots()
         ax.imshow(self._x_realize, cmap=cmap)
-        fig.suptitle('Realización campo gaussiano espacio real XY')
+        fig.suptitle(f'Realización campo gaussiano espacio real XY con potencia -{self.power}')
         ax.set_xlabel('x')
         ax.set_ylabel('y')
         plt.show()
 
-test = FS2029FSC(amplitude=np.random.uniform(0, 10), size=9, power=2)
+test = FS2029FSC(amplitude=np.random.uniform(0, 10), size=9, power=4)
 test.generator()
 test.show_x_realization()
