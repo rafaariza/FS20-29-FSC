@@ -12,7 +12,7 @@ class FS2029FSC():
     def __init__(self, amplitude, power, size, dimensions):
         self._amplitude = amplitude
         self._power = power
-        self._size = int(2 ** size)
+        self._size = int(2 ** size+1)
         self._dimensions = dimensions
 
     def generator(self):
@@ -37,7 +37,7 @@ class FS2029FSC():
         p_espectro = self._amplitude * (normks ** (-1 * self._power))
         p_espectro_root = np.sqrt(p_espectro)
         self._k_realize = seed_gaussiano_fourier * p_espectro_root
-        self._x_realize = np.fft.ifftn(self._k_realize).real
+        self._x_realize = np.fft.fftn(self._k_realize).real
 
     def show_x_realize(self):
         """
@@ -47,20 +47,21 @@ class FS2029FSC():
             print('Genera primero el campo con generator()')
 
         fig, ax = plt.subplots()
-        colombi1_cmap = ListedColormap(\
+        planck_cmap = ListedColormap(
         np.loadtxt("C:\\Users\\Rafa\\Documents\\FS20-29-FSC\\scripts\\colormap.txt")/255.)
-        colombi1_cmap.set_bad("gray")
-        cmap = colombi1_cmap
+        planck_cmap.set_bad("gray")
+        cmap = planck_cmap
 #        for kz in range(20):
-        ax.imshow(self._x_realize, cmap=cmap)
+        plot = ax.imshow(self._x_realize, cmap=cmap)
 #            fig.suptitle(f'Realización campo gaussiano espacio real XY con potencia -{self._power}')
 #            ax.set_xlabel('x')
 #            ax.set_ylabel('y')
-#            plt.savefig(\
+#            plt.savefig(
 #                f"C:\\Users\\Rafa\\Documents\\FS20-29-FSC\\scripts64\\img\\{kz}.png",\
 #                    dpi=300, bbox_inches='tight')
+        fig.colorbar(plot)
         plt.show()
 
-test = FS2029FSC(amplitude=np.random.uniform(0, 10), size=10, power=2, dimensions=2)
+test = FS2029FSC(amplitude=9E-10, size=11, power=2, dimensions=2)
 test.generator()
 test.show_x_realize()
