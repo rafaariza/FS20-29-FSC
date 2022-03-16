@@ -9,11 +9,12 @@ class FS2029FSC():
     """
     DOCSTRING
     """
-    def __init__(self, amplitude, power, size, dimensions):
+    def __init__(self, amplitude, power, size, dimensions, show):
         self._amplitude = amplitude
-        self._power = power
+        self._power = int(power)
         self._size = int(2 ** size + 1)
         self._dimensions = dimensions
+        self._show = show
 
     def generator(self):
         """
@@ -32,12 +33,7 @@ class FS2029FSC():
             normks[0,0] = 0
         self._normks = normks
 
-        vectorx = np.arange(-self._size, self._size+1)
-        xx, xy = np.meshgrid(vectorx, vectorx, indexing='xy')
-        normxs = np.sqrt(xx ** 2 + xy ** 2)
-        self._normxs = normxs
-
-        p_espectro = self._amplitude * (normks ** (-1 * self._power))
+        p_espectro = self._amplitude * np.power(normks, -1 * self._power)
         p_espectro_root = np.sqrt(p_espectro)
         self._k_realize = seed_gaussiano_fourier * p_espectro_root
         self._x_realize = np.fft.fftn(self._k_realize).real
@@ -53,19 +49,21 @@ class FS2029FSC():
         np.loadtxt("C:\\Users\\Rafa\\Documents\\FS20-29-FSC\\scripts\\colormap.txt")/255.)
         planck_cmap.set_bad("gray")
         cmap = planck_cmap
-        for i, realization in enumerate(self._x_realize[::25]):
+        for ind, realization in enumerate(self._x_realize[::len(self._x_realize)]):
             fig, ax = plt.subplots()
-            ax.imshow(realization, cmap=cmap)
+            plot = ax.imshow(realization, cmap=cmap)
             fig.suptitle(f'Realización campo gaussiano espacio real XY con potencia -{self._power}')
-            #fig.colorbar(plot)
+            fig.colorbar(plot)
             ax.set_xlabel('x')
             ax.set_ylabel('y')
-            plt.savefig(
-                f"C:\\Users\\Rafa\\Documents\\FS20-29-FSC\\scripts64\\img\\{i}.png",
-                    dpi=300, bbox_inches='tight')
-            plt.close("all")
-        #plt.show()
+            if self._show is True:
+                plt.show()
+            else:
+                plt.savefig(
+                    f"C:\\Users\\Rafa\\Documents\\FS20-29-FSC\\scripts64\\img\\{ind}{self._power}.png",
+                        dpi=300, bbox_inches='tight')
 
-test = FS2029FSC(amplitude=9E-10, size=9, power=4, dimensions=3)
-test.generator()
-test.show_x_realize()
+for power in range(-2,3):
+    test = FS2029FSC(amplitude=9E-10, size=9, power=power, dimensions=3, show=False)
+    test.generator()
+    test.show_x_realize()
