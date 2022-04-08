@@ -26,3 +26,10 @@ https://astro.uchicago.edu/~andrey/talks/PM/pmpotsdam.pdf (pag 41)
 *Valor central real por condición hermiticidad.*
 
 *¿P(k)?*
+
+**SEMANA X (resolvimos lo de las sigmas)**
+
+*Al final de inflación (t=0) es cuando el campo escalar encuentra su mínimo.*
+*Oscila alrededor de este punto con fluctuaciones cuánticas.*
+*Estas fluctuaciones están amplificadas por la expansión exponencial del espacio.*
+*Hay una transición de un estado con densidad muy baja y alta energía potencial a otro donde las partículas del SM son creadas y tiene mucha energía (reheating)*

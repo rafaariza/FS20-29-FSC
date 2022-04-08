@@ -39,7 +39,7 @@ class FS2029FSC():
 
         p_spectro, self._name = self._method(self._amplitude, self._normks, self._power)
         p_spectro_root = np.sqrt(p_spectro)
-        self._k_realize = seed_gaussiano_fourier * p_spectro_root
+        self._k_realize = seed_gaussiano_fourier * p_spectro_root * (2 * np.pi)
         self._x_realize = np.fft.fftn(self._k_realize).real
 
     def show_x_realize(self):
