@@ -33,3 +33,8 @@ https://astro.uchicago.edu/~andrey/talks/PM/pmpotsdam.pdf (pag 41)
 *Oscila alrededor de este punto con fluctuaciones cuánticas.*
 *Estas fluctuaciones están amplificadas por la expansión exponencial del espacio.*
 *Hay una transición de un estado con densidad muy baja y alta energía potencial a otro donde las partículas del SM son creadas y tiene mucha energía (reheating)*
+
+*Inflación surge para resolver:*
+*El problema de la plenitud del horizonte*
+*Monopolos magnéticos*
+*El fondo de ondas gravitacionales debería estar ahí*
