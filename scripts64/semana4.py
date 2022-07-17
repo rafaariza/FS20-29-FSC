@@ -50,7 +50,7 @@ class FS2029FSC():
             print('Genera primero el campo con generator()')
 
         planck_cmap = ListedColormap(
-        np.loadtxt("C:\\Users\\Rafa\\Documents\\FS20-29-FSC\\scripts\\colormap.txt")/255.)
+        np.loadtxt("R:\\Documentos\\FS20-29-FSC\\scripts\\colormap.txt")/255.)
         planck_cmap.set_bad("gray")
         cmap = planck_cmap
         for ind, realization in enumerate(self._x_realize[::len(self._x_realize)]):
@@ -64,7 +64,7 @@ class FS2029FSC():
                 plt.show()
             else:
                 plt.savefig(
-                    f"C:\\Users\\Rafa\\Documents\\FS20-29-FSC\\scripts64\\img\\{self._name}-{timestr}-{ind}.png",
+                    f"R:\\Documentos\\FS20-29-FSC\\scripts64\\img\\{self._name}-{timestr}-{ind}.png",
                         dpi=300, bbox_inches='tight')
 
 def transferfunction_k(amplitude, modulus, power):
