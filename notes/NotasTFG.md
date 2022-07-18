@@ -44,3 +44,5 @@ https://astro.uchicago.edu/~andrey/talks/PM/pmpotsdam.pdf (pag 41)
 * *Monopolos magnéticos*
 
 * *El fondo de ondas gravitacionales debería estar ahí*
+
+**RESULTADOS - MATERIALES Y MÉTODOS (ENTORNO, HERRAMIENTAS MATEMÁTICAS) - INTRODUCCIÓN (ECUACIONES) - OBJETIVOS - CONCLUSIONES - ABSTRACT - BIBLIOGRAFÍA**
