@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
 
 timestr = time.strftime("%Y%m%d-%H%M%S")
+k0 = 0.05
+lgf = 0.00091743119
 
 class FS2029FSC():
     """
@@ -24,7 +26,7 @@ class FS2029FSC():
         """
         DOCSTRING
         """
-        np.random.seed(8081998)
+        np.random.seed(0)
         seed_gaussiano = np.random.normal(size=[self._size] * self._dimensions)
         seed_gaussiano_fourier = np.fft.fftn(seed_gaussiano)
 
@@ -41,7 +43,7 @@ class FS2029FSC():
         p_spectro_root = np.sqrt(p_spectro)
         self._k_realize = seed_gaussiano_fourier * p_spectro_root * (2 * np.pi)
         self._x_realize = np.fft.fftn(self._k_realize).real
-
+        
     def show_x_realize(self):
         """
         Realización en el espacio de las posiciones
@@ -56,8 +58,9 @@ class FS2029FSC():
         for ind, realization in enumerate(self._x_realize[::len(self._x_realize)]):
             fig, ax = plt.subplots()
             plot = ax.imshow(realization, cmap=cmap)
-            fig.suptitle(f'Realización campo gaussiano espacio real XY con potencia {self._power}. {self._name}')
-            fig.colorbar(plot)
+            #fig.suptitle(f'Realización campo gaussiano espacio real XY con potencia {self._power}. {self._name}')
+            cbar = fig.colorbar(plot)
+            cbar.set_ticks([])
             ax.set_xlabel(r'$x$ (Mpc)')
             ax.set_ylabel(r'$y$ (Mpc)')
             if self._show is True:
@@ -84,14 +87,14 @@ def k_pol(amplitude, modulus, power):
     DOCSTRING
     """
     name = "Only polynomial of k"
-    return amplitude * np.power(modulus, 1 * power), name
+    return lgf**2 * amplitude * np.power(modulus/k0, 1 * power), name
 
 
-TransFunc = FS2029FSC(
-    amplitude=9E-10, size=9, power=1, dimensions=3, show=False, method=transferfunction_k)
-TransFunc.generator()
-TransFunc.show_x_realize()
+#TransFunc = FS2029FSC(
+#    amplitude=2E-9, size=9, power=1, dimensions=3, show=False, method=transferfunction_k)
+#TransFunc.generator()
+#TransFunc.show_x_realize()
 
-k_pol = FS2029FSC(amplitude=9E-10, size=9, power=-4, dimensions=3, show=False, method=k_pol)
+k_pol = FS2029FSC(amplitude=2E-9, size=9, power=-3, dimensions=3, show=True, method=k_pol)
 k_pol.generator()
 k_pol.show_x_realize()
