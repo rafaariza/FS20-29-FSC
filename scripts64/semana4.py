@@ -4,9 +4,17 @@ DOCSTRING
 import time
 import numpy as np
 import matplotlib.pyplot as plt
+plt.rcParams.update({
+        'axes.autolimit_mode': 'data',
+        'axes.xmargin': 0,
+        'axes.ymargin': 0,
+        'xtick.direction': 'in',
+        'xtick.top': True,
+        'ytick.direction' : 'in',
+        'ytick.right': True})
 from matplotlib.colors import ListedColormap
 
-timestr = time.strftime("%Y%m%d-%H%M%S")
+timestr = "DEF"
 k0 = 0.05
 lgf = 0.00091743119
 
@@ -57,6 +65,7 @@ class FS2029FSC():
         cmap = planck_cmap
         for ind, realization in enumerate(self._x_realize[::len(self._x_realize)]):
             fig, ax = plt.subplots()
+            fig.set_size_inches(w=6,h=3.7)
             plot = ax.imshow(realization, cmap=cmap)
             #fig.suptitle(f'Realización campo gaussiano espacio real XY con potencia {self._power}. {self._name}')
             cbar = fig.colorbar(plot)
@@ -67,7 +76,7 @@ class FS2029FSC():
                 plt.show()
             else:
                 plt.savefig(
-                    f"R:\\Documentos\\FS20-29-FSC\\scripts64\\img\\{self._name}-{timestr}-{ind}.png",
+                    f"R:\\Documentos\\FS20-29-FSC\\scripts64\\img\\{self._name}-({self._power})-{timestr}-{ind}.pgf",
                         dpi=300, bbox_inches='tight')
 
 def transferfunction_k(amplitude, modulus, power):
@@ -86,7 +95,7 @@ def k_pol(amplitude, modulus, power):
     """
     DOCSTRING
     """
-    name = "Only polynomial of k"
+    name = "Only_polynomial_of_k"
     return lgf**2 * amplitude * np.power(modulus/k0, 1 * power), name
 
 
@@ -95,6 +104,7 @@ def k_pol(amplitude, modulus, power):
 #TransFunc.generator()
 #TransFunc.show_x_realize()
 
-k_pol = FS2029FSC(amplitude=2E-9, size=9, power=-3, dimensions=3, show=True, method=k_pol)
-k_pol.generator()
-k_pol.show_x_realize()
+for power in range(-4,2):
+    polynomial = FS2029FSC(amplitude=2E-9, size=9, power=power, dimensions=3, show=False, method=k_pol)
+    polynomial.generator()
+    polynomial.show_x_realize()
