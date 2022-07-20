@@ -9,6 +9,10 @@
 \begin{document}
     \raggedbottom
     \input{portada}
+    \null% ARREGLAR
+    \thispagestyle{empty}% ESTO
+    \addtocounter{page}{-1}% METIENDO
+    \newpage% DEDICATORIA
     \input{indices}
     \include{resumen}
     \include{ch1}
