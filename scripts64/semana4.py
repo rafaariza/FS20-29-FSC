@@ -11,6 +11,7 @@ plt.rcParams.update({
         'xtick.direction': 'in',
         'xtick.top': True,
         'ytick.direction' : 'in',
+        'text.usetex': True,
         'ytick.right': True})
 from matplotlib.colors import ListedColormap
 
@@ -34,7 +35,7 @@ class FS2029FSC():
         """
         DOCSTRING
         """
-        np.random.seed(0)
+        np.random.seed(643753)
         seed_gaussiano = np.random.normal(size=[self._size] * self._dimensions)
         seed_gaussiano_fourier = np.fft.fftn(seed_gaussiano)
 
@@ -70,6 +71,7 @@ class FS2029FSC():
             #fig.suptitle(f'Realización campo gaussiano espacio real XY con potencia {self._power}. {self._name}')
             cbar = fig.colorbar(plot)
             cbar.set_ticks([])
+            cbar.set_label(r'$\delta$')
             ax.set_xlabel(r'$x$ (Mpc)')
             ax.set_ylabel(r'$y$ (Mpc)')
             if self._show is True:
@@ -88,7 +90,7 @@ def transferfunction_k(amplitude, modulus, power):
     C0 = 14.2 + 731 * np.power(1 + 62.5 * q, -1)
     T0 = L0 * np.power(L0 + C0 * np.power(q, 2), -1)
     T0[0,0] = 0
-    name = "TF method"
+    name = "TF_method"
     return amplitude * np.power(modulus, 1 * power) * np.power(T0, 2), name
 
 def k_pol(amplitude, modulus, power):
@@ -99,12 +101,13 @@ def k_pol(amplitude, modulus, power):
     return lgf**2 * amplitude * np.power(modulus/k0, 1 * power), name
 
 
-#TransFunc = FS2029FSC(
-#    amplitude=2E-9, size=9, power=1, dimensions=3, show=False, method=transferfunction_k)
-#TransFunc.generator()
-#TransFunc.show_x_realize()
-
 for power in range(-4,2):
-    polynomial = FS2029FSC(amplitude=2E-9, size=9, power=power, dimensions=3, show=False, method=k_pol)
-    polynomial.generator()
-    polynomial.show_x_realize()
+    TransFunc = FS2029FSC(
+        amplitude=2E-9, size=9, power=power, dimensions=3, show=False, method=transferfunction_k)
+    TransFunc.generator()
+    TransFunc.show_x_realize()
+
+#for power in range(-4,2):
+#    polynomial = FS2029FSC(amplitude=2E-9, size=9, power=power, dimensions=3, show=False, method=k_pol)
+#    polynomial.generator()
+#    polynomial.show_x_realize()
