@@ -1,96 +1,24 @@
-\chapter{Resultados}
-En este punto presentamos los resultados obtenidos tras las simulaciones en forma de cortes 2D de una simulación 3D. En un primer apartado mostraremos las imágenes correspondientes a un espectro de potencia puramente proporcional a \(k\), excepto algunos términos correctivos de la amplitud para conseguir unos valores del contraste de la densidad más acordes a la realidad.
+\chapter{Introducción}
+Si el universo tuvo un principio, como el \textit{Big Bang}, procedente de esa ``explosión'' la distribución de materia y energía habría sido muy irregular. Enormemente difusa. El tiempo y el espacio habrían estado curvados, retorcidos, deformados.
 
-Más adelante, en el segundo punto del capítulo, se observan las simulaciones con la función de transferencia (DE ESTA FUNCIÓN PUEDO HABLAR ANTES Y AQUÍ REFERENCIARLA) que son las más acordes al CMB, de acuerdo a (AQUÍ SE PUEDE PONER ALGUNA CITA QUE CORROBORE QUE SON MÁS CERCANAS A LA REALIDAD).
+Pero cuando miramos al universo hoy, no vemos nada de eso. La distribución de materia y energía es casi uniforme en el universo, y el propio espacio es extremadamente plano, obedeciendo a las leyes de la geometría más sencilla. Así que, ¿cómo llegamos desde ese salvaje estado inicial hasta el presente? Ahí es donde nació la idea de inflación.
 
-En las figuras se están representando, tanto en el eje horizontal como en el vertical, distancias medidas en megapársecs (REFERENCIA DE QUE EFECTIVAMENTE SON MPC). La barra de color representa el contraste de la densidad de materia \(\delta\) entre diferentes zonas del espacio, donde los colores más rojos muestran que hay más materia en comparación a otras áreas de igual volumen mientras que los colores más azules significan lo opuesto; el valor 0 (en blanco) señala donde no existe contraste en la densidad.
+El concepto que introdujo la inflación es que, después del \textit{Big Bang}, quizás hubo un periodo de expansión muy rápida y acelerada, expandiendo el universo tan rápido que lo convertiría en algo aplanado y uniforme, y la distribución de materia y energía habría sido también uniformada de esta manera.
 
-\section{Campos gaussianos con \texorpdfstring{\(P(k)\propto k^n\)}{espectro de potencias proporcional a una potencia de k}}
-En la~\autoref{fig::k0} hemos representado el campo de densidad que tendría lugar si el espectro de potencias \(P(k)\) fuera una constante. No se producen fluctuaciones en este caso y resulta una especie de fondo constante que será modificado conforme cambiemos la variación del espectro de potencias con \(k\).
+La teoría inflacionaria, uno de los ejes centrales de la Cosmología moderna, fue introducida por Alan Guth ---entre otros--- en 1981 para resolver una serie de problemas~\cite{peebles1993principles} que estaban presentes en el marco teórico de la Cosmología de la época: el \textit{Hot Big Bang}. En la~\autoref{fig::guth} se muestra una parte de sus notas originales.
+\begin{figure}[t]
+    \centering
+    \includegraphics[scale=.85]{img/AlanGuth.jpg}
+    \caption{Cuaderno con la idea original de Guth}
+    \label{fig::guth}
+\end{figure}
 
-En la~\autoref{fig::k1} se realiza la simulación con una dependencia lineal de \(k\). En este escenario, el Universo tendría una distribución casi uniforme (como la del ruido blanco) de materia, algo que no observamos hoy en día.
+La teoría del \textit{Hot Big Bang} es considerablemente exitosa, superando algunas pruebas clave de observación: expansión del Universo, la existencia y espectro del CMB (\textit{Cosmic Microwave Background}), las abundancias de elementos ligeros en el Universo (nucleosíntesis), entre otras~\cite{liddle1998introduction}. Aun así, surgen dilemas en esta teoría ya que se limita a aquellas épocas en las que el Universo es lo suficientemente frío para que los procesos físicos fundamentales que subyacen estén bien consolidados y comprendidos a través de la experiencia en la Tierra; no aborda el estado del Universo en momentos anteriores, más calientes.
+\newpage
+Estas cuestiones cruciales sin respuesta en el \textit{Hot Big Bang} ---precursoras en la introducción de la inflación--- son el problema de la \textbf{planitud}, el problema del \textbf{horizonte} y la existencia de \textbf{monopolos magnéticos}. Tanto la primera como la segunda son el objetivo de estudio de este texto y están relacionadas con las condiciones iniciales del Universo, que tuvieron que ser muy especiales y finamente ajustadas para dar lugar a lo que se observa hoy día.
 
-En la~\autoref{fig::kmenos1} tenemos el primer caso de exponente negativo en \(k\). Aquí ya es posible observar como los colores se agrupan más, esto quiere decir que se van formando estructuras así como vacíos inter-galácticos. Señalar que las estructuras que aparecen con este espectro son pequeñas, demasiado para lo que observamos en nuestro Universo.
+Para especificar las condiciones iniciales del \textit{Hot Big Bang}, se definen las posiciones y velocidades de todas las partículas en un intervalo de tiempo inicial. Las leyes de la gravedad se utilizan entonces para hacer evolucionar el sistema en el tiempo. En la teoría estándar del \textit{Big Bang} se supone la distribución de materia como homogénea e isotrópica~\cite{baumann2022cosmology}. Pero, ¿cómo se explica esta uniformidad del Universo temprano? Incluso es algo que contrasta con la imagen proyectada por la teoría del \textit{Big Bang} donde la mayor parte del Universo parece no haber estado en contacto causal y no hay motivo dinámico para que estas regiones causalmente no conectadas tengan tales propiedades físicas similares que se suponen. Este problema de la homogeneidad se conoce como el problema del \textbf{horizonte}.
 
-La imagen más interesante hasta ahora es la~\autoref{fig::kmenos2} donde ya se pueden visualizar estructuras de algunas decenas de megapársecs, pero aún pequeñas para las estructuras que se forman en el LSS (Large-Scale Structure): supercúmulos de galaxias, \textit{Great Walls}, filamentos\dots
+Para que el universo siga siendo homogéneo en tiempos posteriores, las velocidades iniciales deben tomar valores muy precisos. Si las velocidades iniciales son ligeramente demasiado pequeñas, el Universo vuelve a colapsar en una fracción de segundo. Si son demasiado grandes, el Universo se expande demasiado rápido y se queda casi vacío. El ajuste de las velocidades iniciales se hace aún más drástico si se considera en combinación con el problema del horizonte, ya que las velocidades de las partículas deben ajustarse a través de regiones del espacio causalmente desconectadas. Este ajuste preciso en la condición inicial de velocidad es lo que se conoce como el problema de la \textbf{planitud} y se plantea comúnmente como por qué la curvatura espacial del Universo es tan pequeña, cuya relación con las velocidades viene dada por la suma de la energía cinética y potencial en una determinada región~\cite{baumann2022cosmology}.
 
-Estas estructuras enormes abarcan algunos cientos de Mpc y podemos verlas en la~\autoref{fig::kmenos3}, la cual es la que más se asemeja a nuestro Universo (AQUÍ PODRÍA REFERENCIAR QUE EL EXPONENTE -3 ES EL QUE SE PREDICE TEÓRICAMENTE).
-
-Por último, en la~\autoref{fig::kmenos4} tenemos grupos de materia que podrían asemejarse a lo que observamos en el cielo pero que están demasiado agrupadas como para darlas por válidas.
-
-(PÁRRAFO COMPARANDO FIGURAS -- AÚN NO SÉ QUÉ PONER)
-\begin{figure}
-  \centering
-  {\input{../scripts64/img/Only_polynomial_of_k-(0)-DEF-0.pgf}}
-  \caption{Ruido blanco, campo gaussiano con \(P(k)\propto k^0\)}
-  \label{fig::k0}
-\end{figure}
-\begin{figure}
-  \centering
-  {\input{../scripts64/img/Only_polynomial_of_k-(1)-DEF-0.pgf}}
-  \caption{Campo gaussiano con \(P(k)\propto k\)}
-  \label{fig::k1}
-\end{figure}
-\begin{figure}
-  \centering
-  {\input{../scripts64/img/Only_polynomial_of_k-(-1)-DEF-0.pgf}}
-  \caption{Campo gaussiano con \(P(k)\propto k^{-1}\)}
-  \label{fig::kmenos1}
-\end{figure}
-\begin{figure}
-  \centering
-  {\input{../scripts64/img/Only_polynomial_of_k-(-2)-DEF-0.pgf}}
-  \caption{Campo gaussiano con \(P(k)\propto k^{-2}\)}
-  \label{fig::kmenos2}
-\end{figure}
-\begin{figure}
-  \centering
-  {\input{../scripts64/img/Only_polynomial_of_k-(-3)-DEF-0.pgf}}
-  \caption{Campo gaussiano con \(P(k)\propto k^{-3}\)}
-  \label{fig::kmenos3}
-\end{figure}
-\begin{figure}
-  \centering
-  {\input{../scripts64/img/Only_polynomial_of_k-(-4)-DEF-0.pgf}}
-  \caption{Campo gaussiano con \(P(k)\propto k^{-4}\)}
-  \label{fig::kmenos4}
-\end{figure}
-%\cleardoublepage
-\section{Campos gaussianos con \texorpdfstring{\(P(k)\propto T(k)\cdot k^n\)}{espectro de potencias del CMB}}
-\begin{figure}
-  \centering
-  {\input{../scripts64/img/TF_method-(0)-DEF-0.pgf}}
-  \caption{Campo gaussiano con \(P(k)\propto T(K)\cdot k^0\)}
-  \label{fig::tf0}
-\end{figure}
-\begin{figure}
-  \centering
-  {\input{../scripts64/img/TF_method-(1)-DEF-0.pgf}}
-  \caption{Campo gaussiano con \(P(k)\propto T(K)\cdot k\)}
-  \label{fig::tf1}
-\end{figure}
-\begin{figure}
-  \centering
-  {\input{../scripts64/img/TF_method-(-1)-DEF-0.pgf}}
-  \caption{Campo gaussiano con \(P(k)\propto T(K)\cdot k^{-1}\)}
-  \label{fig::tfmenos1}
-\end{figure}
-\begin{figure}
-  \centering
-  {\input{../scripts64/img/TF_method-(-2)-DEF-0.pgf}}
-  \caption{Campo gaussiano con \(P(k)\propto T(K)\cdot k^{-2}\)}
-  \label{fig::tfmenos2}
-\end{figure}
-\begin{figure}
-  \centering
-  {\input{../scripts64/img/TF_method-(-3)-DEF-0.pgf}}
-  \caption{Campo gaussiano con \(P(k)\propto T(K)\cdot k^{-3}\)}
-  \label{fig::tfmenos3}
-\end{figure}
-\begin{figure}
-  \centering
-  {\input{../scripts64/img/TF_method-(-4)-DEF-0.pgf}}
-  \caption{Campo gaussiano con \(P(k)\propto T(K)\cdot k^{-4}\)}
-  \label{fig::tfmenos4}
-\end{figure}
-\cleardoublepage
+Inflación predice que las condiciones iniciales del universo son descritas con buena aproximación por un campo aleatorio gaussiano~\cite{baumann2022cosmology,dodelson2020modern}.

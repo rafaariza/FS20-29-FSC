@@ -17,7 +17,6 @@ from matplotlib.colors import ListedColormap
 
 timestr = "DEF"
 k0 = 0.05
-lgf = 0.00091743119
 
 class FS2029FSC():
     """
@@ -91,14 +90,14 @@ def transferfunction_k(amplitude, modulus, power):
     T0 = L0 * np.power(L0 + C0 * np.power(q, 2), -1)
     T0[0,0] = 0
     name = "TF_method"
-    return amplitude * np.power(modulus, 1 * power) * np.power(T0, 2), name
+    return amplitude * np.power(q, 1 * power) * np.power(T0, 2), name
 
 def k_pol(amplitude, modulus, power):
     """
     DOCSTRING
     """
     name = "Only_polynomial_of_k"
-    return lgf**2 * amplitude * np.power(modulus/k0, 1 * power), name
+    return amplitude * np.power(modulus/k0, 1 * power), name
 
 
 for power in range(-4,2):
