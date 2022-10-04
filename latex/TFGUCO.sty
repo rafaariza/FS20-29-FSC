@@ -48,6 +48,7 @@
 \vfill
 }}}
 \titlespacing*{\chapter}{0pt}{50pt}{40pt}
+\titlespacing*\section{0pt}{10pt plus 4pt minus 2pt}{-15pt plus 2pt minus 2pt}
 \titleformat{\chapter}[display]
   { \sffamily\bfseries\Large\color{blue}}
   {\filleft\MakeUppercase{\chaptertitlename}\ \Huge\sffamily{\arabic{chapter}}\
@@ -100,4 +101,5 @@
   \renewcommand{\figureautorefname}{figura}%
 }
 \usepackage[section]{placeins}
-\bibliographystyle{unsrt}
+\usepackage{cite}
+\bibliographystyle{IEEEtran}
