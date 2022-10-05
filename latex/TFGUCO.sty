@@ -1,3 +1,4 @@
+\PassOptionsToPackage{table}{xcolor}
 \usepackage{mathtools,amssymb,amsfonts}
 \usepackage{iftex}
 \ifluatex
@@ -13,7 +14,9 @@
   ]
   \setmathfont{FiraMath-Regular}[
     Path = R:/Documentos/FS20-29-FSC/latex/fonts/,
-    Extension = .otf
+    Extension = .otf,
+    Scale=MatchLowercase,
+    ScaleAgain=1.05
   ]
 \else
   \usepackage[latin1,utf8]{inputenc}
@@ -96,6 +99,12 @@
 \definecolor{gray96}{gray}{.96}
 \usepackage{tocbibind}
 \graphicspath{{./img/}{../scripts64/img/}{./svg/}}
+\definecolor{migris}{HTML}{636363}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{table}{\colorbox{gray}{\parbox{0.98\textwidth}{#1#2#3}}}
+\captionsetup[table]{format=table,labelfont=white,textfont=white}
 \setlength{\parskip}{0.15cm}
 \addto\extrasspanish{%
   \renewcommand{\figureautorefname}{figura}%
