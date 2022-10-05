@@ -1,4 +1,4 @@
-\PassOptionsToPackage{table}{xcolor}
+\PassOptionsToPackage{table,xcdraw}{xcolor}
 \usepackage{mathtools,amssymb,amsfonts}
 \usepackage{iftex}
 \ifluatex
@@ -30,7 +30,7 @@
 \usepackage[activate={true,nocompatibility},factor=1100,stretch=10,shrink=10]{microtype}
 \linespread{1.25}
 \usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=2cm]{geometry}
-\usepackage{xcolor,tikz,svg,graphicx,subfigure,float,appendix,titlesec,pgf}
+\usepackage{booktabs,xcolor,tikz,svg,graphicx,subfigure,float,appendix,titlesec,pgf}
 \usepackage[labelfont=bf,labelsep=period,font={footnotesize},hypcap=true]{caption}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -100,14 +100,13 @@
 \usepackage{tocbibind}
 \graphicspath{{./img/}{../scripts64/img/}{./svg/}}
 \definecolor{migris}{HTML}{636363}
-\usepackage{array}
-\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \DeclareCaptionFont{white}{\color{white}}
-\DeclareCaptionFormat{table}{\colorbox{gray}{\parbox{0.98\textwidth}{#1#2#3}}}
+\DeclareCaptionFormat{table}{\colorbox{migris!75}{\parbox{0.887\textwidth}{\textbf{#1#2}#3}}}
 \captionsetup[table]{format=table,labelfont=white,textfont=white}
 \setlength{\parskip}{0.15cm}
 \addto\extrasspanish{%
   \renewcommand{\figureautorefname}{figura}%
+  \renewcommand{\tableautorefname}{tabla}%
 }
 \usepackage[section]{placeins}
 \usepackage{cite}

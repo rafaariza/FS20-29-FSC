@@ -18,7 +18,7 @@ Una de las asombrosas características de la inflación es que encierra un mecan
 Sin embargo, si se proporciona un \(P(k)\), no es muy sencillo visualizar cómo sería el correspondiente mapa espacial de fluctuaciones, lo que dificulta la intuición de lo que significa un espectro de potencia concreto. En este trabajo, mediante el uso del lenguaje de programación \textit{Python}, se generarán y representarán realizaciones de distintos campos aleatorios gaussianos de densidad.
 \clearpage
 \section{El \textit{Hot Big Bang}}
-La teoría del \textit{Hot Big Bang} es considerablemente exitosa, superando algunas pruebas clave de observación: expansión del universo, la existencia y espectro del \textit{Cosmic Microwave Background} (CMB)~\cite{penzias1965measurement}, las abundancias de elementos ligeros en el universo (nucleosíntesis)~\cite{gamow1946expanding,alpher1948evolution,alpher1953physical}, entre otras~\cite{liddle1998introduction}. Aun así, surgen dilemas en esta teoría ya que se limita a aquellas épocas en las que el universo es lo suficientemente frío para que los procesos físicos fundamentales que subyacen estén bien consolidados y comprendidos a través de la experiencia en la Tierra; no aborda el estado del universo en momentos anteriores, más calientes.
+La teoría del \textit{Hot Big Bang} es considerablemente exitosa, superando algunas pruebas clave de observación: expansión del universo, la existencia y espectro del \textit{Cosmic Microwave Background} (CMB), las abundancias de elementos ligeros en el universo (nucleosíntesis)~\cite{gamow1946expanding,alpher1948evolution,alpher1953physical}, entre otras~\cite{liddle1998introduction}.
 
 El universo se está expandiendo~\cite{hubble1929relation}. Era entonces más denso y caliente en el pasado. Las partículas colisionaban frecuentemente y el universo estaba en un estado de equilibrio térmico con una temperatura \(T\). Ajustando la constante de Boltzmann a la unidad \(k_B=1\), se mide la temperatura en unidades de energía. De este modo, midiendo las energías en electronvoltios:
 \begin{equation}
@@ -28,20 +28,61 @@ La relación entre la temperatura del universo temprano y su edad es~\cite{bauma
 \begin{equation}
     \frac{T}{1\,\mathrm{MeV}}\simeq \left(\frac{t}{1\,\mathrm{s}}\right)^{-1/2}.
 \end{equation}
-Un segundo después del \textit{Big Bang} la temperatura del universo era de unos \(10^{11}\) K (o 1 MeV). Como aún había pasado poco tiempo en el universo temprano, la cadencia de las reacciones era extremadamente alta, así que pasaron muchas cosas en un corto período de tiempo (véase TABLA)
+Un segundo después del \textit{Big Bang} la temperatura del universo era de unos \(10^{11}\) K (o 1 MeV). Como aún había pasado poco tiempo en el universo temprano, la cadencia de las reacciones era extremadamente alta, así que pasaron muchas cosas en un corto período de tiempo (véase~\autoref{tab::eventos}).
+    {\renewcommand{\arraystretch}{1.1}
+        \begin{table}[t]
+            \centering
+            \caption{Eventos clave en la historia del universo}
+            \label{tab::eventos}
+            \begin{tabular}{lrrr}
+                \toprule
+                \multicolumn{1}{c}{\textbf{Evento}}               & \textbf{temperatura}                                              & \textbf{energía}                                                  & \textbf{tiempo}                                                   \\ \midrule
+                \rowcolor{migris!50}
+                {\color[HTML]{FFFFFF} Inflación}                  & {\color[HTML]{FFFFFF} \(<10^{28}\) K}                             & {\color[HTML]{FFFFFF} \(<10^{16}\) GeV}                           & {\color[HTML]{FFFFFF} \(>10^{-34}\) s}                            \\
+                Desacoplamiento materia oscura                    & \multicolumn{1}{c}{?}                                             & \multicolumn{1}{c}{?}                                             & \multicolumn{1}{c}{?}                                             \\
+                \rowcolor{migris!50}
+                {\color[HTML]{FFFFFF} Formación de bariones}      & \multicolumn{1}{c}{\cellcolor{migris!50}{\color[HTML]{FFFFFF} ?}} & \multicolumn{1}{c}{\cellcolor{migris!50}{\color[HTML]{FFFFFF} ?}} & \multicolumn{1}{c}{\cellcolor{migris!50}{\color[HTML]{FFFFFF} ?}} \\
+                Transición de fase electrodébil                   & \(10^{15}\) K                                                     & \(100\) GeV                                                       & \(10^{-11}\) s                                                    \\
+                \rowcolor{migris!50}
+                {\color[HTML]{FFFFFF} Formación de hadrones}      & {\color[HTML]{FFFFFF} \(10^{12}\) K}                              & {\color[HTML]{FFFFFF} \(150\) MeV}                                & {\color[HTML]{FFFFFF} \(10^{-5}\) s}                              \\
+                Desacoplamiento de neutrinos                      & \(10^{10}\) K                                                     & \(1\) MeV                                                         & \(1\) s                                                           \\
+                \rowcolor{migris!50}
+                {\color[HTML]{FFFFFF} Formación de núcleos}       & {\color[HTML]{FFFFFF} \(10^{9}\) K}                               & {\color[HTML]{FFFFFF} \(100\) KeV}                                & {\color[HTML]{FFFFFF} \(200\) s}                                  \\
+                Formación de átomos                               & \(3400\) K                                                        & \(0.30\) eV                                                       & \(250\,000\) a                                                    \\
+                \rowcolor{migris!50}
+                {\color[HTML]{FFFFFF} Desacoplamiento de fotones} & {\color[HTML]{FFFFFF} \(2900\) K}                                 & {\color[HTML]{FFFFFF} \(0.25\) eV}                                & {\color[HTML]{FFFFFF} \(380\,000\) a}                             \\
+                Primeras estrellas                                & \(50\) K                                                          & \(4\) meV                                                         & \(100\) Ma                                                        \\
+                \rowcolor{migris!50}
+                {\color[HTML]{FFFFFF} Primeras galaxias}          & {\color[HTML]{FFFFFF} \(20\) K}                                   & {\color[HTML]{FFFFFF} \(1.7\) meV}                                & {\color[HTML]{FFFFFF} \(1\) Ga}                                   \\
+                Sistema solar                                     & \(3.8\) K                                                         & \(0.33\) meV                                                      & \(9\) Ga                                                          \\
+                \rowcolor{migris!50}
+                {\color[HTML]{FFFFFF} Escritura de este TFG}      & {\color[HTML]{FFFFFF} \(2.7\) K}                                  & {\color[HTML]{FFFFFF} \(0.23\) meV}                               & {\color[HTML]{FFFFFF} \(13.8\) Ga}                                \\ \bottomrule
+            \end{tabular}
+        \end{table}}
 
-Estas cuestiones cruciales sin respuesta en el \textit{Hot Big Bang} ---precursoras en la introducción de la inflación--- son el problema de la \textbf{planitud}, el problema del \textbf{horizonte} y la existencia de \textbf{monopolos magnéticos}. Tanto la primera como la segunda son el objeto de estudio de este texto al estar relacionadas con las condiciones iniciales del universo, que tuvieron que ser muy especiales y finamente ajustadas para dar lugar a lo que se observa hoy día. La última, la existencia de monopolos magnéticos y otras partículas que hoy no se observan pero deberían estar ahí~\cite{liddle1998introduction}, también queda resuelta con inflación pero no se dirá más sobre ella en este escrito.
+Un acontecimiento importante en la historia del universo primitivo es la formación de los primeros átomos y el consecuente desacoplamiento de los fotones (véase~\autoref{fig::decouple}). Ocurrió 380 000 años después del \textit{Big Bang} y se le conoce por \textbf{recombinación}. En este punto, la temperatura era lo suficientemente baja ---debajo de 0.3 eV--- para que se formaran átomos de hidrógeno mediante la reacción \(\mathrm{e^{-}}+\mathrm{p^+}\rightarrow \mathrm{H}+\gamma\). Alrededor de 0.25 eV, los fotones se desacoplaron de la materia y el universo se torna transparente. Estos fotones todavía se ven hoy en día como un resplandor del \textit{Big Bang}. Estirada por 13 800 millones de años de expansión cósmica, la primera luz del universo se observa hoy como una débil radiación de microondas, el CMB~\cite{penzias1965measurement}.
+\begin{figure}[b]
+    \centering
+    \def\svgwidth{0.8\textwidth}
+    \input{svg/cmb.pdf_tex}
+    \caption[Representación de la recombinación de protones y electrones]{Representación de la recombinación de protones y electrones en átomos de hidrógeno neutros y el correspondiente desacoplamiento de los fotones.}
+    \label{fig::decouple}
+\end{figure}
+
+Una característica destacable de las correlaciones observadas en el CMB es que abarcan escalas mayores que la distancia recorrida por la luz entre el inicio del \textit{Hot Big Bang} y el momento en que se creó el CMB. Esto entra en conflicto con la causalidad, a menos que las correlaciones se generaran antes del \textit{Hot Big Bang}. De hecho, cada vez hay más pruebas de que el \textit{Big Bang} no fue el comienzo del tiempo, sino que las fluctuaciones de densidad primordiales se produjeron durante un periodo anterior de expansión acelerada llamado inflación.
+
+Aun así, surgen dilemas en esta teoría ya que se limita a aquellas épocas en las que el universo es lo suficientemente frío para que los procesos físicos fundamentales que subyacen estén bien consolidados y comprendidos a través de la experiencia en la Tierra; no aborda el estado del universo en momentos anteriores, más calientes. Estas cuestiones cruciales sin respuesta en el \textit{Hot Big Bang} ---precursoras en la introducción de la inflación--- son el problema de la \textbf{planitud}, el problema del \textbf{horizonte} y la existencia de \textbf{monopolos magnéticos}. Tanto la primera como la segunda son el objeto de estudio de este texto al estar relacionadas con las condiciones iniciales del universo, que tuvieron que ser muy especiales y finamente ajustadas para dar lugar a lo que se observa hoy día. La última, la existencia de monopolos magnéticos y otras partículas que hoy no se observan pero deberían estar ahí~\cite{liddle1998introduction}, también queda resuelta con inflación pero no se dirá más sobre ella en este escrito.
 
 Para especificar las condiciones iniciales del \textit{Hot Big Bang}, se definen las posiciones y velocidades de todas las partículas en un intervalo de tiempo inicial. Las leyes de la gravedad se utilizan entonces para hacer evolucionar el sistema en el tiempo. En la teoría estándar del \textit{Big Bang} se supone la distribución de materia como homogénea e isotrópica~\cite{baumann2022cosmology}. Pero, ¿cómo se explica esta uniformidad del universo temprano? Incluso es algo que contrasta con la imagen proyectada por la teoría del \textit{Big Bang} donde la mayor parte del universo parece no haber estado en contacto causal y no hay motivo dinámico para que estas regiones causalmente no conectadas tengan tales propiedades físicas similares que se suponen. Este problema de la homogeneidad se conoce como el problema del \textbf{horizonte}.
 
-Para visualizar el primer problema, considérense dos direcciones opuestas en el cielo. Los fotones del CMB que recibimos de dichas direcciones fueron emitidos en los puntos etiquetados como \(q\) y \(p\) en la~\autoref{fig::horizonproblem}. Se observa que los fotones fueron liberados lo suficientemente cerca de la singularidad del \textit{Big Bang} para que los conos de luz del pasado de \(q\) y \(p\) no se superpongan. Como ningún punto se encuentra dentro de los horizontes de \(q\) y \(p\), tenemos el siguiente enigma: ¿Cómo ``saben'' los fotones procedentes de estos dos puntos que deben estar a la misma temperatura? Simplemente no hubo tiempo suficiente para que las diferencias en las temperaturas iniciales se eliminaran mediante transferencia de calor. Lo mismo se aplica para cualesquiera dos puntos en el CMB que estén separados por más de 2°~\cite{baumann2022cosmology}.
-\begin{figure}[t]
+\begin{figure}
     \centering
     \def\svgwidth{0.75\textwidth}
     \input{svg/horizonproblem.pdf_tex}
     \caption[Ilustración del problema del horizonte]{Ilustración del problema del horizonte en el modelo convencional del \textit{Big Bang}. Todos los eventos que observamos actualmente están en nuestro cono de luz pasado. La intersección de nuestro cono de luz del pasado con la franja espacial en el momento de la recombinación es la superficie de última dispersión. Los puntos que están separados por más de 2° en el cielo parecen no haber estado nunca haber estado en contacto causal, ya que sus conos de luz pasados no se solapan. Notar que la singularidad del \textit{Big Bang} es un momento en el tiempo y no un punto en el espacio.}
     \label{fig::horizonproblem}
 \end{figure}
+Para visualizar el primer problema, considérense dos direcciones opuestas en el cielo. Los fotones del CMB que recibimos de dichas direcciones fueron emitidos en los puntos etiquetados como \(q\) y \(p\) en la~\autoref{fig::horizonproblem}. Se observa que los fotones fueron liberados lo suficientemente cerca de la singularidad del \textit{Big Bang} para que los conos de luz del pasado de \(q\) y \(p\) no se superpongan. Como ningún punto se encuentra dentro de los horizontes de \(q\) y \(p\), tenemos el siguiente enigma: ¿Cómo ``saben'' los fotones procedentes de estos dos puntos que deben estar a la misma temperatura? Simplemente no hubo tiempo suficiente para que las diferencias en las temperaturas iniciales se eliminaran mediante transferencia de calor. Lo mismo se aplica para cualesquiera dos puntos en el CMB que estén separados por más de 2°~\cite{baumann2022cosmology}.
 
 \begin{figure}
     \centering
