@@ -56,13 +56,13 @@
     \put(0,0){\includegraphics[width=\unitlength,page=1]{cmb.pdf}}%
     \put(0.07668685,0.30713483){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}temperatura\end{tabular}}}}%
     \put(0.95817743,0.0343282){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}tiempo\end{tabular}}}}%
-    \put(0.16001575,0.09326752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small electrón\end{tabular}}}}%
-    \put(0.14964572,0.06151164){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small protón\end{tabular}}}}%
+    \put(0.14343567,0.09326752){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small electrón\end{tabular}}}}%
+    \put(0.13306563,0.06151164){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small protón\end{tabular}}}}%
     \put(0.27195792,0.00041288){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}250 000 años\end{tabular}}}}%
     \put(0.6284293,0.00041288){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}380 000 años\end{tabular}}}}%
     \put(0.25880106,0.33595108){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0.30 eV\end{tabular}}}}%
     \put(0.61527238,0.33595108){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}0.25 eV\end{tabular}}}}%
-    \put(0.84906811,0.28195276){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small hidrógeno\end{tabular}}}}%
-    \put(0.92805944,0.243502){\color[rgb]{0.49803922,0.49803922,0.49803922}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}CMB\end{tabular}}}}%
+    \put(0.83248797,0.28195276){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small hidrógeno\end{tabular}}}}%
+    \put(0.91976922,0.243502){\color[rgb]{0.49803922,0.49803922,0.49803922}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}CMB\end{tabular}}}}%
   \end{picture}%
 \endgroup%

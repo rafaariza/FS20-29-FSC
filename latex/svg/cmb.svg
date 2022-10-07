@@ -27,7 +27,7 @@
      showguides="false"
      inkscape:zoom="2.0888419"
      inkscape:cx="272.39974"
-     inkscape:cy="83.299745"
+     inkscape:cy="84.257214"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -1767,24 +1767,24 @@
     <text
        xml:space="preserve"
        style="font-size:3.175px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.122;stroke-miterlimit:9.7;stroke-dasharray:none;stroke-dashoffset:2.19213;stroke-opacity:1"
-       x="23.21245"
+       x="21.095781"
        y="36.808388"
        id="text17663"><tspan
          sodipodi:role="line"
          id="tspan17661"
          style="stroke-width:0.122"
-         x="23.21245"
+         x="21.095781"
          y="36.808388">\small electrón</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.122;stroke-miterlimit:9.7;stroke-dasharray:none;stroke-dashoffset:2.19213;stroke-opacity:1"
-       x="21.888577"
+       x="19.771908"
        y="40.86245"
        id="text17667"><tspan
          sodipodi:role="line"
          id="tspan17665"
          style="stroke-width:0.122"
-         x="21.888577"
+         x="19.771908"
          y="40.86245">\small protón</tspan></text>
     <text
        xml:space="preserve"
@@ -1833,24 +1833,24 @@
     <text
        xml:space="preserve"
        style="font-size:3.175px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.122;stroke-miterlimit:9.7;stroke-dasharray:none;stroke-dashoffset:2.19213;stroke-opacity:1"
-       x="111.17918"
+       x="109.0625"
        y="12.7202"
        id="text24947"><tspan
          sodipodi:role="line"
          id="tspan24945"
          style="stroke-width:0.122"
-         x="111.17918"
+         x="109.0625"
          y="12.7202">\small hidrógeno</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;text-align:center;text-anchor:middle;fill:#7f7f7f;fill-opacity:1;stroke-width:0.122;stroke-miterlimit:9.7;stroke-dashoffset:2.19213"
-       x="121.26347"
+       x="120.20512"
        y="17.628952"
        id="text8675"><tspan
          sodipodi:role="line"
          id="tspan8673"
          style="fill:#7f7f7f;fill-opacity:1;stroke-width:0.122"
-         x="121.26347"
+         x="120.20512"
          y="17.628952">CMB</tspan></text>
   </g>
 </svg>
