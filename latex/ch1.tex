@@ -17,7 +17,11 @@ Una de las asombrosas características de la inflación es que encierra un mecan
 \newpage
 Sin embargo, si se proporciona un \(P(k)\), no es muy sencillo visualizar cómo sería el correspondiente mapa espacial de fluctuaciones, lo que dificulta la intuición de lo que significa un espectro de potencia concreto. En este trabajo, mediante el uso del lenguaje de programación \textit{Python}, se generarán y representarán realizaciones de distintos campos aleatorios gaussianos de densidad.
 \clearpage
-\section{El \textit{Hot Big Bang}}
+\section{El universo homogéneo e isótropo}
+La cosmología física necesita un marco teórico que permita explicar los datos observacionales. En ausencia de dicho marco, ni siquiera las propiedades observables más básicas de las galaxias, como el desplazamiento al rojo, el brillo o tamaño aparentes, podrían interpretarse correctamente. El actual marco teórico aceptado por la mayoría de los astrónomos es el ``modelo de concordancia'' ---dentro de la teoría del \textit{Big Bang}--- que es un caso especial del modelo Friedmann-Lemaître-Robertson-Walker (FLRW). Estos modelos están basados en la suposición de que el universo se rige por la relatividad general y es esencialmente homogéneo e isotrópo, si se suaviza en escalas suficientemente grandes.
+\subsection{Principio cosmológico}
+La cosmología moderna se apoya en dos principios fundamentales: en primer lugar, la interacción dominante en escalas cosmológicas es la gravedad, y segundo, el principio cosmológico es una buena aproximación del universo. El principio cosmológico afirma que el universo, suavizado en escalas suficientemente grandes, es esencialmente homogéneo e isótropo. La homogeneidad tiene el significado intuitivo de que en un momento dado, el universo se ve igual en todas partes, e isotropía se refiere al hecho de que para cualquier observador que se mueve con la materia local, el universo se ve (localmente) igual en todas las direcciones.
+\subsection{El \textit{Hot Big Bang}}
 La teoría estándar del \textit{Hot Big Bang} es considerablemente exitosa, superando algunas pruebas clave de observación: expansión del universo, la existencia y espectro del \textit{Cosmic Microwave Background} (CMB), las abundancias de elementos ligeros en el universo (nucleosíntesis)~\cite{gamow1946expanding,alpher1948evolution,alpher1953physical}, entre otras~\cite{liddle1998introduction}.
 
 El universo se está expandiendo~\cite{hubble1929relation}. Era entonces más denso y caliente en el pasado. Las partículas colisionaban frecuentemente y el universo estaba en un estado de equilibrio térmico con una temperatura \(T\). Ajustando la constante de Boltzmann a la unidad \(k_B=1\), se mide la temperatura en unidades de energía. De este modo, midiendo las energías en electronvoltios:
@@ -28,7 +32,7 @@ La relación entre la temperatura del universo temprano y su edad es~\cite{bauma
 \begin{equation}
     \frac{T}{1\,\mathrm{MeV}}\simeq \left(\frac{t}{1\,\mathrm{s}}\right)^{-1/2}.
 \end{equation}
-Un segundo después del \textit{Big Bang} la temperatura del universo era de unos \(10^{11}\) K (o 1 MeV). Como aún había pasado poco tiempo en el universo temprano, la cadencia de las reacciones era extremadamente alta, así que pasaron muchas cosas en un corto período de tiempo (véase~\autoref{tab::eventos}).
+Un segundo después del \textit{Big Bang} la temperatura del universo era de unos \(10^{11}\) K (o 1 MeV). Como aún había pasado poco tiempo en el universo temprano, la cadencia de las reacciones era extremadamente alta, así que pasaron muchas cosas en un corto periodo de tiempo (véase~\autoref{tab::eventos}).
     {\renewcommand{\arraystretch}{1.1}
         \begin{table}[t]
             \centering
@@ -61,7 +65,7 @@ Un segundo después del \textit{Big Bang} la temperatura del universo era de uno
         \end{table}}
 
 Un acontecimiento importante en la historia del universo primitivo es la formación de los primeros átomos y el consecuente desacoplamiento de los fotones (véase~\autoref{fig::decouple}). Ocurrió 380 000 años después del \textit{Big Bang} y se le conoce por \textbf{recombinación}. En este punto, la temperatura era lo suficientemente baja ---debajo de 0.3 eV--- para que se formaran átomos de hidrógeno mediante la reacción \(\mathrm{e^{-}}+\mathrm{p^+}\rightarrow \mathrm{H}+\gamma\). Alrededor de 0.25 eV, los fotones se desacoplaron de la materia y el universo se torna transparente. Estos fotones todavía se ven hoy en día como un resplandor del \textit{Big Bang}. Estirada por 13 800 millones de años de expansión cósmica, la primera luz del universo se observa hoy como una débil radiación de microondas, el CMB~\cite{penzias1965measurement}.
-\begin{figure}[b]
+\begin{figure}
     \centering
     \def\svgwidth{0.9\textwidth}
     \input{svg/cmb.pdf_tex}
@@ -72,10 +76,10 @@ Un acontecimiento importante en la historia del universo primitivo es la formaci
 Una característica destacable de las correlaciones observadas en el CMB es que abarcan escalas mayores que la distancia recorrida por la luz entre el inicio del \textit{Hot Big Bang} y el momento en que se creó el CMB. Esto entra en conflicto con la causalidad, a menos que las correlaciones se generaran antes del \textit{Hot Big Bang}. De hecho, cada vez hay más pruebas de que el \textit{Big Bang} no fue el comienzo del tiempo, sino que las fluctuaciones de densidad primordiales se produjeron durante un periodo anterior de expansión acelerada llamado inflación.
 
 Aun así, surgen dilemas en esta teoría ya que se limita a aquellas épocas en las que el universo es lo suficientemente frío para que los procesos físicos fundamentales que subyacen estén bien consolidados y comprendidos a través de la experiencia en la Tierra; no aborda el estado del universo en momentos anteriores, más calientes. Estas cuestiones cruciales sin respuesta en el \textit{Hot Big Bang} ---precursoras en la introducción de la inflación--- son el problema de la \textbf{planitud}, el problema del \textbf{horizonte} y la existencia de \textbf{monopolos magnéticos}. Tanto la primera como la segunda son el objeto de estudio de este texto al estar relacionadas con las condiciones iniciales del universo, que tuvieron que ser muy especiales y finamente ajustadas para dar lugar a lo que se observa hoy día. La última, la existencia de monopolos magnéticos y otras partículas que hoy no se observan pero deberían estar ahí~\cite{liddle1998introduction}, también queda resuelta con inflación pero no se dirá más sobre ella en este escrito.
-\clearpage
-Para especificar las condiciones iniciales del \textit{Hot Big Bang}, se definen las posiciones y velocidades de todas las partículas en un intervalo de tiempo inicial. Las leyes de la gravedad se utilizan entonces para hacer evolucionar el sistema en el tiempo. En la teoría estándar del \textit{Big Bang} se supone la distribución de materia como homogénea e isotrópica~\cite{baumann2022cosmology}. Pero, ¿cómo se explica esta uniformidad del universo temprano? Incluso es algo que contrasta con la imagen proyectada por la teoría del \textit{Big Bang} donde la mayor parte del universo parece no haber estado en contacto causal y no hay motivo dinámico para que estas regiones causalmente no conectadas tengan tales propiedades físicas similares que se suponen. Este problema de la homogeneidad se conoce como el problema del \textbf{horizonte}.
 
-\begin{figure}
+Para especificar las condiciones iniciales del \textit{Hot Big Bang}, se definen las posiciones y velocidades de todas las partículas en un intervalo de tiempo inicial, o aproximando al universo como un fluido la presión y densidad. Las leyes de la gravedad se utilizan entonces para hacer evolucionar el sistema en el tiempo. En la teoría estándar del \textit{Big Bang} se supone la distribución de materia como homogénea e isotrópica~\cite{baumann2022cosmology}. Pero, ¿cómo se explica esta uniformidad del universo temprano? Incluso es algo que contrasta con la imagen proyectada por la teoría del \textit{Big Bang} donde la mayor parte del universo parece no haber estado en contacto causal y no hay motivo dinámico para que estas regiones causalmente no conectadas tengan tales propiedades físicas similares que se suponen. Este problema de la homogeneidad se conoce como el problema del \textbf{horizonte}.
+
+\begin{figure}[t]
     \centering
     \def\svgwidth{0.75\textwidth}
     \input{svg/horizonproblem.pdf_tex}
@@ -95,8 +99,33 @@ En teorías inflacionarias la singularidad de la~\autoref{fig::horizonproblem} n
 
 Para que el universo siga siendo homogéneo en tiempos posteriores, las velocidades iniciales deben tomar valores muy precisos. Si las velocidades iniciales son ligeramente demasiado pequeñas, el universo vuelve a colapsar en una fracción de segundo. Si son demasiado grandes, el universo se expande demasiado rápido y se queda casi vacío. El ajuste de las velocidades iniciales se hace aún más drástico si se considera en combinación con el problema del horizonte, ya que las velocidades de las partículas deben ajustarse a través de regiones del espacio causalmente desconectadas. Este ajuste preciso en la condición inicial de velocidad es lo que se conoce como el problema de la \textbf{planitud} y se plantea comúnmente como por qué la curvatura espacial del universo es tan pequeña, cuya relación con las velocidades viene dada por la suma de la energía cinética y potencial en una determinada región~\cite{baumann2022cosmology}.
 
-Los problemas de causalidad descritos arriba sugieren que hubo una fase antes del \textit{Hot Big Bang}, durante la cual la homogeneidad del universo y sus correspondientes fluctuaciones fueron generadas. Un período de expansión acelerada es suficiente para resolverlos. Pero es necesario un escenario viable para dirigir tal expansión. Los campos escalares son la receta a seguir.
+Los problemas de causalidad descritos arriba sugieren que hubo una fase antes del \textit{Hot Big Bang}, durante la cual la homogeneidad del universo y sus correspondientes fluctuaciones fueron generadas. Un periodo de expansión acelerada es suficiente para resolverlos. Pero es necesario un escenario viable para dirigir tal expansión. Los campos escalares son la receta a seguir.
 \section{Inflación}
-ass
+Sabemos que para obtener una expansión acelerada, la presión efectiva debe ser negativa~\cite{dodelson2020modern}. Inflación, aparentemente, fue dirigida por una forma de energía cuya presión \(\mathcal{P}<0\). La presión negativa no es algo familiar para los físicos. Así, sea lo que sea que conduce inflación, no es materia ordinaria o radiación. Tampoco puede ser una constante cosmológica: en este caso, el universo estaría en un estado de rápida inflación perpetuo, mientras que necesitamos que el periodo inflacionario termine y exista una transición de la fase dominada por radiación a la fase dominada por materia, ambas conocidas.
+\newpage
+La forma más simple de genera tal época transitoria de expansión acelerada es mediante la energía potencial de un campo escalar. En física de partículas, se utilizan los campos escalares para representar partículas de espín cero. Se transforman como un escalar (es decir, no cambian) bajo transformaciones de coordenadas. En un universo homogéneo, un campo escalar será función del tiempo únicamente. Notar que no hay campo escalar conocido que pueda regir inflación. Aunque conocemos un campo escalar en la naturaleza, el campo de Higgs, usarlo para dirigir inflación resulta ser complicado. Sus propiedades e interacciones están lo suficientemente restringidas, por ahora, para que sepamos que no puede servir como fuente de la inflación. No obstante, hay que tener en cuenta que puede ser cierto que la idea de la inflación sea correcta, pero esté impulsada por algo distinto a un campo escalar.
+\subsection{Dinámica del campo escalar}
+Se toman como punto de partida las expresiones de la densidad de energía y presión efectivas de un campo escalar \(\phi\left(t,\symbf{x}\right)\) que llamaremos \textbf{inflatón}. Como se indica en la notación, el valor del campo depende del tiempo \(t\) y de la posición \(\symbf{x}\). Asociado a cada valor del campo hay una densidad de energía potencial \(V(\phi)\). Cuando el campo es dinámico (cambia con el tiempo) entonces también incluye una densidad de energía cinética \(\frac{1}{2}\dot{\phi}^2\). Si la energía asociada al campo escalar domina el universo, entonces sirve como fuente de la evolución de este en el modelo FLRW~\cite{baumann2022cosmology}, donde se tiene al mismo ocupado por un fluido perfecto. Dichas expresiones de la densidad de energía y presión, se obtienen por comparación del tensor energía-momento (ecuaciones relatividad general de Einstein) del campo escalar con el de un fluido perfecto, y son
+\begin{subequations}
+    \begin{equation}
+        \rho_\phi=\frac{1}{2}\dot{\phi}^2+V(\phi)
+    \end{equation}
+    \begin{equation}
+        \mathcal{P}_\phi=\frac{1}{2}\dot{\phi}^2-V(\phi),
+    \end{equation}
+\end{subequations}
+respectivamente.
+
+En lo sucesivo son utilizadas las unidades naturales, esto es, \(c=\hbar=1\). Definimos la ecuación de estado de un fluido perfecto con el número adimensional \(\mathscr{w}\):
+\begin{equation}
+    \mathscr{w}\equiv\frac{\mathcal{P}_\phi}{\rho_\phi}.
+\end{equation}
+El universo está acelerando solo si es gobernado por uno o varios componentes energéticos con ecuaciones de estado \(\mathscr{w}_i<-1/3\)~\cite{knobel2012introduction}. Así que durante inflación se ha de cumplir esta condición.
+
+En el marco FLRW, el campo escalar es homogéneo y por tanto, solo depende del tiempo, i.e., \(\phi\left(t,\symbf{x}\right)\rightarrow\phi(t)\). Este obedece la ecuación de movimiento
+\begin{equation}
+    \ddot{\phi}+3H\dot{\phi}+V'(\phi)=0,
+\end{equation}
+donde \(V'(\phi)=\mathrm{d}V/\mathrm{d}\phi\)
 
 Inflación predice que las condiciones iniciales del universo son descritas con buena aproximación por un campo aleatorio gaussiano~\cite{baumann2022cosmology,dodelson2020modern}.

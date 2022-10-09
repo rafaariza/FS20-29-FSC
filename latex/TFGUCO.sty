@@ -18,6 +18,15 @@
     Scale=MatchLowercase,
     ScaleAgain=1.05
   ]
+  \setmathfont{stixtwomath-regular}[
+    Path = R:/Documentos/FS20-29-FSC/latex/fonts/,
+    Extension =.otf,
+    Scale = 1.1,
+    math-style = TeX,
+    bold-style = TeX,
+    RawFeature = {+ss08;+ss02;+ss03;},
+    range = {cal, scr}
+  ]
 \else
   \usepackage[latin1,utf8]{inputenc}
   \usepackage[T1]{fontenc}
@@ -52,6 +61,7 @@
 }}}
 \titlespacing*{\chapter}{0pt}{50pt}{40pt}
 \titlespacing*\section{0pt}{10pt plus 4pt minus 2pt}{-15pt plus 2pt minus 2pt}
+\titlespacing*\subsection{0pt}{10pt plus 4pt minus 2pt}{-20pt plus 2pt minus 2pt}
 \titleformat{\chapter}[display]
   { \sffamily\bfseries\Large\color{blue}}
   {\filleft\MakeUppercase{\chaptertitlename}\ \Huge\sffamily{\arabic{chapter}}\
@@ -69,7 +79,7 @@
 {1ex}{\color{blue}}[\quad]
 {}
 
-  \titleformat{\subsection}[runin]
+  \titleformat{\subsection}[hang]
 { \scshape\bfseries}
 {\color{blue}  \thesubsection .}
 {1ex}{\color{blue}}[\quad]
