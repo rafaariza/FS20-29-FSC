@@ -57,5 +57,6 @@
     \put(0.46488336,0.00641195){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\phi\)\end{tabular}}}}%
     \put(0.02421601,0.37180052){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(V(\phi)\)\end{tabular}}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{potential.pdf}}%
+    \put(0.79376355,0.01661781){\color[rgb]{0,0,0}\transparent{0.65882403}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small recalentamiento\end{tabular}}}}%
   \end{picture}%
 \endgroup%

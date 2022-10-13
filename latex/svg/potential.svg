@@ -26,13 +26,13 @@
      showgrid="false"
      inkscape:zoom="1.9939962"
      inkscape:cx="177.53294"
-     inkscape:cy="149.95013"
+     inkscape:cy="149.95014"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="g18238" />
   <defs
      id="defs4696">
     <marker
@@ -91,7 +91,7 @@
        id="text11805"><tspan
          sodipodi:role="line"
          id="tspan11803"
-         style="stroke-width:0.332"></tspan></text>
+         style="stroke-width:0.332" /></text>
     <g
        id="g18238"
        transform="matrix(1.0339527,0,0,1.0339527,-0.08494493,-2.6751322)">
@@ -192,25 +192,25 @@
          style="fill:#0000ff;fill-opacity:1;stroke:none;stroke-opacity:1" />
       <text
          xml:space="preserve"
-         style="font-size:3.175px;text-align:center;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.331999;stroke-miterlimit:9.7;stroke-dasharray:none;stroke-dashoffset:2.19213;stroke-opacity:1"
+         style="font-size:3.175px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.331999;stroke-miterlimit:9.7;stroke-dasharray:none;stroke-dashoffset:2.19213;stroke-opacity:1"
          x="48.810802"
          y="78.151222"
          id="text11809"><tspan
            sodipodi:role="line"
            id="tspan11807"
-           style="stroke-width:0.332"
+           style="stroke-width:0.332;fill:#000000"
            x="48.810802"
            y="78.151222">\(\phi\)</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:3.175px;text-align:center;text-anchor:middle;fill:#0000ff;fill-opacity:1;stroke:none;stroke-width:0.331999;stroke-miterlimit:9.7;stroke-dasharray:none;stroke-dashoffset:2.19213;stroke-opacity:1"
+         style="font-size:3.175px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.331999;stroke-miterlimit:9.7;stroke-dasharray:none;stroke-dashoffset:2.19213;stroke-opacity:1"
          x="-41.753365"
          y="4.9141159"
          id="text11813"
          transform="rotate(-90)"><tspan
            sodipodi:role="line"
            id="tspan11811"
-           style="stroke-width:0.332"
+           style="stroke-width:0.332;fill:#000000"
            x="-41.753365"
            y="4.9141159">\(V(\phi)\)</tspan></text>
       <path
@@ -219,5 +219,16 @@
          id="path13321"
          sodipodi:nodetypes="csc" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;text-align:center;text-anchor:middle;opacity:0.658824;fill:#000000;stroke-width:0.232;stroke-miterlimit:9.7;stroke-dashoffset:2.19213"
+       x="84.256554"
+       y="77.078369"
+       id="text1652"><tspan
+         sodipodi:role="line"
+         id="tspan1650"
+         style="fill:#000000;stroke-width:0.232"
+         x="84.256554"
+         y="77.078369">\small recalentamiento</tspan></text>
   </g>
 </svg>

@@ -62,6 +62,7 @@ class FS2029FSC():
         planck_cmap = ListedColormap(
         np.loadtxt("R:\\Documentos\\FS20-29-FSC\\scripts\\colormap.txt")/255.)
         planck_cmap.set_bad("gray")
+        planck_cmap.set_under("white")
         cmap = planck_cmap
         for ind, realization in enumerate(self._x_realize[::len(self._x_realize)]):
             fig, ax = plt.subplots()

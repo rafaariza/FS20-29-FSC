@@ -13,7 +13,7 @@ La teoría inflacionaria~\cite{albrecht1982cosmology,guth1981inflationary,linde1
     \label{fig::guth}
 \end{figure}
 
-Una de las asombrosas características de la inflación es que encierra un mecanismo para producir las fluctuaciones de densidad primordiales. Estas pequeñas fluctuaciones cuánticas son estiradas por la expansión inflacionaria y se convierten en las semillas para la formación de la estructura a gran escala del universo~\cite{Mukhanov1981,bardeen1983spontaneous,hawking1982development,starobinsky1982dynamics,guth1985quantum}. Dichas fluctuaciones se describen mediante campos aleatorios, que son la generalización de las variables aleatorias a cantidades que toman valores diferentes en distintos puntos del espacio y/o del tiempo. La estadística de los campos aleatorios está codificada en el espectro de potencias \(P(k)\), donde \(k\) es el módulo del vector de onda.
+Una de las asombrosas características de la inflación es que encierra un mecanismo para producir las fluctuaciones de densidad primordiales. Estas pequeñas fluctuaciones cuánticas son estiradas por la expansión inflacionaria y se convierten en las semillas para la formación de la estructura a gran escala del universo~\cite{Mukhanov1981,bardeen1983spontaneous,hawking1982development,starobinsky1982dynamics,guth1985quantum}. Dichas fluctuaciones se describen mediante campos aleatorios, que son la generalización de las variables aleatorias a cantidades que toman valores diferentes en distintos puntos del espacio y/o del tiempo. La estadística de los campos aleatorios está codificada en el espectro de potencias \(P(k)\), donde \(k\) es el módulo del vector de onda comóvil.
 \newpage
 Sin embargo, si se proporciona un \(P(k)\), no es muy sencillo visualizar cómo sería el correspondiente mapa espacial de fluctuaciones, lo que dificulta la intuición de lo que significa un espectro de potencia concreto. En este trabajo, mediante el uso del lenguaje de programación \textit{Python}, se generarán y representarán realizaciones de distintos campos aleatorios gaussianos de densidad.
 \clearpage
@@ -115,7 +115,7 @@ Se toman como punto de partida las expresiones de la densidad de energía y pres
     \end{equation}
     \label{eq::eqscampo}
 \end{subequations}
-respectivamente.
+respectivamente, donde \(\dot{\phi}\) indica derivada temporal.
 
 En lo sucesivo son utilizadas las unidades naturales, esto es, \(c=\hbar=1\). Definimos la ecuación de estado de un fluido perfecto con el número adimensional \(\mathscr{w}\):
 \begin{equation}
@@ -129,15 +129,15 @@ En el marco FLRW, el campo escalar es homogéneo y por tanto, solo depende del t
 \end{equation}
 donde \(V'(\phi)=\mathrm{d}V/\mathrm{d}\phi\) y
 \begin{equation}
-    H=H(t)\equiv \frac{1}{a}\frac{\mathrm{d}a}{\mathrm{d}t},
+    H=H(t)\equiv \frac{1}{a}\frac{\mathrm{d}a}{\mathrm{d}t}
 \end{equation}
-donde \(a(t)\) es el factor de escala ---cantidad adimensional--- del universo, el cual cuantiza el tamaño físico de este. La forma de \(a(t)\) depende de las propiedades del material dentro del universo~\cite{liddle1998introduction}. El término \(\dot{\phi}^2/2\) en~\ref{eq::eqscampo} es como la ``energía cinética'' del campo y \(3H\dot{\phi}\) en~\ref{eq::eqmovcampo} viene de la expansión del universo y actúa como una fricción. Con las expresiones en~\ref{eq::eqscampo}, la ecuación de estado del campo escalar es
+es el parámetro de Hubble, donde \(a(t)\) es el factor de escala (cantidad adimensional) del universo, el cual cuantiza el tamaño físico de este. La forma de \(a(t)\) depende de las propiedades del material dentro del universo~\cite{liddle1998introduction}. El término \(\dot{\phi}^2/2\) en~\ref{eq::eqscampo} es como la ``energía cinética'' del campo y \(3H\dot{\phi}\) en~\ref{eq::eqmovcampo} viene de la expansión del universo y actúa como una fricción. Con las expresiones en~\ref{eq::eqscampo}, la ecuación de estado del campo escalar es
 \begin{equation}
     \mathscr{w}(t)=\frac{\frac{1}{2}\dot{\phi}^2-V(\phi)}{\frac{1}{2}\dot{\phi}^2+V(\phi)}\label{eq::estado}
 \end{equation}
 con los límites \(-1\leq\mathscr{w}(t)\leq 1\). La ecuación de arriba es generalmente dependiente del tiempo. No obstante, si \(\dot{\phi}^2<4V(\phi)\) entonces \(\mathscr{w} < -1/3\) y la condición para inflación es satisfecha. Más aún, si \(\dot{\phi}^2 \ll V(\phi)\), entonces la ecuación de estado se torna \(\mathscr{w}\simeq -1\) y es constante. La expansión asociada del universo es, en este último caso, exponencial con \(H\) y \(\phi\) siendo prácticamente constantes~\cite{knobel2012introduction}.
-
-Hasta ahora, la forma del potencial \(V(\phi)\) está indeterminada y hay bastantes escenarios de inflación posibles en la literatura, véase~\cite{liddle2000cosmological}. Sin embargo, las predicciones de los modelos más simples de inflación son bastante robustas y de este modo no es necesario especificar todos los detalles siempre y cuando se cumplan ciertas características. El escenario más popular y simple de inflación supone un campo escalar ``rodando lentamente'' (de aquí en adelante se usará el anglicismo \textit{slow-roll} para referirnos a este tipo de escenarios) hacia su estado fundamental~\cite{linde1982new,albrecht1982cosmology}. La energía potencial de un campo escalar \textit{slow-roll} es muy cercana a constante (si el potencial no es muy pronunciado) por lo que rápidamente llega a dominar sobre la energía cinética (y la energía de todas las demás partículas). Un ejemplo es mostrado en la~\autoref{fig::potential}; inflación acaba una vez el campo haya llegado al mínimo del potencial, donde oscilará y decaerá a partículas más ligeras ---eventualmente a aquellas del modelo estándar de partículas. En ese momento, el campo ya no rueda lentamente, sino que tiene una energía cinética importante, por lo que oscila en torno al mínimo. Entonces, la ecuación de estado~\ref{eq::estado} ya no está cerca de -1, sino cerca de cero, por lo que el universo ha pasado a una época de expansión desacelerada. Entonces, al final, \(\phi\) decae en partículas más ligeras. Con el tiempo, quizá tras una larga cadena de desintegraciones, el resultado es un universo casi completamente homogéneo, dominado por la radiación.
+\subsection{Inflación \textit{Slow-roll}}
+Hasta ahora, la forma del potencial \(V(\phi)\) está indeterminada y hay bastantes escenarios de inflación posibles en la literatura, véase~\cite{liddle2000cosmological}. Sin embargo, las predicciones de los modelos más simples de inflación son bastante robustas y de este modo no es necesario especificar todos los detalles siempre y cuando se cumplan ciertas características. El escenario más popular y simple de inflación supone un campo escalar ``rodando lentamente'' (de aquí en adelante se usará el anglicismo \textit{slow-roll} para referirnos a este tipo de escenarios) hacia su estado fundamental~\cite{linde1982new,albrecht1982cosmology}. La energía potencial de un campo escalar \textit{slow-roll} es muy cercana a constante (si el potencial no es muy pronunciado) por lo que rápidamente llega a dominar sobre la energía cinética (y la energía de todas las demás partículas). Un ejemplo es mostrado en la~\autoref{fig::potential}; inflación acaba una vez el campo haya llegado al mínimo del potencial, donde oscilará y decaerá a partículas más ligeras ---eventualmente a aquellas del modelo estándar de partículas--- en un proceso llamado \textbf{recalentamiento} (del que no conocemos los detalles, pero sabemos de varios mecanismos físicos para conseguirlo), siguiendo a este la escena del \textit{Big Bang} que fue discutida en la sección anterior. En ese momento, el campo ya no rueda lentamente, sino que tiene una energía cinética importante, por lo que oscila en torno al mínimo. Entonces, la ecuación de estado~\ref{eq::estado} ya no está cerca de -1, sino cerca de cero, por lo que el universo ha pasado a una época de expansión desacelerada. Entonces, al final, \(\phi\) decae en partículas más ligeras. Con el tiempo, quizá tras una larga cadena de desintegraciones, el resultado es un universo casi completamente homogéneo, dominado por la radiación.
 \begin{figure}[t]
     \centering
     \def\svgwidth{0.65\textwidth}
@@ -145,5 +145,34 @@ Hasta ahora, la forma del potencial \(V(\phi)\) está indeterminada y hay bastan
     \caption[Ejemplo de un potencial \textit{slow-roll}]{Ejemplo de un potencial \textit{slow-roll}. Inflación ocurre en la parte sombreada.}
     \label{fig::potential}
 \end{figure}
+\newpage
+Estos modelos contienen un solo campo escalar \(\phi\) (inflatón) y resolver la ecuación de movimiento~\ref{eq::eqmovcampo} se vuelve accesible si hacemos la aproximación \textit{slow-roll} donde el término \(\ddot{\phi}\) es despreciable. La motivación física aquí es que interesa más un comportamiento de expansión, así el potencial domina en la densidad de energía~\cite{peacock1998cosmological}. La condición es
+\begin{equation}
+    \frac{\dot{\phi}^2}{2}\ll V(\phi);
+\end{equation}
+diferenciando se obtiene
+\begin{equation}
+    \ddot{\phi}\ll V'(\phi),
+\end{equation}
+tal y como se buscaba. De este modo, se tiene una simple ecuación \textit{slow-roll} para campos homogéneos:
+\begin{equation}
+    3H\dot{\phi}=-V'(\phi).
+\end{equation}
+Combinando la ecuación anterior con la ecuación de Friedmann~\cite{friedmann1922125}, usando las unidades naturales,
+\begin{equation}
+    H^2=\frac{8\pi G}{3}\left(\frac{\dot{\phi}^2}{2}+V(\phi)\right)\simeq \frac{8\pi G}{3}V(\phi),
+\end{equation}
+donde \(G\) es la constante de gravitación universal, se obtiene un potente y simple aparato para deducir la historia de la expansión de cualquier modelo inflacionario.
 
+La inflación \textit{slow-roll} es, por lo general, cuantificada por los \textbf{parámetros adimensionales de \textit{slow-roll}}\footnote{Notar que \(\epsilon\) es positivo por definición y \(\eta\) puede ser positivo o negativo}
+\begin{subequations}
+    \begin{equation}
+        \epsilon\equiv\frac{1}{16\pi G}\left(\frac{V'}{V}\right)^2\ll 1
+    \end{equation}
+    \begin{equation}
+        \left|\eta\right|\equiv\frac{1}{8\pi G}\frac{V''}{V}\ll 1,
+    \end{equation}
+\end{subequations}
+donde el primero mide la pendiente del potencial y el segundo, su curvatura. Estos criterios dan la intuición exacta: el potencial debe ser plano en el sentido de tener pequeñas derivadas si el campo ha de rodar lo suficientemente lento para que inflación sea posible. Ya que \(\epsilon\ll 1\) y \(\eta\ll 1\) son equivalentes a \(V'/V\ll 1\) y \(V''/V\ll 1\), respectivamente, la aproximación \textit{slow-roll} es automáticamente satisfecha si \(V(\phi)\) es lo \textbf{suficientemente} plano.
+\section{Fluctuaciones producto de inflación}
 Inflación predice que las condiciones iniciales del universo son descritas con buena aproximación por un campo aleatorio gaussiano~\cite{baumann2022cosmology,dodelson2020modern}.
