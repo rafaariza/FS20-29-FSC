@@ -17,7 +17,7 @@ Una de las asombrosas características de la inflación es que encierra un mecan
 \newpage
 Sin embargo, si se proporciona un \(P(k)\), no es muy sencillo visualizar cómo sería el correspondiente mapa espacial de fluctuaciones, lo que dificulta la intuición de lo que significa un espectro de potencia concreto. En este trabajo, mediante el uso del lenguaje de programación \textit{Python}, se generarán y representarán realizaciones de distintos campos aleatorios gaussianos de densidad.
 \clearpage
-\section{El universo homogéneo e isótropo}
+\section{El universo homogéneo e isótropo}\label{sec::homogeneo}
 La cosmología física necesita un marco teórico que permita explicar los datos observacionales. En ausencia de dicho marco, ni siquiera las propiedades observables más básicas de las galaxias, como el desplazamiento al rojo, el brillo o tamaño aparentes, podrían interpretarse correctamente. El actual marco teórico aceptado por la mayoría de los astrónomos es el ``modelo de concordancia'' ---dentro de la teoría del \textit{Big Bang}--- que es un modelo basado en la métrica Friedmann-Lemaître-Robertson-Walker (FLRW). Estos modelos están basados en la suposición de que el universo se rige por la relatividad general y es esencialmente homogéneo e isótropo, si se suaviza en escalas suficientemente grandes.
 \subsection{Principio cosmológico}
 La cosmología moderna se apoya en dos principios fundamentales: en primer lugar, la interacción dominante en escalas cosmológicas es la gravedad, y segundo, el principio cosmológico es una buena aproximación del universo. El principio cosmológico afirma que el universo, suavizado en escalas suficientemente grandes, es esencialmente homogéneo e isótropo. La homogeneidad tiene el significado intuitivo de que en un momento dado, el universo se ve igual en todas partes, e isotropía se refiere al hecho de que para cualquier observador que se mueve con la materia local, el universo se ve (localmente) igual en todas las direcciones.
@@ -107,12 +107,10 @@ La forma más simple de generar tal época transitoria de expansión acelerada e
 \subsection{Dinámica del campo escalar}
 Se toman como punto de partida las expresiones de la densidad de energía y presión efectivas de un campo escalar \(\phi\left(t,\symbf{x}\right)\) que llamaremos \textbf{inflatón}. Como se indica en la notación, el valor del campo depende del tiempo \(t\) y de la posición \(\symbf{x}\). Asociado a cada valor del campo hay una densidad de energía potencial \(V(\phi)\). Cuando el campo es dinámico (cambia con el tiempo) entonces también incluye una densidad de energía cinética \(\frac{1}{2}\dot{\phi}^2\). Si la energía asociada al campo escalar domina el universo, entonces sirve como fuente de la evolución de este en el modelo FLRW~\cite{baumann2022cosmology}, donde se tiene al mismo ocupado por un fluido perfecto. Dichas expresiones de la densidad de energía y presión, se obtienen por comparación del tensor energía-momento (ecuaciones relatividad general de Einstein) del campo escalar con el de un fluido perfecto, y son
 \begin{subequations}
-    \begin{equation}
-        \rho_\phi=\frac{1}{2}\dot{\phi}^2+V(\phi)
-    \end{equation}
-    \begin{equation}
-        \mathcal{P}_\phi=\frac{1}{2}\dot{\phi}^2-V(\phi),
-    \end{equation}
+    \begin{align}
+        \rho_\phi&=\frac{1}{2}\dot{\phi}^2+V(\phi)\\
+        \mathcal{P}_\phi&=\frac{1}{2}\dot{\phi}^2-V(\phi),
+    \end{align}
     \label{eq::eqscampo}
 \end{subequations}
 respectivamente, donde \(\dot{\phi}\) indica derivada temporal.
@@ -166,13 +164,28 @@ donde \(G\) es la constante de gravitación universal, se obtiene un potente y s
 
 La inflación \textit{slow-roll} es, por lo general, cuantificada por los \textbf{parámetros adimensionales de \textit{slow-roll}}\footnote{Notar que \(\epsilon\) es positivo por definición y \(\eta\) puede ser positivo o negativo}
 \begin{subequations}
-    \begin{equation}
-        \epsilon\equiv\frac{1}{16\pi G}\left(\frac{V'}{V}\right)^2\ll 1
-    \end{equation}
-    \begin{equation}
-        \left|\eta\right|\equiv\frac{1}{8\pi G}\frac{V''}{V}\ll 1,
-    \end{equation}
+    \begin{align}
+        \epsilon&\equiv\frac{1}{16\pi G}\left(\frac{V'}{V}\right)^2\ll 1\\
+        \left|\eta\right|&\equiv\frac{1}{8\pi G}\frac{V''}{V}\ll 1,
+    \end{align}
+    \label{eq::slowroll}
 \end{subequations}
 donde el primero mide la pendiente del potencial y el segundo, su curvatura. Estos criterios dan la intuición exacta: el potencial debe ser plano en el sentido de tener pequeñas derivadas si el campo ha de rodar lo suficientemente lento para que inflación sea posible. Ya que \(\epsilon\ll 1\) y \(\left|\eta\right|\ll 1\) son equivalentes a \(V'/V\ll 1\) y \(V''/V\ll 1\), respectivamente, la aproximación \textit{slow-roll} es automáticamente satisfecha si \(V(\phi)\) es lo \textbf{suficientemente} plano.
-\section{Fluctuaciones producto de inflación}
+\section{Perturbaciones cosmológicas}
+El universo es homogéneo e isótropo a escalas mayores de 100 Mpc~\cite{baumann2022cosmology}, pero a escalas más pequeñas se observan grandes desviaciones de la densidad media en forma de galaxias, cúmulos de galaxias y la red cósmica formada por hojas y filamentos de galaxias. ¿Cómo crecen las estructuras en el universo y cómo podemos describirlas?
+
+En el modelo estándar cosmológico que mencionamos en la~\autoref{sec::homogeneo} se supone que el universo es altamente homogéneo en sus tiempos más tempranos. Estas enormes estructuras galácticas observadas hoy en día han crecido a partir de pequeñas perturbaciones iniciales de la densidad debido a la acción de la gravedad. En este escenario, la formación de estructuras en el universo implica dos temas a tratar: (i) las propiedades de las perturbaciones de densidad iniciales, y (ii) la evolución temporal de las perturbaciones cosmológicas en un universo en expansión. Para entender la estructura a gran escala del universo, se han de introducir perturbaciones y, mientras sean lo suficientemente pequeñas (régimen lineal), estudiar las propiedades estadísticas dadas por sus correspondientes funciones de distribución.
+
+Si se descomponen las perturbaciones cosmológicas en ``modos'' de Fourier, encontraremos que algunos de ellos se amplifican durante la evolución lineal mientras que otros se amortiguan. Los resultados de la evolución temporal están representados por una \textbf{función de transferencia} lineal que describe el cambio en la amplitud de la perturbación como una función del modo de Fourier. La importancia de esta función de transferencia radica en que, una vez que el espectro de la perturbación (es decir, la amplitud de la perturbación en función del modo de Fourier) se establece en algún momento durante inflación, nos permite calcular el espectro de potencias de la perturbación en cualquier momento posterior. Como se verá, si las perturbaciones de densidad tienen una distribución gaussiana, entonces el campo de densidad está completamente especificado por el espectro de potencia.
+\subsection{Fluctuaciones con origen en inflación}
+Ahora se ha de considerar el mayor logro de la inflación, que no se previó cuando se propuso la teoría: proporciona un mecanismo concreto para generar las semillas de la estructura en el universo. En esencia, la idea es que las inevitables pequeñas fluctuaciones cuánticas del campo inflatón \(\phi\) se transforman en fluctuaciones clásicas de la densidad de materia cuando inflación ha terminado. Esto se ilustra en la~\autoref{fig::fluctuaciones}. Los detalles de este proceso son muy técnicos y se salen de la mira de este texto. Las propiedades estadísticas de las perturbaciones espaciales creadas por la inflación coinciden muy bien con las observaciones.
+\begin{figure}
+    \centering
+    \def\svgwidth{0.95\textwidth}
+    \input{svg/fluctuations.pdf_tex}
+    \caption[Fluctuaciones cuánticas a clásicas]{Este dibujo muestra como las fluctuaciones en el campo escalar se transforman en fluctuaciones en la densidad al final de inflación. Diferentes puntos del universo se inflan desde puntos en el potencial perturbados por una fluctuación \(\delta\phi\), como dos bolas rodando desde distintos puntos de partida. Inflación termina en tiempos separados por \(\delta t\), induciendo esa fluctuación en la densidad de materia.}
+    \label{fig::fluctuaciones}
+\end{figure}
+
+
 Inflación predice que las condiciones iniciales del universo son descritas con buena aproximación por un campo aleatorio gaussiano~\cite{baumann2022cosmology,dodelson2020modern}.
