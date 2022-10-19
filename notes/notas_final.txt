@@ -1,0 +1,21 @@
+-CMB-
+The CMB contains tiny variations in its intensity
+(as a function of direction on the sky) that reflect perturbations in the density
+of matter in the early universe. The pattern of these fluctuations contains critical
+information about the primordial universe. More than any other cosmological probe,
+the study of the CMB anisotropies has transformed cosmology into a precision
+science.
+The correlations observed in the
+afterglow of the Big Bang were inherited from the correlations of the quantum
+fluctuations during inflation.
+
+-SPECTRUM-
+inflation predicts fluctuations that are naturally close to scale invariant because the inflationary dynamics is approximately time-translation invariant.
+However, we also know that inflation must end, so there has to be a small time
+dependence in the evolution. This translates into a small deviation from a perfectly
+scale-invariant spectrum.
+
+- HABLAR DE QUE CADA REGION/PUNTO DEL ESPACIO SE VA A SIMULAR CON UN No GAUSSIANO
+
+- DEL PDF ESCRITO A MANO (https://cosmo.nyu.edu/roman/courses/cosmology_2021/GaussianRandomFields.pdf)
+MOLA LO QUE EXPLICA EN LAS PRIMERAS PAGINAS PA PONERLO

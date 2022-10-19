@@ -55,13 +55,13 @@
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{fluctuations.pdf}}%
     \put(0.94705373,0.04191544){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\phi\)\end{tabular}}}}%
-    \put(0.40963322,0.00607774){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\phi_{\mathrm{fin}}\)\end{tabular}}}}%
+    \put(0.40963322,0.00607774){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\phi_{\symrm{fin}}\)\end{tabular}}}}%
     \put(0.02220005,0.33553495){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(V(\phi)\)\end{tabular}}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{fluctuations.pdf}}%
     \put(0.7276837,0.00992078){\color[rgb]{0,0,0}\transparent{0.65882403}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small recalentamiento\end{tabular}}}}%
     \put(0.20859197,0.0099218){\color[rgb]{0,0,0}\transparent{0.65882403}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small inflación\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=3]{fluctuations.pdf}}%
-    \put(0.31343632,0.565469){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\bar{\phi}(t)\)\end{tabular}}}}%
+    \put(0.31343632,0.565469){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\overbar{\phi}(t)\)\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=4]{fluctuations.pdf}}%
     \put(0.17280524,0.60643873){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(\delta\phi(\symbf{x})\)\end{tabular}}}}%
   \end{picture}%

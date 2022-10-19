@@ -25,7 +25,7 @@ print(f"El área debajo de la gaussiana es {integral:1.0f}")
 
 plt.subplot(1,2,1)
 plt.plot(k_interval,fvalues,'r')
-plt.title(r"\(f(k)=\frac{1}{\sigma\sqrt{2\pi}}\ \mathrm{e}^{-\frac{k^2}{2\sigma^2}}\) con \(\sigma=20\)",fontsize=18)
+plt.title(r"\(f(k)=\frac{1}{\sigma\sqrt{2\pi}}\ \symrm{e}^{-\frac{k^2}{2\sigma^2}}\) con \(\sigma=20\)",fontsize=18)
 plt.subplot(1,2,2)
 plt.plot(k_interval,np.abs(fft_norm),'g')
 plt.title(r"DFT de \(f(k)\) mediante método FFT",fontsize=18)

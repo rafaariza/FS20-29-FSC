@@ -251,7 +251,7 @@
          id="tspan11807-4"
          style="fill:#000000;stroke-width:0.354927"
          x="48.52383"
-         y="77.510132">\(\phi_{\mathrm{fin}}\)</tspan></text>
+         y="77.510132">\(\phi_{\symrm{fin}}\)</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.2828px;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.343271;stroke-miterlimit:9.7;stroke-dasharray:none;stroke-dashoffset:2.19213;stroke-opacity:1"
@@ -306,7 +306,7 @@
          id="tspan13322"
          x="181.23122"
          y="32.092922"
-         style="font-size:5.33333px">\(\bar{\phi}(t)\)</tspan></text>
+         style="font-size:5.33333px">\(\overbar{\phi}(t)\)</tspan></text>
     <path
        style="opacity:1;fill:none;stroke:#000000;stroke-width:0.265;stroke-miterlimit:9.7;stroke-dasharray:none;stroke-dashoffset:7.19018;stroke-opacity:1;marker-start:url(#marker15932);marker-end:url(#marker15976)"
        d="m 18.436807,12.431944 h 7.552992"

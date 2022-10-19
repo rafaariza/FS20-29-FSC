@@ -1,7 +1,7 @@
 \chapter{Introducción}
 Si el universo tuvo un principio, como el \textit{Big Bang}, procedente de esa ``explosión'' la distribución de materia y energía habría sido muy irregular. Enormemente difusa. El tiempo y el espacio habrían estado curvados, retorcidos, deformados.
 
-Pero cuando miramos al universo hoy, no vemos nada de eso. La distribución de materia y energía es casi uniforme en el universo, y el propio espacio es extremadamente plano, obedeciendo a las leyes de la geometría más sencilla. Así que, ¿cómo llegamos desde ese salvaje estado inicial hasta el presente? Ahí es donde nació la idea de inflación.
+Pero cuando se mira al universo hoy, no se observa nada de eso. La distribución de materia y energía es casi uniforme en el universo, y el propio espacio es extremadamente plano, obedeciendo a las leyes de la geometría más sencilla. Así que, ¿cómo se llegó desde ese salvaje estado inicial hasta el presente? Ahí es donde nació la idea de inflación.
 
 El concepto que introdujo la inflación es que, después del \textit{Big Bang}, quizás hubo un periodo de expansión muy rápida y acelerada, expandiendo el universo tan rápido que lo convertiría en algo aplanado y uniforme, y la distribución de materia y energía habría sido también uniformada de esta manera.
 
@@ -13,9 +13,9 @@ La teoría inflacionaria~\cite{albrecht1982cosmology,guth1981inflationary,linde1
     \label{fig::guth}
 \end{figure}
 
-Una de las asombrosas características de la inflación es que encierra un mecanismo para producir las fluctuaciones de densidad primordiales. Estas pequeñas fluctuaciones cuánticas son estiradas por la expansión inflacionaria y se convierten en las semillas para la formación de la estructura a gran escala del universo~\cite{Mukhanov1981,bardeen1983spontaneous,hawking1982development,starobinsky1982dynamics,guth1985quantum}. Dichas fluctuaciones se describen mediante campos aleatorios, que son la generalización de las variables aleatorias a cantidades que toman valores diferentes en distintos puntos del espacio y/o del tiempo. La estadística de los campos aleatorios está codificada en el espectro de potencias \(P(k)\), donde \(k\) es el módulo del vector de onda comóvil.
+Una de las asombrosas características de la inflación es que encierra un mecanismo para producir las fluctuaciones de densidad primordiales. Estas pequeñas fluctuaciones cuánticas son estiradas por la expansión inflacionaria y se convierten en las semillas para la formación de la estructura a gran escala del universo~\cite{Mukhanov1981,bardeen1983spontaneous,hawking1982development,starobinsky1982dynamics,guth1985quantum}. Dichas fluctuaciones se describen mediante campos aleatorios, que son la generalización de las variables aleatorias a cantidades que toman valores diferentes en distintos puntos del espacio y/o del tiempo. La estadística de los campos aleatorios está codificada en el espectro de potencias \(\symrm{P(k)}\), donde \(k\) es el módulo del vector de onda comóvil.
 \newpage
-Sin embargo, si se proporciona un \(P(k)\), no es muy sencillo visualizar cómo sería el correspondiente mapa espacial de fluctuaciones, lo que dificulta la intuición de lo que significa un espectro de potencia concreto. En este trabajo, mediante el uso del lenguaje de programación \textit{Python}, se generarán y representarán realizaciones de distintos campos aleatorios gaussianos de densidad.
+Sin embargo, si se proporciona un \(\symrm{P(k)}\), no es muy sencillo visualizar cómo sería el correspondiente mapa espacial de fluctuaciones, lo que dificulta la intuición de lo que significa un espectro de potencias concreto. En este trabajo, mediante el uso del lenguaje de programación \textit{Python}, se generarán y representarán realizaciones de distintos campos aleatorios gaussianos de densidad.
 \clearpage
 \section{El universo homogéneo e isótropo}\label{sec::homogeneo}
 La cosmología física necesita un marco teórico que permita explicar los datos observacionales. En ausencia de dicho marco, ni siquiera las propiedades observables más básicas de las galaxias, como el desplazamiento al rojo, el brillo o tamaño aparentes, podrían interpretarse correctamente. El actual marco teórico aceptado por la mayoría de los astrónomos es el ``modelo de concordancia'' ---dentro de la teoría del \textit{Big Bang}--- que es un modelo basado en la métrica Friedmann-Lemaître-Robertson-Walker (FLRW). Estos modelos están basados en la suposición de que el universo se rige por la relatividad general y es esencialmente homogéneo e isótropo, si se suaviza en escalas suficientemente grandes.
@@ -26,11 +26,11 @@ La teoría estándar del \textit{Hot Big Bang} es considerablemente exitosa, sup
 
 El universo se está expandiendo~\cite{hubble1929relation}. Era entonces más denso y caliente en el pasado. Las partículas colisionaban frecuentemente y el universo estaba en un estado de equilibrio térmico con una temperatura \(T\). Ajustando la constante de Boltzmann a la unidad \(k_B=1\), se mide la temperatura en unidades de energía. De este modo, midiendo las energías en electronvoltios:
 \begin{equation}
-    \mathrm{eV}\approx 1.6\times 10^{-19}\,\mathrm{J}\approx 1.2\times 10^{4}\,\mathrm{K}.
+    \symrm{eV}\approx 1.6\times 10^{-19}\,\symrm{J}\approx 1.2\times 10^{4}\,\symrm{K}.
 \end{equation}
 La relación entre la temperatura del universo temprano y su edad es~\cite{baumann2022cosmology}
 \begin{equation}
-    \frac{T}{1\,\mathrm{MeV}}\simeq \left(\frac{t}{1\,\mathrm{s}}\right)^{-1/2}.
+    \frac{T}{1\,\symrm{MeV}}\simeq \left(\frac{t}{1\,\symrm{s}}\right)^{-1/2}.
 \end{equation}
 Un segundo después del \textit{Big Bang} la temperatura del universo era de unos \(10^{11}\) K (o 1 MeV). Como aún había pasado poco tiempo en el universo temprano, la cadencia de las reacciones era extremadamente alta, así que pasaron muchas cosas en un corto periodo de tiempo (véase~\autoref{tab::eventos}).
     {\renewcommand{\arraystretch}{1.1}
@@ -64,7 +64,7 @@ Un segundo después del \textit{Big Bang} la temperatura del universo era de uno
             \end{tabular}
         \end{table}}
 
-Un acontecimiento importante en la historia del universo primitivo es la formación de los primeros átomos y el consecuente desacoplamiento de los fotones (véase~\autoref{fig::decouple}). Ocurrió 380 000 años después del \textit{Big Bang} y se le conoce por \textbf{recombinación}. En este punto, la temperatura era lo suficientemente baja ---debajo de 0.3 eV--- para que se formaran átomos de hidrógeno mediante la reacción \(\mathrm{e^{-}}+\mathrm{p^+}\rightarrow \mathrm{H}+\gamma\). Alrededor de 0.25 eV, los fotones se desacoplaron de la materia y el universo se torna transparente. Estos fotones todavía se ven hoy en día como un resplandor del \textit{Big Bang}. Estirada por 13 800 millones de años de expansión cósmica, la primera luz del universo se observa hoy como una débil radiación de microondas, el CMB~\cite{penzias1965measurement}.
+Un acontecimiento importante en la historia del universo primitivo es la formación de los primeros átomos y el consecuente desacoplamiento de los fotones (véase~\autoref{fig::decouple}). Ocurrió 380 000 años después del \textit{Big Bang} y se le conoce por \textbf{recombinación}. En este punto, la temperatura era lo suficientemente baja ---debajo de 0.3 eV--- para que se formaran átomos de hidrógeno mediante la reacción \(\symrm{e^{-}}+\symrm{p^+}\rightarrow \symrm{H}+\gamma\). Alrededor de 0.25 eV, los fotones se desacoplaron de la materia y el universo se torna transparente. Estos fotones todavía se ven hoy en día como un resplandor del \textit{Big Bang}. Estirada por 13 800 millones de años de expansión cósmica, la primera luz del universo se observa hoy como una débil radiación de microondas, el CMB~\cite{penzias1965measurement}.
 \begin{figure}
     \centering
     \def\svgwidth{0.9\textwidth}
@@ -83,10 +83,10 @@ Para especificar las condiciones iniciales del \textit{Hot Big Bang}, se definen
     \centering
     \def\svgwidth{0.75\textwidth}
     \input{svg/horizonproblem.pdf_tex}
-    \caption[Ilustración del problema del horizonte]{Ilustración del problema del horizonte en el modelo convencional del \textit{Big Bang}. Todos los eventos que observamos actualmente están en nuestro cono de luz pasado. La intersección de nuestro cono de luz del pasado con la franja espacial en el momento de la recombinación es la superficie de última dispersión. Los puntos que están separados por más de 2° en el cielo parecen no haber estado nunca haber estado en contacto causal, ya que sus conos de luz pasados no se solapan. Notar que la singularidad del \textit{Big Bang} es un momento en el tiempo y no un punto en el espacio.}
+    \caption[Ilustración del problema del horizonte]{Ilustración del problema del horizonte en el modelo convencional del \textit{Big Bang}. Todos los eventos que son observados actualmente están en nuestro cono de luz pasado. La intersección de nuestro cono de luz del pasado con la franja espacial en el momento de la recombinación es la superficie de última dispersión. Los puntos que están separados por más de 2° en el cielo parecen no haber estado nunca haber estado en contacto causal, ya que sus conos de luz pasados no se solapan. Notar que la singularidad del \textit{Big Bang} es un momento en el tiempo y no un punto en el espacio.}
     \label{fig::horizonproblem}
 \end{figure}
-Para visualizar el primer problema, considérense dos direcciones opuestas en el cielo. Los fotones del CMB que recibimos de dichas direcciones fueron emitidos en los puntos etiquetados como \(q\) y \(p\) en la~\autoref{fig::horizonproblem}. Se observa que los fotones fueron liberados lo suficientemente cerca de la singularidad del \textit{Big Bang} para que los conos de luz del pasado de \(q\) y \(p\) no se superpongan. Como ningún punto se encuentra dentro de los horizontes de \(q\) y \(p\), tenemos el siguiente enigma: ¿Cómo ``saben'' los fotones procedentes de estos dos puntos que deben estar a la misma temperatura? Simplemente no hubo tiempo suficiente para que las diferencias en las temperaturas iniciales se eliminaran mediante transferencia de calor. Lo mismo se aplica para cualesquiera dos puntos en el CMB que estén separados por más de 2°~\cite{baumann2022cosmology}.
+Para visualizar el primer problema, considérense dos direcciones opuestas en el cielo. Los fotones del CMB que son recibidos de dichas direcciones fueron emitidos en los puntos etiquetados como \(q\) y \(p\) en la~\autoref{fig::horizonproblem}. Se observa que los fotones fueron liberados lo suficientemente cerca de la singularidad del \textit{Big Bang} para que los conos de luz del pasado de \(q\) y \(p\) no se superpongan. Como ningún punto se encuentra dentro de los horizontes de \(q\) y \(p\), se tiene el siguiente enigma: ¿Cómo ``saben'' los fotones procedentes de estos dos puntos que deben estar a la misma temperatura? Simplemente no hubo tiempo suficiente para que las diferencias en las temperaturas iniciales se eliminaran mediante transferencia de calor. Lo mismo se aplica para cualesquiera dos puntos en el CMB que estén separados por más de 2°~\cite{baumann2022cosmology}.
 
 \begin{figure}
     \centering
@@ -101,41 +101,41 @@ Para que el universo siga siendo homogéneo en tiempos posteriores, las velocida
 
 Los problemas de causalidad descritos arriba sugieren que hubo una fase antes del \textit{Hot Big Bang}, durante la cual la homogeneidad del universo y sus correspondientes fluctuaciones fueron generadas. Un periodo de expansión acelerada es suficiente para resolverlos. Pero es necesario un escenario viable para dirigir tal expansión. Los campos escalares son la receta a seguir.
 \section{Inflación}
-Sabemos que para obtener una expansión acelerada, la presión efectiva debe ser negativa~\cite{dodelson2020modern}. Inflación, aparentemente, fue dirigida por una forma de energía cuya presión \(\mathcal{P}<0\). La presión negativa no es algo familiar para los físicos. Así, sea lo que sea que conduce inflación, no es materia ordinaria o radiación. Tampoco puede ser una constante cosmológica: en este caso, el universo estaría en un estado de rápida inflación perpetuo, mientras que necesitamos que el periodo inflacionario termine y exista una transición de la fase dominada por radiación a la fase dominada por materia, ambas conocidas.
+Es sabido que para obtener una expansión acelerada, la presión efectiva debe ser negativa~\cite{dodelson2020modern}. Inflación, aparentemente, fue dirigida por una forma de energía cuya presión \(\symcal{P}<0\). La presión negativa no es algo familiar para los físicos. Así, sea lo que sea que conduce inflación, no es materia ordinaria o radiación. Tampoco puede ser una constante cosmológica: en este caso, el universo estaría en un estado de rápida inflación perpetuo, mientras que es necesario que el periodo inflacionario termine y exista una transición de la fase dominada por radiación a la fase dominada por materia, ambas conocidas.
 \newpage
-La forma más simple de generar tal época transitoria de expansión acelerada es mediante la energía potencial de un campo escalar. En física de partículas, se utilizan los campos escalares para representar partículas de espín cero. Se transforman como un escalar (es decir, no cambian) bajo transformaciones de coordenadas. En un universo homogéneo, un campo escalar será función del tiempo únicamente. Notar que no hay campo escalar conocido que pueda regir inflación. Aunque conocemos un campo escalar en la naturaleza, el campo de Higgs, usarlo para dirigir inflación resulta ser complicado. Sus propiedades e interacciones están lo suficientemente restringidas, por ahora, para que sepamos que no puede servir como fuente de la inflación. No obstante, hay que tener en cuenta que puede ser cierto que la idea de la inflación sea correcta, pero esté impulsada por algo distinto a un campo escalar.
+La forma más simple de generar tal época transitoria de expansión acelerada es mediante la energía potencial de un campo escalar. En física de partículas, se utilizan los campos escalares para representar partículas de espín cero. Se transforman como un escalar (es decir, no cambian) bajo transformaciones de coordenadas. En un universo homogéneo, un campo escalar será función del tiempo únicamente. Notar que no hay campo escalar conocido que pueda regir inflación. Aunque no se conoce un campo escalar en la naturaleza, el campo de Higgs, usarlo para dirigir inflación resulta ser complicado. Sus propiedades e interacciones están lo suficientemente restringidas, por ahora, para que se sepa que no puede servir como fuente de la inflación. No obstante, hay que tener en cuenta que puede ser cierto que la idea de la inflación sea correcta, pero esté impulsada por algo distinto a un campo escalar.
 \subsection{Dinámica del campo escalar}
-Se toman como punto de partida las expresiones de la densidad de energía y presión efectivas de un campo escalar \(\phi\left(t,\symbf{x}\right)\) que llamaremos \textbf{inflatón}. Como se indica en la notación, el valor del campo depende del tiempo \(t\) y de la posición \(\symbf{x}\). Asociado a cada valor del campo hay una densidad de energía potencial \(V(\phi)\). Cuando el campo es dinámico (cambia con el tiempo) entonces también incluye una densidad de energía cinética \(\frac{1}{2}\dot{\phi}^2\). Si la energía asociada al campo escalar domina el universo, entonces sirve como fuente de la evolución de este en el modelo FLRW~\cite{baumann2022cosmology}, donde se tiene al mismo ocupado por un fluido perfecto. Dichas expresiones de la densidad de energía y presión, se obtienen por comparación del tensor energía-momento (ecuaciones relatividad general de Einstein) del campo escalar con el de un fluido perfecto, y son
+Se toman como punto de partida las expresiones de la densidad de energía y presión efectivas de un campo escalar \(\phi\left(t,\symbf{x}\right)\) que se denominará \textbf{inflatón}. Como se indica en la notación, el valor del campo depende del tiempo \(t\) y de la posición \(\symbf{x}\). Asociado a cada valor del campo hay una densidad de energía potencial \(V(\phi)\). Cuando el campo es dinámico (cambia con el tiempo) entonces también incluye una densidad de energía cinética \(\frac{1}{2}\dot{\phi}^2\). Si la energía asociada al campo escalar domina el universo, entonces sirve como fuente de la evolución de este en el modelo FLRW~\cite{baumann2022cosmology}, donde se tiene al mismo ocupado por un fluido perfecto. Dichas expresiones de la densidad de energía y presión, se obtienen por comparación del tensor energía-momento (ecuaciones relatividad general de Einstein) del campo escalar con el de un fluido perfecto, y son
 \begin{subequations}
     \begin{align}
-        \rho_\phi&=\frac{1}{2}\dot{\phi}^2+V(\phi)\label{eq::rho}\\
-        \mathcal{P}_\phi&=\frac{1}{2}\dot{\phi}^2-V(\phi),
+        \rho_\phi       & =\frac{1}{2}\dot{\phi}^2+V(\phi)\label{eq::rho} \\
+        \symcal{P}_\phi & =\frac{1}{2}\dot{\phi}^2-V(\phi),
     \end{align}
     \label{eq::eqscampo}
 \end{subequations}
 respectivamente, donde \(\dot{\phi}\) indica derivada temporal.
 
-En lo sucesivo son utilizadas las unidades naturales, esto es, \(c=\hbar=1\). Definimos la ecuación de estado de un fluido perfecto con el número adimensional \(\mathscr{w}\):
+En lo sucesivo son utilizadas las unidades naturales, esto es, \(c=\hbar=1\). Sea definida la ecuación de estado de un fluido perfecto con el número adimensional \(\symscr{w}\):
 \begin{equation}
-    \mathscr{w}\equiv\frac{\mathcal{P}_\phi}{\rho_\phi}.
+    \symscr{w}\equiv\frac{\symcal{P}_\phi}{\rho_\phi}.
 \end{equation}
-El universo está acelerando solo si es gobernado por uno o varios componentes energéticos con ecuaciones de estado \(\mathscr{w}_i<-1/3\)~\cite{knobel2012introduction}. Así que durante inflación se ha de cumplir esta condición.
+El universo está acelerando solo si es gobernado por uno o varios componentes energéticos con ecuaciones de estado \(\symscr{w}_i<-1/3\)~\cite{knobel2012introduction}. Así que durante inflación se ha de cumplir esta condición.
 
 En el marco FLRW, el campo escalar es homogéneo y por tanto, solo depende del tiempo, esto es, \(\phi\left(t,\symbf{x}\right)\rightarrow\phi(t)\). Este obedece la ecuación de movimiento
 \begin{equation}
     \ddot{\phi}+3H\dot{\phi}+V'(\phi)=0,\label{eq::eqmovcampo}
 \end{equation}
-donde \(V'(\phi)=\mathrm{d}V/\mathrm{d}\phi\) y
+donde \(V'(\phi)=\symrm{d}V/\symrm{d}\phi\) y
 \begin{equation}
-    H=H(t)\equiv \frac{1}{a}\frac{\mathrm{d}a}{\mathrm{d}t}
+    H=H(t)\equiv \frac{1}{a}\frac{\symrm{d}a}{\symrm{d}t}
 \end{equation}
 es el parámetro de Hubble, donde \(a(t)\) es el factor de escala (cantidad adimensional) del universo, el cual cuantiza el tamaño físico de este. La forma de \(a(t)\) depende de las propiedades del material dentro del universo~\cite{liddle1998introduction}. El término \(\dot{\phi}^2/2\) en~\ref{eq::eqscampo} es como la ``energía cinética'' del campo y \(3H\dot{\phi}\) en~\ref{eq::eqmovcampo} viene de la expansión del universo y actúa como una fricción. Con las expresiones en~\ref{eq::eqscampo}, la ecuación de estado del campo escalar es
 \begin{equation}
-    \mathscr{w}(t)=\frac{\frac{1}{2}\dot{\phi}^2-V(\phi)}{\frac{1}{2}\dot{\phi}^2+V(\phi)}\label{eq::estado}
+    \symscr{w}(t)=\frac{\frac{1}{2}\dot{\phi}^2-V(\phi)}{\frac{1}{2}\dot{\phi}^2+V(\phi)}\label{eq::estado}
 \end{equation}
-con los límites \(-1\leq\mathscr{w}(t)\leq 1\). La ecuación de arriba es generalmente dependiente del tiempo. No obstante, si \(\dot{\phi}^2<4V(\phi)\) entonces \(\mathscr{w} < -1/3\) y la condición para inflación es satisfecha. Más aún, si \(\dot{\phi}^2 \ll V(\phi)\), entonces la ecuación de estado se torna \(\mathscr{w}\simeq -1\) y es constante. La expansión asociada del universo es, en este último caso, exponencial con \(H\) y \(\phi\) siendo prácticamente constantes~\cite{knobel2012introduction}.
+con los límites \(-1\leq\symscr{w}(t)\leq 1\). La ecuación de arriba es generalmente dependiente del tiempo. No obstante, si \(\dot{\phi}^2<4V(\phi)\) entonces \(\symscr{w} < -1/3\) y la condición para inflación es satisfecha. Más aún, si \(\dot{\phi}^2 \ll V(\phi)\), entonces la ecuación de estado se torna \(\symscr{w}\simeq -1\) y es constante. La expansión asociada del universo es, en este último caso, exponencial con \(H\) y \(\phi\) siendo prácticamente constantes~\cite{knobel2012introduction}.
 \subsection{Inflación \textit{Slow-roll}}
-Hasta ahora, la forma del potencial \(V(\phi)\) está indeterminada y hay bastantes escenarios de inflación posibles en la literatura, véase~\cite{liddle2000cosmological}. Sin embargo, las predicciones de los modelos más simples de inflación son bastante robustas y de este modo no es necesario especificar todos los detalles siempre y cuando se cumplan ciertas características. El escenario más popular y simple de inflación supone un campo escalar ``rodando lentamente'' (de aquí en adelante se usará el anglicismo \textit{slow-roll} para referirnos a este tipo de escenarios) hacia su estado fundamental~\cite{linde1982new,albrecht1982cosmology}. La energía potencial de un campo escalar \textit{slow-roll} es muy cercana a constante (si el potencial no es muy pronunciado) por lo que rápidamente llega a dominar sobre la energía cinética (y la energía de todas las demás partículas). Un ejemplo es mostrado en la~\autoref{fig::potential}; inflación acaba una vez el campo haya llegado al mínimo del potencial, donde oscilará y decaerá a partículas más ligeras ---eventualmente a aquellas del modelo estándar de partículas--- en un proceso llamado \textbf{recalentamiento} (del que no conocemos los detalles, pero sabemos de varios mecanismos físicos para conseguirlo), siguiendo a este la escena del \textit{Big Bang} que fue discutida en la sección anterior. En ese momento, el campo ya no rueda lentamente, sino que tiene una energía cinética importante, por lo que oscila en torno al mínimo. Entonces, la ecuación de estado~\ref{eq::estado} ya no está cerca de -1, sino cerca de cero, por lo que el universo ha pasado a una época de expansión desacelerada. Entonces, al final, \(\phi\) decae en partículas más ligeras. Con el tiempo, quizá tras una larga cadena de desintegraciones, el resultado es un universo casi completamente homogéneo, dominado por la radiación.
+Hasta ahora, la forma del potencial \(V(\phi)\) está indeterminada y hay bastantes escenarios de inflación posibles en la literatura, véase~\cite{liddle2000cosmological}. Sin embargo, las predicciones de los modelos más simples de inflación son bastante robustas y de este modo no es necesario especificar todos los detalles siempre y cuando se cumplan ciertas características. El escenario más popular y simple de inflación supone un campo escalar ``rodando lentamente'' (de aquí en adelante se usará el anglicismo \textit{slow-roll} para referirnos a este tipo de escenarios) hacia su estado fundamental~\cite{linde1982new,albrecht1982cosmology}. La energía potencial de un campo escalar \textit{slow-roll} es muy cercana a constante (si el potencial no es muy pronunciado) por lo que rápidamente llega a dominar sobre la energía cinética (y la energía de todas las demás partículas). Un ejemplo es mostrado en la~\autoref{fig::potential}; inflación acaba una vez el campo haya llegado al mínimo del potencial, donde oscilará y decaerá a partículas más ligeras ---eventualmente a aquellas del modelo estándar de partículas--- en un proceso llamado \textbf{recalentamiento} (del que no se conocen los detalles, pero se tienen varios mecanismos físicos para conseguirlo), siguiendo a este la escena del \textit{Big Bang} que fue discutida en la sección anterior. En ese momento, el campo ya no rueda lentamente, sino que tiene una energía cinética importante, por lo que oscila en torno al mínimo. Entonces, la ecuación de estado~\ref{eq::estado} ya no está cerca de -1, sino cerca de cero, por lo que el universo ha pasado a una época de expansión desacelerada. Entonces, al final, \(\phi\) decae en partículas más ligeras. Con el tiempo, quizá tras una larga cadena de desintegraciones, el resultado es un universo casi completamente homogéneo, dominado por la radiación.
 \begin{figure}[t]
     \centering
     \def\svgwidth{0.65\textwidth}
@@ -144,7 +144,7 @@ Hasta ahora, la forma del potencial \(V(\phi)\) está indeterminada y hay bastan
     \label{fig::potential}
 \end{figure}
 \newpage
-Estos modelos contienen un solo campo escalar \(\phi\) (inflatón) y resolver la ecuación de movimiento~\ref{eq::eqmovcampo} se vuelve accesible si hacemos la aproximación \textit{slow-roll} donde el término \(\ddot{\phi}\) es despreciable. La motivación física aquí es que interesa más un comportamiento de expansión, así el potencial domina en la densidad de energía~\cite{peacock1998cosmological}. La condición es
+Estos modelos contienen un solo campo escalar \(\phi\) (inflatón) y resolver la ecuación de movimiento~\ref{eq::eqmovcampo} se vuelve accesible haciendo la aproximación \textit{slow-roll} donde el término \(\ddot{\phi}\) es despreciable. La motivación física aquí es que interesa más un comportamiento de expansión, así el potencial domina en la densidad de energía~\cite{peacock1998cosmological}. La condición es
 \begin{equation}
     \frac{\dot{\phi}^2}{2}\ll V(\phi);
 \end{equation}
@@ -165,24 +165,156 @@ donde \(G\) es la constante de gravitación universal, se obtiene un potente y s
 La inflación \textit{slow-roll} es, por lo general, cuantificada por los \textbf{parámetros adimensionales de \textit{slow-roll}}\footnote{Notar que \(\epsilon\) es positivo por definición y \(\eta\) puede ser positivo o negativo}
 \begin{subequations}
     \begin{align}
-        \epsilon&\equiv\frac{1}{16\pi G}\left(\frac{V'}{V}\right)^2\ll 1\\
-        \left|\eta\right|&\equiv\frac{1}{8\pi G}\frac{V''}{V}\ll 1,
+        \epsilon          & \equiv\frac{1}{16\pi G}\left(\frac{V'}{V}\right)^2\ll 1 \\
+        \left|\eta\right| & \equiv\frac{1}{8\pi G}\frac{V''}{V}\ll 1,
     \end{align}
     \label{eq::slowroll}
 \end{subequations}
 donde el primero mide la pendiente del potencial y el segundo, su curvatura. Estos criterios dan la intuición exacta: el potencial debe ser plano en el sentido de tener pequeñas derivadas si el campo ha de rodar lo suficientemente lento para que inflación sea posible. Ya que \(\epsilon\ll 1\) y \(\left|\eta\right|\ll 1\) son equivalentes a \(V'/V\ll 1\) y \(V''/V\ll 1\), respectivamente, la aproximación \textit{slow-roll} es automáticamente satisfecha si \(V(\phi)\) es lo \textbf{suficientemente} plano.
 \section{Perturbaciones cosmológicas}
-El universo es homogéneo e isótropo a escalas mayores de 100 Mpc~\cite{baumann2022cosmology}, pero a escalas más pequeñas se observan grandes desviaciones de la densidad media en forma de galaxias, cúmulos de galaxias y la red cósmica formada por hojas y filamentos de galaxias. ¿Cómo crecen las estructuras en el universo y cómo podemos describirlas?
+El universo es homogéneo e isótropo a escalas mayores de 100 Mpc~\cite{baumann2022cosmology}, pero a escalas más pequeñas se observan grandes desviaciones de la densidad media en forma de galaxias, cúmulos de galaxias y la red cósmica formada por hojas y filamentos de galaxias. ¿Cómo crecen las estructuras en el universo y cómo se describen?
 
-En el modelo estándar cosmológico que mencionamos en la~\autoref{sec::homogeneo} se supone que el universo es altamente homogéneo en sus tiempos más tempranos. Estas enormes estructuras galácticas observadas hoy en día han crecido a partir de pequeñas perturbaciones iniciales de la densidad debido a la acción de la gravedad. En este escenario, la formación de estructuras en el universo implica dos temas a tratar: (i) las propiedades de las perturbaciones de densidad iniciales, y (ii) la evolución temporal de las perturbaciones cosmológicas en un universo en expansión. Para entender la estructura a gran escala del universo, se han de introducir perturbaciones y, mientras sean lo suficientemente pequeñas (régimen lineal), estudiar las propiedades estadísticas dadas por sus correspondientes funciones de distribución.
+En el modelo estándar cosmológico que es mencionado en la~\autoref{sec::homogeneo} se supone que el universo es altamente homogéneo en sus tiempos más tempranos. Estas enormes estructuras galácticas observadas hoy en día han crecido a partir de pequeñas perturbaciones iniciales de la densidad debido a la acción de la gravedad. En este escenario, la formación de estructuras en el universo implica dos temas a tratar: (i) las propiedades de las perturbaciones de densidad iniciales, y (ii) la evolución temporal de las perturbaciones cosmológicas en un universo en expansión. Para entender la estructura a gran escala del universo, se han de introducir perturbaciones y, mientras sean lo suficientemente pequeñas (régimen lineal), estudiar las propiedades estadísticas dadas por sus correspondientes funciones de distribución.
 
-Si se descomponen las perturbaciones cosmológicas en ``modos'' de Fourier, encontraremos que algunos de ellos se amplifican durante la evolución lineal mientras que otros se amortiguan. Los resultados de la evolución temporal están representados por una \textbf{función de transferencia} lineal que describe el cambio en la amplitud de la perturbación como una función del modo de Fourier. La importancia de esta función de transferencia radica en que, una vez que el espectro de la perturbación (es decir, la amplitud de la perturbación en función del modo de Fourier) se establece en algún momento durante inflación, nos permite calcular el espectro de potencias de la perturbación en cualquier momento posterior. Como se verá, si las perturbaciones de densidad tienen una distribución gaussiana, entonces el campo de densidad está completamente especificado por el espectro de potencia.
+Si se descomponen las perturbaciones cosmológicas en ``modos'' de Fourier, se hallará que algunos de ellos se amplifican durante la evolución lineal mientras que otros se amortiguan. Los resultados de la evolución temporal están representados por una \textbf{función de transferencia} lineal que describe el cambio en la amplitud de la perturbación como una función del modo de Fourier. La importancia de esta función de transferencia radica en que, una vez que el espectro de la perturbación (es decir, la amplitud de la perturbación en función del modo de Fourier) se establece en algún momento durante inflación, nos permite calcular el espectro de potencias de la perturbación en cualquier momento posterior. Como se verá, si las perturbaciones de densidad tienen una distribución gaussiana, entonces el campo de densidad está completamente especificado por el espectro de potencias.
 \subsection{Fluctuaciones con origen en inflación}
 Ahora se ha de considerar el mayor logro de la inflación, que no se previó cuando se propuso la teoría: proporciona un mecanismo concreto para generar las semillas de la estructura en el universo. Hay que tener presente que la evolución del campo inflatón \(\phi(t)\) gobierna la densidad de energía \(\rho(t)\)~(\ref{eq::rho}). En esencia, la idea es que las inevitables pequeñas fluctuaciones espaciales del campo inflatón \(\delta\phi(\symbf{x})\) producidas por el principio de incertidumbre se transforman en fluctuaciones clásicas de la densidad de energía, \(\delta\rho(t,\symbf{x})\), cuando inflación ha terminado. Los detalles de este proceso son muy técnicos y se salen de la mira de este texto. Esto se ilustra en la~\autoref{fig::fluctuaciones}. Las regiones del espacio que terminen inflación primero comenzarán a diluirse y, por tanto, acabarán teniendo densidades más pequeñas. Las regiones que sienten inflación durante más tiempo tendrán densidades más altas. Vale la pena destacar que la teoría no fue diseñada para producir estas fluctuaciones, sino que su origen es una consecuencia natural de tratar inflación cuánticamente. Además, se verá que las propiedades estadísticas de las perturbaciones espaciales creadas por la inflación coinciden muy bien con las observaciones.
 \begin{figure}
     \centering
     \def\svgwidth{0.75\textwidth}
     \input{svg/fluctuations.pdf_tex}
-    \caption[Fluctuaciones cuánticas a clásicas]{Las fluctuaciones cuánticas \(\delta\phi(\symbf{x})\) en torno a la evolución del inflatón clásico \(\bar{\phi}(t)\) afectan a la duración del período inflacionario. Las regiones que adquieren fluctuaciones negativas \(\delta\phi\) permanecen dominadas por el potencial durante más tiempo, y por lo tanto se inflan más tiempo, que las regiones con \(\delta\phi\) positivas. Por lo tanto, las distintas partes del universo experimentan evoluciones ligeramente diferentes, lo que induce variaciones en la densidad después de la inflación, \(\delta\rho(t,\symbf{x})\).}
+    \caption[Fluctuaciones cuánticas a clásicas]{Las fluctuaciones cuánticas \(\delta\phi(\symbf{x})\) en torno a la evolución del fondo del inflatón clásico \(\overbar{\phi}(t)\) afectan a la duración del período inflacionario. Las regiones que adquieren fluctuaciones negativas \(\delta\phi\) permanecen dominadas por el potencial durante más tiempo, y por lo tanto se inflan más tiempo, que las regiones con \(\delta\phi\) positivas. Por lo tanto, las distintas partes del universo experimentan evoluciones ligeramente diferentes, lo que induce variaciones en la densidad después de la inflación, \(\delta\rho(t,\symbf{x})\).}
     \label{fig::fluctuaciones}
 \end{figure}
+\subsection{El campo de fluctuaciones de densidad de energía}
+A la hora de describir la evolución del campo de densidad \(\rho(t,\symbf{x})\) para explicar la estructura a gran escala que se observa hoy, se toma que esta empezó con pequeñas desviaciones iniciales del modelo FLRW homogéneo y creció por inestabilidad gravitatoria. En épocas donde estas desviaciones son muy pequeñas, pueden ser tratadas como perturbaciones alrededor del fondo homogéneo (indicado por una barra superior), tomando solamente términos a primer orden en las cantidades perturbadas (indicadas por \(\delta\)). Esto se conoce como \textbf{teoría lineal} y el régimen donde es válida, \textbf{régimen lineal}. La teoría newtoniana fue inicialmente formulada por Bonnor~\cite{bonnor1957jeans}.
+
+En concreto, el objetivo principal de este texto es el tratamiento de la densidad de energía \(\rho\). Para este campo se define el correspondiente campo de fluctuaciones
+\begin{equation}
+    \delta(t,\symbf{x})\equiv\frac{\delta\rho(t,\symbf{x})}{\overbar{\rho}(t)}=\frac{\rho(t,\symbf{x})-\overbar{\rho}(t)}{\overbar{\rho}(t)}.\label{eq::campofluct}
+\end{equation}
+
+En el régimen lineal, la ecuación en derivadas parciales (EDP) que gobierna la evolución del campo de fluctuaciones de densidad~\ref{eq::campofluct} es lineal en las cantidades perturbadas~\cite{mo_van}. De hecho, la única dependencia espacial es debida a las perturbaciones y se trabaja a primer orden en ellas. Si la curvatura del universo, como es el caso del nuestro, es muy pequeña (puede ser despreciada), este tipo de EDPs son particularmente adecuadas para ser tratadas en el espacio de Fourier. Sea definida la transformada espacial de Fourier como
+\begin{equation}
+    \delta(\symbf{x})=\int\frac{\symrm{d}^3 k}{\left(2\pi\right)^3}\ \symrm{e}^{\symrm{i}\symbf{k\cdot x}}\ \delta(\symbf{k}),
+\end{equation}
+donde, al ser \(\symbf{x}\) las coordenadas comóviles, \(\symbf{k}\) son los vectores de onda comóviles. De la ecuación anterior se tiene:
+\begin{equation}
+    \delta(\symbf{k})=\int\symrm{d}^3 x\ \symrm{e}^{-\symrm{i}\symbf{k\cdot x}}\ \delta(\symbf{x}).
+\end{equation}
+De este modo, el campo de fluctuaciones es expresado como una superposición de un espectro de ``modos'' ondulantes. Un modo cualquiera es \(\symrm{e}^{\symrm{i}\symbf{k\cdot x}}\) y su amplitud es \(\delta(\symbf{k})\), el valor correspondiente del campo de fluctuaciones en el espacio de Fourier. La longitud de onda \(\lambda\) de dicho modo se relaciona con el vector de onda \(\symbf{k}\) por:
+\begin{equation}
+    \lambda=\frac{2\pi}{\left|\symbf{k}\right|}=\frac{2\pi}{k}.
+\end{equation}
+De ahí que las perturbaciones de longitud de onda larga correspondan a números de onda pequeños, y las perturbaciones de longitud de onda corta corresponden a números de onda grandes. Un modo será caracterizado por el módulo de su vector de onda, su número de onda \(k\).
+
+Las derivadas respecto de \(\symbf{x}\) se vuelven relaciones algebraicas en el espacio de Fourier haciendo que la EDP se convierta en un conjunto de ecuaciones diferenciales ordinarias (ODE), las cuales están desacopladas: es posible resolver la ecuación para un \(\symbf{k}\), sin saber la solución para otros valores \(\symbf{k}'\). Esto quiere decir que cada modo de Fourier evoluciona independientemente.
+\section{Estadística del campo de fluctuaciones}
+En cosmología, usualmente, no se predice el comportamiento y evolución de sistemas simples, sino más bien las propiedades estadísticas de un gran conjunto de ellos. Por ejemplo, no hay forma de predecir qué punto en el universo debería tener exceso de densidad y cuál defecto, pero es posible predecir la probabilidad de estos sucesos. Además, particularmente en este caso, al ser fluctuaciones cuánticas todo lo que se puede hacer son predicciones estadísticas. Por lo tanto, el universo observable será tomado como una realización concreta de un conjunto estadístico de posibilidades. Dicha descripción estadística es necesaria para poder relacionar teoría con observaciones.
+
+Fundamentalmente, el campo de fluctuaciones \(\delta(t,\symbf{x})\) contiene toda la información sobre la estructura a gran escala del universo en cualquier instante de tiempo. Para caracterizar esta estructura y comparar observaciones de \(\delta\) con teoría, tiene todo el sentido pensar en \(\delta\) como una realización de un proceso estocástico. Ya que dicho proceso no está limitado a un solo punto, sino a todo el espacio, la maquinaria matemática necesaria es la teoría de campos aleatorios~\cite{MILLER1975185}.
+\subsection{Campos aleatorios}
+Los campos aleatorios son la generalización natural de una variable aleatoria. Sea \(r\) una variable aleatoria con función de densidad de probabilidad (FDP) \(\symbb{P}(r)\), donde está toda la información de \(r\) codificada. Sabiendo todos los momentos (media, segundo momento, varianza, etc.) de \(\symbb{P}(r)\) es posible reconstruir la FDP. Estos momentos son los que se miden experimentalmente.
+
+Un campo aleatorio \(\delta(t,\symbf{x})\) es una variable aleatoria en cada punto del espacio \(\symbf{x}\). Así, se tiene un número infinito de variables aleatorias, una por cada punto en el espacio. Por definición, \(\delta\) tiene media nula
+\begin{equation}
+    \left\langle\delta\right\rangle=\left\langle\frac{\rho-\overbar{\rho}}{\overbar{\rho}}\right\rangle=\frac{1}{\overbar{\rho}}\left\langle\rho-\overbar{\rho}\right\rangle=\frac{1}{\overbar{\rho}}\left(\overbar{\rho}-\overbar{\rho}\right)=0,\label{eq::media}
+\end{equation}
+donde \(\left\langle\cdots\right\rangle\) indica media del conjunto o valor esperado del proceso estocástico sobre el que está el campo aleatorio \(\delta\).
+
+Antes de continuar, hay que discutir un punto clave. Primero, en cosmología solo se tiene disponible un universo observable, entonces al contrario que en otras ciencias experimentales no es posible volver a ``ejecutar el universo'' desde un conjunto diferente de condiciones iniciales (consistente con las propiedades estadísticas), llegar a observar diferentes realizaciones del conjunto estadístico y promediar estos resultados para construir los valores esperados. De algún modo, es necesario definir como se van a medir los valores esperados cuando solo se dispone de una realización del universo observable.
+
+Para poder hacer alguna inferencia sobre el proceso estocástico subyacente, hay que postular algún tipo de ``ergodicidad'' o ``hipótesis de muestra razonable''. La ergodicidad se refiere a la propiedad matemática de los campos aleatorios de que promediar en volumen (espacialmente) converge a los valores esperados a medida que el volumen va llegando al infinito. En general, es difícil demostrar que un campo aleatorio tiene esta propiedad. Sin embargo, se puede demostrar que un campo aleatorio gaussiano, homogéneo y con media cero cumple ergodicidad~\cite{adler1981}. Por otro lado, la hipótesis de la muestra razonable~\cite{peebles1980large} afirma que zonas bien separadas del universo pueden considerarse realizaciones independientes del proceso estocástico subyacente y que el universo observable contiene muchas de esas realizaciones.
+
+Mientras que la ergodicidad es un preciso enunciado matemático que puede aplicarse o no a un determinado campo aleatorio, la hipótesis de la muestra razonable es más ambigua. Sin embargo, la hipótesis de la muestra razonable es más fuerte que la ergodicidad y probablemente más útil para estudiar la estructura a gran escala~\cite{watts2003statistical}, porque para obtener una muestra razonable no es necesario promediar sobre un volumen infinito, lo que es prácticamente imposible.
+\subsection{Funciones de correlación}
+Por definición, el valor medio del campo de fluctuaciones~(\ref{eq::media}) es cero. La primera medida estadística no trivial de este campo (fijado un tiempo \(t\)) es la función de correlación de dos puntos
+\begin{equation}
+    \xi\left(\symbf{x},\symbf{x}',t\right)\equiv\left\langle\delta(\symbf{x},t),\delta(\symbf{x}',t)\right\rangle=\int\symcal{D}\delta\,\symbb{P}\left[\delta\right]\,\delta(\symbf{x},t)\delta(\symbf{x}',t).\label{eq::corr}
+\end{equation}
+Para evitar exceso de notación, como el tiempo está fijado, se suprimirá la dependencia temporal. La integral es una integral funcional sobre el espacio de realizaciones del campo \(\symcal{D}\delta\) y \(\symbb{P}[\delta]\) es la FDP de las dos variables aleatorias \(\left\lbrace\delta(\symbf{x}),\delta(\symbf{x}')\right\rbrace\). Así, la ecuación~\ref{eq::corr} es un valor esperado que representa el promedio del proceso estocástico (fluctuaciones cuánticas en inflación) que creó el campo aleatorio \(\delta\). Ya que el principio cosmológico requiere que todas las direcciones y posiciones en el universo sean equivalentes, el campo de fluctuaciones debe ser estadísticamente homogéneo e isótropo. Estas dos características implican que la función de dos puntos ha de ser invariante ante traslaciones y rotaciones de forma que \(\xi(\symbf{x},\symbf{x}')=\xi(\symbf{x}-\symbf{x}')=\xi(r)\), donde \(r=\left|\symbf{x}-\symbf{x}'\right|\). La ecuación~\ref{eq::corr} es generalizable a funciones de \(N\)-puntos.
+
+En la sección anterior se ve que los modos de Fourier de las pequeñas fluctuaciones evolucionan independientemente. De este modo, es útil definir la función de dos puntos en el espacio de Fourier
+\begin{equation}
+    \left\langle\delta(\symbf{k})\delta^{*}(\symbf{k}')\right\rangle\equiv (2\pi)^3\,\delta_{\symrm{D}}(\symbf{k}-\symbf{k}')\,\symrm{P}(k),
+\end{equation}
+donde \(\delta(\symbf{k})\) es un campo aleatorio complejo
+\begin{equation}
+    \delta(\symbf{k})=A_k+\symrm{i}B_k.\label{eq::deltak}
+\end{equation}
+Por ser el campo de fluctuaciones \(\delta(\symbf{x})\) real, se ha de cumplir
+\begin{equation}
+    \delta(\symbf{-k})=\delta^{*}(\symbf{k})\Longleftrightarrow A_k=A_{-k}\wedge B_k=-B_{-k}.\label{eq::reality}
+\end{equation}
+La función \(\symrm{P}(k)\) es conocida como espectro de potencias y es la transformada de Fourier tridimensional de la función de correlación
+\begin{equation}
+    \symrm{P}(k)=\int\xi(x)\,\symrm{e}^{-\symrm{i}\symbf{k\cdot x}}\,\symrm{d}^3x.\label{eq::relation}
+\end{equation}
+Por la realidad de \(\delta(\symbf{x})\), la función de correlación también	es real, así que \(\symrm{P}(k)\) es una función real de igual manera. Mientras que la función de correlación \(\xi(r)\) es el objeto a considerar en las observaciones, el espectro de potencias \(\symrm{P}(k)\) es más fácil de predecir teóricamente y será usado en las simulaciones de este trabajo. Ambos están relacionados por~\ref{eq::relation} y son, por lo tanto, descripciones completamente equivalentes de la estadística.
+\subsection{Campos aleatorios gaussianos}
+De lo discutido en los dos apartados anteriores, reluce que es bastante costoso especificar un campo aleatorio genérico porque es necesaria la función de correlación que a su vez necesita de la FDP, la cual es deducida si se conocen una cantidad infinita de momentos estadísticos. Afortunadamente, el campo de densidad y sus fluctuaciones en el inicio del universo quedan bien descritos por un campo aleatorio gaussiano, homogéneo e isótropo~\cite{baumann2022cosmology, dodelson2020modern,mo_van}.
+
+Para un campo aleatorio gaussiano, la FDP \(\symbb{P}[\delta(\symbf{x})]\) es un funciona gaussiano de \(\delta(\symbf{x})\). La FDP para \(N\) puntos en el espacio, \(\symbf{x}_1,\ldots,\symbf{x}_N\), es una multivariable gaussiana
+\begin{equation}
+    \symbb{P}(\delta(\symbf{x}_1),\ldots,\delta(\symbf{x}_N))=\frac{1}{(2\pi)^{N/2}\sqrt{\symrm{det}(\symcal{M})}}\ \symrm{exp}\left(-\frac{1}{2}\sum^N_{i,\,j}\delta(\symbf{x}_i)\,\left(\symcal{M}^{-1}\right)_{ij}\,\delta(\symbf{x}_j)\right),
+\end{equation}
+donde \(\symcal{M}_{ij}\equiv\left\langle\delta(\symbf{x}_i)\delta(\symbf{x}_j)\right\rangle=\xi\left(\symbf{x}_i-\symbf{x}_j\right)\) es matriz de covarianza. Todas las funciones de \(N\)-puntos están determinadas por una integral funcional sobre \(\symbb{P}\) y por tanto fijadas completamente en términos de la función de correlación de dos puntos \(\xi(r)\).
+
+Cualquier combinación lineal de variables gaussianas tiene también distribución gaussiana. Esto permite obtener las FDP de las transformadas de Fourier~\ref{eq::deltak}, que son combinaciones lineales de \(\delta(\symbf{x})\). Se han de cumplir las condiciones de realidad~\ref{eq::reality}. Por esto, se prueba que las FDP de \(A_k\) y \(B_k\) son gaussianas con media cero y varianza \(\symrm{P}(k)\)~\cite{mo_van} que de manera computacional serán simuladas usando números aleatorios gaussianos. Destacar que el espectro de potencias \(\symrm{P}(k)\), relacionado con la función de dos puntos \(\xi(r)\) por~\ref{eq::relation}, es la única función necesaria para definir completamente un campo aleatorio gaussiano.
+
+Los campos aleatorios gaussianos son especialmente fáciles de manejar. La cuestión importante, por supuesto, es si el campo de densidad inicial es gaussiano o no. Por el momento, hay al menos tres razones para preferir un campo gaussiano a uno no gaussiano. En primer lugar, un campo de perturbación gaussiano surge naturalmente de las fluctuaciones cuánticas durante inflación. Dado que un campo gaussiano sigue siendo gaussiano durante la evolución lineal, la predicción genérica de los modelos inflacionarios es, pues, que \(\delta(\symbf{x})\) en el régimen lineal sigue la estadística gaussiana. En segundo lugar, según el teorema del límite central, la distribución de la suma de un gran número de variables independientes se aproxima a una distribución gaussiana sin tener en cuenta las funciones de distribución de las variables individuales. El campo de perturbación de la densidad inicial \(\delta(\symbf{x})\) es una suma de un gran número de modos de Fourier, por lo que el teorema del límite central garantiza una distribución gaussiana. Y en tercer lugar, actualmente no hay evidencia observacional convincente que sugiera que el campo de densidad lineal es no gaussiano.
+\subsection{Espectro de potencias lineal y condiciones iniciales}
+Incluso en ausencia de un mecanismo que produzca las perturbaciones en el universo primitivo y mucho antes de la idea de la inflación, existía un \textit{ansatz} para el espectro de potencias inicial de la forma~\cite{harrison1970,zel1970hypothesis,peebles1970primeval}
+\begin{equation}
+    \symrm{P}_0(k)\propto k^{n_s},
+\end{equation}
+con \(n_s\) conocido por \textbf{índice espectral}. El valor \(n_s=1\), donde el espectro resultante es conocido como espectro de Harrison-Zel'dovich y es invariante de escala porque el espectro de potencias adimensional del potencial gravitatorio \(\Delta(k)\propto k^3\symrm{P}(k)_{\symrm{potencial}}\propto k^{-1}\symrm{P}(k)\) es independiente de \(k\) para \(n_s=1\)~\cite{baumann2022cosmology}. El caso \(n_s=1\) da lugar a un campo de fluctuaciones muy uniforme en grandes escalas (\(>1000\) Mpc) pero con fluctuaciones notables en escalas más pequeñas.
+
+De cualquier manera, hay razones justas para limitar los valores del índice espectral \(-3<n_s<4\)~\cite{peacock1998cosmological}. Observaciones del fondo cósmico de microondas, mostrado en la~\autoref{fig::cmbpng}, han encontrado que el índice espectral vale~\cite{collaboration2020planck}
+\begin{equation}
+    n_s=0.965\pm 0.004.
+\end{equation}
+Esta pequeña desviación del espectro de Harrison-Zel'dovich es precisamente predicha por inflación
+\begin{equation}
+    n_s=1-6\epsilon+2\eta,
+\end{equation}
+donde \(\epsilon\) y \(\eta\) son los parámetros slow-roll definidos en~\ref{eq::slowroll}.
+\begin{figure}[b]
+    \centering
+    \includegraphics[scale=.7]{img/Cmb_inpaint_T_smica_v1-min.png}
+    \caption[Mapa del fondo cósmico de microondas]{Mapa del fondo cósmico de microondas (Tomada de~\cite{collaboration2020planck4})}
+    \label{fig::cmbpng}
+\end{figure}
+\clearpage
+El espectro de potencias en el régimen lineal es descrito por
+\begin{equation}
+    \symrm{P}(k)=A_0\symrm{P}_0(k)T^2(k)=A_0k^{n_s}T^2(k),\label{eq::espectrolineal}
+\end{equation}
+donde \(T(k)\) se llama función de transferencia y describe el efecto de la presión y otros procesos astrofísicos en la evolución gravitatoria de las perturbaciones, cambiando la forma del espectro inicial \(\symrm{P}_0\). La constante \(A_0\) es introducida para darle un sentido a la cantidad \(k^{n_s}\) ya que \(k\) tiene dimensiones. Así, se introduce un modo de Fourier de referencia \(k_0\) para escalar las unidades de \(k\) tal que \(\left(k/k_0\right)^{n_s}\). De esta manera, la constante \(A_0\) lleva las dimensiones del espectro de potencias y depende del modo de referencia usado, por lo que un valor de \(A_0\) ha de ser declarado para el correspondiente \(k_0\). Se usará \(A_0=2.101\times 10^{-9}\) Mpc\textsuperscript{3} con \(k_0=0.05\) Mpc\textsuperscript{-1}, datos tomados de~\cite{collaboration2020planck}. Además se simularán
+
+La función de transferencia que se usará para describir con más exactitud el campo de fluctuaciones, de acuerdo a~\ref{eq::espectrolineal}, será~\cite{eisenstein1998baryonic}
+\begin{equation}
+    \begin{aligned}
+        T(q) & =\frac{L}{L+Cq^2},         \\
+        L(q) & =\ln(2\symrm{e}+1.8q),     \\
+        C(q) & =14.2+\frac{731}{1+62.5q},
+    \end{aligned}
+\end{equation}
+donde \(q\equiv k/0.142\).
+
+\begin{figure}[t]
+    \centering
+    \def\svgwidth{0.75\textwidth}
+    \input{svg/matterpower.pdf_tex}
+    \caption[Espectro de potencias lineal en la época actual]{Espectro de potencias lineal en la época actual. La línea sólida negra es el modelo del espectro de potencias para el modelo de concordancia y los puntos con barras de error muestran las diferentes mediciones como se indica en la leyenda. Se aprecia que en escalas grandes (miles de Mpc) \(\symrm{P}(k)\propto k\) y en escalas pequeñas (galaxias, cúmulos, etc.) \(\symrm{P}(k)\propto k^{-3}\). (Tomada de~\cite{collaboration2020planck1})}
+    \label{fig::matterpower}
+\end{figure}
+
+El espectro de potencias lineal para el modelo de concordancia se muestra en la~\autoref{fig::matterpower}. En escalas grandes el espectro de potencias está dado básicamente por el espectro inicial y en escalas pequeñas queda afectado por diferentes procesos físicos (por ejemplo, efecto Meszaros) ---que dieron lugar a una variación en el espectro de potencias inicial dejando suficiente tiempo a las fluctuaciones para llegar a ser las galaxias y cúmulos que se tienen hoy--- de modo que \(\symrm{P}(k)\propto k^{-3}\) como se esperaba por la función de transferencia \(T(k)\). El solapamiento de las diferentes mediciones mostradas en la~\autoref{fig::matterpower} demuestra de forma impresionante el éxito y la consistencia del paradigma de la formación de estructuras en el régimen lineal.
+
+Se generarán realizaciones del campo de fluctuaciones gaussiano para ambos espectros de potencias, \(\symrm{P}_0(k)\) y \(\symrm{P}(k)\), para diferentes valores de \(n_s\):
+\begin{itemize}
+    \item \(n_s=0\). Ruido blanco, el fondo sobre el que perturbamos.
+    \item \(n_s=1\). Harrison-Zel'dovich. Grandes escalas, homogéneo predominando las fluctuaciones pequeñas.
+    \item \(n_s=-3\). Pequeñas escalas del universo, se aprecian fluctuaciones más grandes.
+\end{itemize}
