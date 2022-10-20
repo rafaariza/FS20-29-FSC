@@ -196,7 +196,7 @@ En concreto, el objetivo principal de este texto es el tratamiento de la densida
 
 En el régimen lineal, la ecuación en derivadas parciales (EDP) que gobierna la evolución del campo de fluctuaciones de densidad~\ref{eq::campofluct} es lineal en las cantidades perturbadas~\cite{mo_van}. De hecho, la única dependencia espacial es debida a las perturbaciones y se trabaja a primer orden en ellas. Si la curvatura del universo, como es el caso del nuestro, es muy pequeña (puede ser despreciada), este tipo de EDPs son particularmente adecuadas para ser tratadas en el espacio de Fourier. Sea definida la transformada espacial de Fourier como
 \begin{equation}
-    \delta(\symbf{x})=\int\frac{\symrm{d}^3 k}{\left(2\pi\right)^3}\ \symrm{e}^{\symrm{i}\symbf{k\cdot x}}\ \delta(\symbf{k}),
+    \delta(\symbf{x})=\int\frac{\symrm{d}^3 k}{\left(2\pi\right)^3}\ \symrm{e}^{\symrm{i}\symbf{k\cdot x}}\ \delta(\symbf{k}),\label{eq::fourier}
 \end{equation}
 donde, al ser \(\symbf{x}\) las coordenadas comóviles, \(\symbf{k}\) son los vectores de onda comóviles. De la ecuación anterior se tiene:
 \begin{equation}
@@ -238,9 +238,9 @@ En la sección anterior se ve que los modos de Fourier de las pequeñas fluctuac
 \begin{equation}
     \left\langle\delta(\symbf{k})\delta^{*}(\symbf{k}')\right\rangle\equiv (2\pi)^3\,\delta_{\symrm{D}}(\symbf{k}-\symbf{k}')\,\symrm{P}(k),
 \end{equation}
-donde \(\delta(\symbf{k})\) es un campo aleatorio complejo
+donde \(\delta(\symbf{k})\) es un campo aleatorio, en principio, complejo
 \begin{equation}
-    \delta(\symbf{k})=A_k+\symrm{i}B_k.\label{eq::deltak}
+    \delta(\symbf{k})=A_{\symbf{k}}+\symrm{i}B_{\symbf{k}}.\label{eq::deltak}
 \end{equation}
 Por ser el campo de fluctuaciones \(\delta(\symbf{x})\) real, se ha de cumplir
 \begin{equation}
@@ -250,7 +250,7 @@ La función \(\symrm{P}(k)\) es conocida como espectro de potencias y es la tran
 \begin{equation}
     \symrm{P}(k)=\int\xi(x)\,\symrm{e}^{-\symrm{i}\symbf{k\cdot x}}\,\symrm{d}^3x.\label{eq::relation}
 \end{equation}
-Por la realidad de \(\delta(\symbf{x})\), la función de correlación también	es real, así que \(\symrm{P}(k)\) es una función real de igual manera. Mientras que la función de correlación \(\xi(r)\) es el objeto a considerar en las observaciones, el espectro de potencias \(\symrm{P}(k)\) es más fácil de predecir teóricamente y será usado en las simulaciones de este trabajo. Ambos están relacionados por~\ref{eq::relation} y son, por lo tanto, descripciones completamente equivalentes de la estadística.
+Por la realidad de \(\delta(\symbf{x})\), la función de correlación también	es real, así que \(\symrm{P}(k)\) es una función real de igual manera, por lo que el espectro de potencias no es más que la norma de los coeficientes de Fourier en~\ref{eq::fourier}. A grandes rasgos, esto indica como de grandes son las fluctuaciones en el campo \(\delta(\symbf{x})\) en diferentes escalas. Por ejemplo, un campo aleatorio con un espectro de potencias constante no tiene predilección por ninguna escala (ruido blanco). Mientras que la función de correlación \(\xi(r)\) es el objeto a considerar en las observaciones, el espectro de potencias \(\symrm{P}(k)\) es más fácil de predecir teóricamente y será usado en las simulaciones de este trabajo. Ambos están relacionados por~\ref{eq::relation} y son, por lo tanto, descripciones completamente equivalentes de la estadística.
 \subsection{Campos aleatorios gaussianos}
 De lo discutido en los dos apartados anteriores, reluce que es bastante costoso especificar un campo aleatorio genérico porque es necesaria la función de correlación que a su vez necesita de la FDP, la cual es deducida si se conocen una cantidad infinita de momentos estadísticos. Afortunadamente, el campo de densidad y sus fluctuaciones en el inicio del universo quedan bien descritos por un campo aleatorio gaussiano, homogéneo e isótropo~\cite{baumann2022cosmology, dodelson2020modern,mo_van}.
 
@@ -260,10 +260,16 @@ Para un campo aleatorio gaussiano, la FDP \(\symbb{P}[\delta(\symbf{x})]\) es un
 \end{equation}
 donde \(\symcal{M}_{ij}\equiv\left\langle\delta(\symbf{x}_i)\delta(\symbf{x}_j)\right\rangle=\xi\left(\symbf{x}_i-\symbf{x}_j\right)\) es matriz de covarianza. Todas las funciones de \(N\)-puntos están determinadas por una integral funcional sobre \(\symbb{P}\) y por tanto fijadas completamente en términos de la función de correlación de dos puntos \(\xi(r)\).
 
-Cualquier combinación lineal de variables gaussianas tiene también distribución gaussiana. Esto permite obtener las FDP de las transformadas de Fourier~\ref{eq::deltak}, que son combinaciones lineales de \(\delta(\symbf{x})\). Se han de cumplir las condiciones de realidad~\ref{eq::reality}. Por esto, se prueba que las FDP de \(A_k\) y \(B_k\) son gaussianas con media cero y varianza \(\symrm{P}(k)\)~\cite{mo_van} que de manera computacional serán simuladas usando números aleatorios gaussianos. Destacar que el espectro de potencias \(\symrm{P}(k)\), relacionado con la función de dos puntos \(\xi(r)\) por~\ref{eq::relation}, es la única función necesaria para definir completamente un campo aleatorio gaussiano.
+Cualquier combinación lineal de variables gaussianas tiene también distribución gaussiana. Esto permite obtener las FDP de las transformadas de Fourier~\ref{eq::deltak}, que son combinaciones lineales de \(\delta(\symbf{x})\). Se han de cumplir las condiciones de realidad~\ref{eq::reality}. Por esto, se prueba que las FDP de \(A_{\symbf{k}}\) y \(B_{\symbf{k}}\) son gaussianas con media cero y varianza \(\symrm{P}(k)\)~\cite{mo_van} que, de manera computacional serán simuladas usando números aleatorios gaussianos. Destacar que el espectro de potencias \(\symrm{P}(k)\), relacionado con la función de dos puntos \(\xi(r)\) por~\ref{eq::relation}, es la única función necesaria para definir completamente un campo aleatorio gaussiano.
 
 Los campos aleatorios gaussianos son especialmente fáciles de manejar. La cuestión importante, por supuesto, es si el campo de densidad inicial es gaussiano o no. Por el momento, hay al menos tres razones para preferir un campo gaussiano a uno no gaussiano. En primer lugar, un campo de perturbación gaussiano surge naturalmente de las fluctuaciones cuánticas durante inflación. Dado que un campo gaussiano sigue siendo gaussiano durante la evolución lineal, la predicción genérica de los modelos inflacionarios es, pues, que \(\delta(\symbf{x})\) en el régimen lineal sigue la estadística gaussiana. En segundo lugar, según el teorema del límite central, la distribución de la suma de un gran número de variables independientes se aproxima a una distribución gaussiana sin tener en cuenta las funciones de distribución de las variables individuales. El campo de perturbación de la densidad inicial \(\delta(\symbf{x})\) es una suma de un gran número de modos de Fourier, por lo que el teorema del límite central garantiza una distribución gaussiana. Y en tercer lugar, actualmente no hay evidencia observacional convincente que sugiera que el campo de densidad lineal es no gaussiano.
 \subsection{Espectro de potencias lineal y condiciones iniciales}
+\begin{figure}[t]
+    \centering
+    \includegraphics[scale=.7]{img/Cmb_inpaint_T_smica_v1-min.png}
+    \caption[Mapa del fondo cósmico de microondas]{Mapa del fondo cósmico de microondas (Tomada de~\cite{collaboration2020planck4})}
+    \label{fig::cmbpng}
+\end{figure}
 Incluso en ausencia de un mecanismo que produzca las perturbaciones en el universo primitivo y mucho antes de la idea de la inflación, existía un \textit{ansatz} para el espectro de potencias inicial de la forma~\cite{harrison1970,zel1970hypothesis,peebles1970primeval}
 \begin{equation}
     \symrm{P}_0(k)\propto k^{n_s},
@@ -279,42 +285,40 @@ Esta pequeña desviación del espectro de Harrison-Zel'dovich es precisamente pr
     n_s=1-6\epsilon+2\eta,
 \end{equation}
 donde \(\epsilon\) y \(\eta\) son los parámetros slow-roll definidos en~\ref{eq::slowroll}.
-\begin{figure}[b]
-    \centering
-    \includegraphics[scale=.7]{img/Cmb_inpaint_T_smica_v1-min.png}
-    \caption[Mapa del fondo cósmico de microondas]{Mapa del fondo cósmico de microondas (Tomada de~\cite{collaboration2020planck4})}
-    \label{fig::cmbpng}
-\end{figure}
-\clearpage
+
 El espectro de potencias en el régimen lineal es descrito por
 \begin{equation}
     \symrm{P}(k)=A_0\symrm{P}_0(k)T^2(k)=A_0k^{n_s}T^2(k),\label{eq::espectrolineal}
 \end{equation}
-donde \(T(k)\) se llama función de transferencia y describe el efecto de la presión y otros procesos astrofísicos en la evolución gravitatoria de las perturbaciones, cambiando la forma del espectro inicial \(\symrm{P}_0\). La constante \(A_0\) es introducida para darle un sentido a la cantidad \(k^{n_s}\) ya que \(k\) tiene dimensiones. Así, se introduce un modo de Fourier de referencia \(k_0\) para escalar las unidades de \(k\) tal que \(\left(k/k_0\right)^{n_s}\). De esta manera, la constante \(A_0\) lleva las dimensiones del espectro de potencias y depende del modo de referencia usado, por lo que un valor de \(A_0\) ha de ser declarado para el correspondiente \(k_0\). Se usará \(A_0=2.101\times 10^{-9}\) Mpc\textsuperscript{3} con \(k_0=0.05\) Mpc\textsuperscript{-1}, datos tomados de~\cite{collaboration2020planck}. Además se simularán
-
-La función de transferencia que se usará para describir con más exactitud el campo de fluctuaciones, de acuerdo a~\ref{eq::espectrolineal}, será~\cite{eisenstein1998baryonic}
+donde \(T(k)\) se llama función de transferencia y describe el efecto de la presión y otros procesos astrofísicos en la evolución gravitatoria de las perturbaciones, cambiando la forma del espectro inicial \(\symrm{P}_0\). La constante \(A_0\) es introducida para darle un sentido a la cantidad \(k^{n_s}\) ya que \(k\) tiene dimensiones. Así, se introduce un modo de Fourier de referencia \(k_0\) para escalar las unidades de \(k\) tal que \(\left(k/k_0\right)^{n_s}\). De esta manera, la constante \(A_0\) lleva las dimensiones del espectro de potencias y depende del modo de referencia usado, por lo que un valor de \(A_0\) ha de ser declarado para el correspondiente \(k_0\). Se usará \(A_0=2.101\times 10^{-9}\) Mpc\textsuperscript{3} con \(k_0=0.05\) Mpc\textsuperscript{-1}, datos tomados de~\cite{collaboration2020planck}.
+\begin{figure}[b!]
+    \centering
+    \def\svgwidth{0.95\textwidth}
+    \input{svg/matterpower.pdf_tex}
+    \caption[Espectro de potencias lineal en la época actual]{Espectro de potencias lineal en la época actual. La línea sólida negra es el modelo del espectro de potencias para el modelo de concordancia y los puntos con barras de error muestran las diferentes mediciones como se indica en la leyenda. Se aprecia que en escalas grandes (miles de Mpc) \(\symrm{P}(k)\propto k\) y en escalas pequeñas (galaxias, cúmulos, etc.) \(\symrm{P}(k)\propto k^{-3}\). (Tomada de~\cite{collaboration2020planck1})}
+    \label{fig::matterpower}
+\end{figure}
+\clearpage
+La función de transferencia que se usará para describir con más     exactitud el campo de fluctuaciones, de acuerdo a~\ref{eq::espectrolineal}, será~\cite{eisenstein1998baryonic}
 \begin{equation}
     \begin{aligned}
         T(q) & =\frac{L}{L+Cq^2},         \\
         L(q) & =\ln(2\symrm{e}+1.8q),     \\
         C(q) & =14.2+\frac{731}{1+62.5q},
-    \end{aligned}
+    \end{aligned}\label{eq::transff}
 \end{equation}
 donde \(q\equiv k/0.142\).
 
-\begin{figure}[t]
-    \centering
-    \def\svgwidth{0.75\textwidth}
-    \input{svg/matterpower.pdf_tex}
-    \caption[Espectro de potencias lineal en la época actual]{Espectro de potencias lineal en la época actual. La línea sólida negra es el modelo del espectro de potencias para el modelo de concordancia y los puntos con barras de error muestran las diferentes mediciones como se indica en la leyenda. Se aprecia que en escalas grandes (miles de Mpc) \(\symrm{P}(k)\propto k\) y en escalas pequeñas (galaxias, cúmulos, etc.) \(\symrm{P}(k)\propto k^{-3}\). (Tomada de~\cite{collaboration2020planck1})}
-    \label{fig::matterpower}
-\end{figure}
-
 El espectro de potencias lineal para el modelo de concordancia se muestra en la~\autoref{fig::matterpower}. En escalas grandes el espectro de potencias está dado básicamente por el espectro inicial y en escalas pequeñas queda afectado por diferentes procesos físicos (por ejemplo, efecto Meszaros) ---que dieron lugar a una variación en el espectro de potencias inicial dejando suficiente tiempo a las fluctuaciones para llegar a ser las galaxias y cúmulos que se tienen hoy--- de modo que \(\symrm{P}(k)\propto k^{-3}\) como se esperaba por la función de transferencia \(T(k)\). El solapamiento de las diferentes mediciones mostradas en la~\autoref{fig::matterpower} demuestra de forma impresionante el éxito y la consistencia del paradigma de la formación de estructuras en el régimen lineal.
 
-Se generarán realizaciones del campo de fluctuaciones gaussiano para ambos espectros de potencias, \(\symrm{P}_0(k)\) y \(\symrm{P}(k)\), para diferentes valores de \(n_s\):
+Se generarán realizaciones del campo de fluctuaciones gaussiano para ambos espectros de potencias y diferentes valores de \(n_s\). En primer lugar para \(\symrm{P}_0(k)\):
 \begin{itemize}
-    \item \(n_s=0\). Ruido blanco, el fondo sobre el que perturbamos.
+    \item \(n_s=0\). Ruido blanco, el fondo sobre el que perturbamos. Servirá para chequear que funciona.
     \item \(n_s=1\). Harrison-Zel'dovich. Grandes escalas, homogéneo predominando las fluctuaciones pequeñas.
     \item \(n_s=-3\). Pequeñas escalas del universo, se aprecian fluctuaciones más grandes.
+\end{itemize}
+Y al final, para la simulación más realista usando~\ref{eq::espectrolineal} y~\ref{eq::transff}:
+\begin{itemize}
+    \item \(n_s=5\). Dará lugar a \(P(k)\propto k\) que corresponde a grandes escalas y ha de ser homogéneo con pequeñas fluctuaciones.
+    \item \(n_s=1\). Conducirá a \(P(k)\propto k^{-3}\) que apuntará a escalas más pequeñas donde las fluctuaciones son más grandes.
 \end{itemize}

@@ -68,7 +68,7 @@
     \put(0.43835204,0.26856062){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\footnotesize Planck TT\end{tabular}}}}%
     \put(0.43835204,0.23625943){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\footnotesize Planck EE\end{tabular}}}}%
     \put(0.43835204,0.20429743){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\footnotesize Planck ϕϕ\end{tabular}}}}%
-    \put(0.5658902,0.17213644){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\footnotesize DES Y1 cosmic shear\end{tabular}}}}%
+    \put(0.54368983,0.17213644){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\footnotesize DES Y1 cosmic shear\end{tabular}}}}%
     \put(0.43880422,0.14130633){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\footnotesize SDSS DR7 LRG\end{tabular}}}}%
     \put(0.43812286,0.10705472){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\footnotesize BOSS DR9 Ly-α forest\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{matterpower.pdf}}%
