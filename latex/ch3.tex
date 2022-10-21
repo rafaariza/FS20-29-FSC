@@ -1,1 +1,15 @@
 \chapter{Materiales y métodos}
+En este capítulo se describe cómo fueron realizadas las simulaciones de los campos gaussianos aleatorios para poder ser replicadas. También se especifican los materiales usados en todo el proceso.
+
+Se generarán realizaciones tridimensionales (de las que se tomarán cortes bidimensionales), así como una visualización animada de la tercera dimensión en formato GIF o MP4, del campo de fluctuaciones gaussiano para ambos espectros de potencias y diferentes valores de \(n_s\). En primer lugar para el espectro de potencias primordial \(\symrm{P}_0(k)\):
+\begin{itemize}
+    \item \(n_s=0\). Ruido blanco, el fondo sobre el que perturbamos. Servirá para comprobar el funcionamiento.
+    \item \(n_s=1\). Harrison-Zel'dovich. Grandes escalas, homogéneo predominando las fluctuaciones pequeñas.
+    \item \(n_s=-3\). Pequeñas escalas del universo, se aprecian fluctuaciones más grandes.
+\end{itemize}
+Y al final, para la simulación más realista usando~\ref{eq::espectrolineal} y~\ref{eq::transff}:
+\begin{itemize}
+    \item \(n_s=5\). Dará lugar a \(P(k)\propto k\) que corresponde a grandes escalas y ha de ser homogéneo con pequeñas fluctuaciones.
+    \item \(n_s=1\). Conducirá a \(P(k)\propto k^{-3}\) que apuntará a escalas más pequeñas donde las fluctuaciones son más grandes.
+\end{itemize}
+
