@@ -1,0 +1,178 @@
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{NavyBlue}{RGB}{22,73,178}
+\lstdefinestyle{mystyle}{
+    language=Python,
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\myfont\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=t,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    basewidth=0.6em,
+    literate=
+    {www}{{www}}3
+    {**}{{**}}2
+    {***}{{***}}3
+%    {**/}{{**/}}3 % Removed in Fira Code v1.206
+    {*>}{{*>}}2
+%    {*/}{{*/}}2 % Interferes with comment highlighting
+%    {\\\\}{{\textbackslash\textbackslash}}2 % Removed in Fira Code v1.206
+%    {\\\\\\}{{\textbackslash\textbackslash\textbackslash}}3 % Removed in Fira Code v1.206
+%    {\{-}{{\{-}}2 % Removed in Fira Code v1.206
+%    {[]}{{[]}}2 % Removed in Fira Code v1.206
+    {::}{{::}}2
+    {:::}{{:::}}3
+    {:=}{{:=}}2
+    {!!}{{!!}}2
+%    {!!!}{{!!!}}3 % Removed in Fira Code v1.206
+    {!=}{{!=}}2
+    {!==}{{!==}}3
+%    {-\}}{{-\}}}2 % Removed in Fira Code v1.206
+    {--}{{--}}2
+    {---}{{---}}3
+    {-->}{{-->}}3
+    {->}{{->}}2
+    {->>}{{->>}}3
+    {-<}{{-<}}2
+    {-<<}{{-<<}}3
+    {-~}{{-\textasciitilde}}2
+    {\#\{}{{\#\{}}2
+    {\#[}{{\#[}}2
+    {\#\#}{{\#\#}}2
+    {\#\#\#}{{\#\#\#}}3
+    {\#\#\#\#}{{\#\#\#\#}}4
+    {\#(}{{\#(}}2
+    {\#?}{{\#?}}2
+    {\#_}{{\#\_}}2
+    {\#_(}{{\#\_(}}3
+    {.-}{{.-}}2
+    {.=}{{.=}}2
+    {..}{{..}}2
+    {..<}{{..<}}3
+    {...}{{...}}3
+    {?=}{{?=}}2
+    {??}{{??}}2
+%    {???}{{???}}3 % Removed in Fira Code v1.206
+%    {;;}{{;;}}2 % Interferes with comment highlighting
+%    {;;;}{{;;;}}3 % Removed in Fira Code v1.206
+%    {/*}{{/*}}2 % Interferes with comment highlighting
+%    {/**}{{/**}}3 % Removed in Fira Code v1.206
+    {/=}{{/=}}2
+    {/==}{{/==}}3
+    {/>}{{/>}}2
+%    {//}{{//}}2 % Interferes with comment highlighting
+%    {///}{{///}}3 % Interferes with comment highlighting
+    {\&\&}{{\&\&}}2
+%    {\&\&\&}{{\&\&\&}}3 % Removed in Fira Code v1.206
+    {||}{{||}}2
+%    {|||}{{|||}}3 % Removed in Fira Code v1.206
+    {||=}{{||=}}3
+    {|=}{{|=}}2
+    {|>}{{|>}}2
+    {^=}{{\textasciicircum=}}2
+    {$>}{{\$>}}2
+    {++}{{++}}2
+    {+>}{{+>}}2
+    {=:=}{{=:=}}3
+    {==}{{==}}2
+    {===}{{===}}3
+    {==>}{{==>}}3
+    {=>}{{=>}}2
+    {=>>}{{=>>}}3
+%    {=<}{{=<}}2 % Removed in Fira Code v1.206
+    {=<<}{{=<<}}3
+%    {=~}{{=\textasciitilde}}2 % Removed in Fira Code v1.206
+    {=/=}{{=/=}}3
+    {>-}{{>-}}2
+    {>=}{{>=}}2
+    {>=>}{{>=>}}3
+    {>>}{{>>}}2
+    {>>-}{{>>-}}3
+    {>>=}{{>>=}}3
+    {>>>}{{>>>}}3
+    {<*}{{<*}}2
+    {<*>}{{<*>}}3
+    {<|}{{<|}}2
+    {<|>}{{<|>}}3
+    {<$}{{<\$}}2
+    {<$>}{{<\$>}}3
+    {<!--}{{<!--}}4
+    {<-}{{<-}}2
+    {<--}{{<--}}3
+    {<->}{{<->}}3
+    {<+}{{<+}}2
+    {<+>}{{<+>}}3
+    {<=}{{<=}}2
+    {<==}{{<==}}3
+    {<=>}{{<=>}}3
+    {<=<}{{<=<}}3
+    {<>}{{<>}}2
+    {<<}{{<<}}2
+    {<<-}{{<<-}}3
+    {<<=}{{<<=}}3
+    {<<<}{{<<<}}3
+    {<~}{{<\textasciitilde}}2
+    {<~~}{{<\textasciitilde\textasciitilde}}3
+    {</}{{</}}2
+    {~@}{{\textasciitilde @}}2
+    {~-}{{\textasciitilde-}}2
+    {~=}{{\textasciitilde=}}2
+    {~>}{{\textasciitilde>}}2
+    {~~}{{\textasciitilde\textasciitilde}}2
+    {~~>}{{\textasciitilde\textasciitilde>}}3
+%    {~~~}{{\textasciitilde\textasciitilde\textasciitilde}}3 % Removed in Fira Code v1.206
+    {\%\%}{{\%\%}}2
+%    {\%\%\%}{{\%\%\%}}3 % Removed in Fira Code v1.206
+    {<==>}{{<==>}}4
+    {<||}{{<||}}3
+    {<|||}{{<|||}}4
+    {|||>}{{|||>}}4
+    {</>}{{</>}}3
+    {<~>}{{<\textasciitilde>}}3
+    {<-<}{{<-<}}3
+    {>->}{{>->}}3
+    {=!=}{{=!=}}3
+    {+++}{{+++}}3
+    {||>}{{||>}}3
+    {_|_}{{\_|\_}}3
+    {..=}{{..=}}3
+    {!!.}{{!!.}}3
+    {::=}{{::=}}3
+    {<:}{{<:}}2
+    {>:}{{>:}}2
+    {|-}{{|-}}2
+    {|]}{{|]}}2
+    {|\}}{{|\}}}2
+    {__}{{\_\_}}2
+    {?.}{{?.}}2
+    {?:}{{?:}}2
+    {.?}{{.?}}2
+    {\#=}{{\#=}}2
+    {\#!}{{\#!}}2
+    {\#:}{{\#:}}2
+    {-|}{{-|}}2
+    {:<}{{:<}}2
+    {:>}{{:>}}2
+    {]\#}{{]\#}}2
+    {[|}{{[|}}2
+    {\{|}{{\{|}}2
+  }
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{0.98\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+\renewcommand*{\lstlistingname}{Algoritmo}

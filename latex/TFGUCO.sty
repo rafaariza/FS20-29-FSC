@@ -26,8 +26,23 @@
     math-style = TeX,
     bold-style = TeX,
     RawFeature = {+ss08;+ss02;+ss03;},
-    range = {\sim, "002C, \Longleftrightarrow, \wedge, "0027, cal, scr, \ll, "003C, "003D, "002D, "002B, \simeq, \equiv, \leq, \geq}
+    range = {\sum, \sim, "002C, \Longleftrightarrow, \wedge, "0027, cal, scr, \ll, "003C, "003D, "002D, "002B, \simeq, \equiv, \leq, \geq}
   ]
+  \setmonofont{FiraCode}[
+    Path=C:/Users/Rafa/AppData/Local/Microsoft/Windows/Fonts/,
+    Extension=.ttf,
+    UprightFont=*-Regular,
+    BoldFont=*-Bold,
+    Scale=0.90096774193548387,
+    Contextuals={Alternate},
+    Colour={FF6E78}
+  ]
+  \newfontfamily\myfont[Path=C:/Users/Rafa/AppData/Local/Microsoft/Windows/Fonts/,
+  Extension=.ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  Scale=0.90096774193548387,
+  Contextuals={Alternate}]{FiraCode}
 \else
   \usepackage[latin1,utf8]{inputenc}
   \usepackage[T1]{fontenc}
@@ -65,7 +80,7 @@
 \titlespacing*\subsection{0pt}{10pt plus 4pt minus 2pt}{-20pt plus 2pt minus 2pt}
 \titleformat{\chapter}[display]
   { \sffamily\bfseries\Large\color{blue}}
-  {\filleft\MakeUppercase{\chaptertitlename}\ \Huge\sffamily{\arabic{chapter}}\
+  {\filleft\MakeUppercase{\chaptertitlename}\ \Huge\sffamily{\thechapter}\
   }
   {4ex}
   {\titlerule
@@ -89,9 +104,8 @@
 \hypersetup{
     colorlinks=true,
     citecolor=webgreen,
-    filecolor=black,
     linkcolor=webblue,
-    urlcolor=webtinto,
+    urlcolor=webblue,
     pdfauthor={\textcopyright\ \autor},
     pdftitle={},
     pdfsubject={},
@@ -103,9 +117,9 @@
     pdfstartview={FitH}
 }
 \definecolor{azul}{rgb}{65,105,225}
-\definecolor{webgreen}{rgb}{0,.5,0}
+\definecolor{webgreen}{RGB}{53,113,105}
 \definecolor{webgray}{rgb}{.753,.753,.753}
-\definecolor{webblue}{rgb}{0,0,.8}
+\definecolor{webblue}{HTML}{0006B8}
 \definecolor{webtinto}{rgb}{0.73,0.00,0.00}
 \definecolor{gray96}{gray}{.96}
 \usepackage{tocbibind}
@@ -119,9 +133,26 @@
   \renewcommand{\figureautorefname}{figura}%
   \renewcommand{\tableautorefname}{tabla}%
   \renewcommand{\sectionautorefname}{sección}%
+  \renewcommand{\appendixautorefname}{apéndice}%
+  \def\lstlistingautorefname{algoritmo}%
+  \renewcommand{\lstlistlistingname}{Índice de algoritmos}%
 }
 \usepackage[section]{placeins}
 \usepackage{cite}
 \bibliographystyle{IEEEtran}
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
-%\newcommand{\overbar}[1]{\mkern 1.5mu\overbar{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+\makeatletter
+\let\@msm@th@eqref\eqref
+\renewcommand{\eqref}[1]{%
+  \begingroup
+  \leavevmode
+  \color{webblue}%
+  \hypersetup{linkbordercolor=[named]{webblue}}%
+  \@msm@th@eqref{#1}%
+  \endgroup
+}
+\makeatother
+\usepackage{qrcode}
+\definecolor{qrblue}{cmyk}{1.0,0.8,0.05,0.20}
+\definecolor{ttcolor}{RGB}{255,110,120}
+\newcommand\numera{\addtocounter{equation}{1}\tag{\theequation}}

@@ -10,11 +10,11 @@ plt.rcParams.update({
         'xtick.direction': 'in',
         'xtick.top': True,
         'ytick.direction' : 'in',
-        'ytick.right': True,
-        'text.usetex': True})
+        'ytick.right': True})
+#        'text.usetex': True})
 from matplotlib.colors import ListedColormap
-from powerbox.tools import _magnitude_grid as mgrid
-from powerbox.powerbox import _make_hermitian as hermitian
+from powerbox.tools import _magnitude_grid as _mgrid
+from powerbox.powerbox import _make_hermitian as _hermitian
 from powerbox.dft import fftfreq as _fftfreq, ifft as _ifftn
 
 timestr = "DEF"
@@ -25,11 +25,11 @@ class FS2029FSC():
     DOCSTRING
     """
     def __init__(self, amplitude, power, size, dimensions, show, method,
-                boxlength = 1.0, normalise_power = True, a = 1., b = 1.):
+                boxlength=1.0, normalise=True, a=1., b=1.):
 
         self._amplitude = amplitude
         self._boxlength = boxlength
-        self._normalised_power = normalise_power
+        self._normalise = normalise
         self._coef_a = a
         self._coef_b = b
         self._power = int(power)
@@ -39,37 +39,39 @@ class FS2029FSC():
         self._method = method
         self._volume = self._boxlength ** self._dimensions
         self._dx = float(boxlength) / self._size
-        self.n = self._size + 1
+        self._n = self._size + 1
 
     def generator(self):
         """
         DOCSTRING
         """
         rng = np.random.default_rng(seed=42)
-        seed_gaussiano_mag = rng.normal(0.0, 1.0, size = [self.n] * self._dimensions)
-        seed_gaussiano_phase = 2 * np.pi * rng.uniform(size = [self.n] * self._dimensions)
-        seed_gaussiano_hermitian = hermitian(seed_gaussiano_mag, seed_gaussiano_phase)
+        seed_gaussiano_mag = rng.normal(0.0,1.0, size=[self._n] * self._dimensions)
+        seed_gaussiano_phase = 2 * np.pi * rng.uniform(size=[self._n] * self._dimensions)
+        seed_gaussiano_hermitian = _hermitian(seed_gaussiano_mag, seed_gaussiano_phase)
         cutindex = (slice(None, -1),) * self._dimensions
         seed_gaussiano_hermitian = seed_gaussiano_hermitian[cutindex]
 
-        vectork = _fftfreq(self._size, d = self._dx, b = self._coef_b)
-        normks = mgrid(vectork, self._dimensions)
+        vectork = _fftfreq(self._size, d=self._dx, b=self._coef_b)
+        normks = _mgrid(vectork, self._dimensions)
         if self._power < 0:
             normks[0,0,0] = 10E20
         else:
             normks[0,0,0] = 0
         self._normks = normks
-
+        print(self._normks.shape)
         p_spectro, self._name = self._method(self._amplitude, self._normks, self._power)
 
-        if self._normalised_power:
+        if self._normalise:
             p_spectro[...] = p_spectro / self._volume
  
         p_spectro_root = np.sqrt(p_spectro)
         self._k_realize = seed_gaussiano_hermitian * p_spectro_root
-        self._x_realize = np.empty((self._size,) * self._dimensions, dtype = 'complex128')
+        self._x_realize = np.empty((self._size,) * self._dimensions,
+        dtype='complex128')
         self._x_realize[...] = self._k_realize
-        self._x_realize[...] = self._volume * _ifftn(self._x_realize, L = self._boxlength, a = self._coef_a, b = self._coef_b)[0]
+        self._x_realize[...] = self._volume * _ifftn(self._x_realize, 
+        L=self._boxlength, a=self._coef_a, b=self._coef_b)[0]
         self._x_realize = np.real(self._x_realize)
         np.clip(self._x_realize, -1, np.inf, self._x_realize)
 
@@ -89,8 +91,8 @@ class FS2029FSC():
         cmap = planck_cmap
         for ind, realization in enumerate(self._x_realize[::len(self._x_realize)]):
             fig, ax = plt.subplots()
-            fig.set_size_inches(w=8,h=4.94)
-            plot = ax.imshow(realization, cmap="blue")
+            fig.set_size_inches(w=8, h=4.94)
+            plot = ax.imshow(realization, cmap=cmap)
             cbar = fig.colorbar(plot)
             #cbar.set_ticks([])
             cbar.set_label(r'$\delta$')
@@ -122,6 +124,6 @@ def k_pol(amplitude, modulus, power):
     name = "pdek"
     return amplitude * np.power(modulus/k0, 1 * power), name
 
-testing =  FS2029FSC(amplitude=2.101E-9, power=5, size=9, dimensions=3, show=True, method=transferfunction_k, boxlength=5.0)
+testing =  FS2029FSC(amplitude=2.101E-9, power=1, size=8, dimensions=3, show=True, method=transferfunction_k, boxlength=1.0)
 testing.generator()
-testing.show_x_realize()
+#testing.show_x_realize()

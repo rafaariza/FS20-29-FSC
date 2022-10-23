@@ -89,7 +89,7 @@ FUNCTION {default.is.use.url} { #1 }
 
 % #0 turns off the forced use of "et al."
 % #1 enables
-FUNCTION {default.is.forced.et.al} { #0 }
+FUNCTION {default.is.forced.et.al} { #1 }
 
 
 % The maximum number of names that can be present beyond which an "et al."
