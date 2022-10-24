@@ -25,7 +25,7 @@ Para obtener un espectro de potencias cuya magnitud fuese independiente del volu
 \begin{equation}
     \tilde{\symrm{P}}(k)=\frac{\symrm{P}(k)}{L^3},
 \end{equation}
-donde \(\tilde{\symrm{P}}(k)\) tiene unidades \([x]^3\equiv[k]^{-3}\). El valor \(L\) indica cuanta distancia física representa 1 píxel:
+donde \(\tilde{\symrm{P}}(k)\) tiene unidades \([x]^3\equiv[k]^{-3}\). El valor \(L\) indica cuánta distancia física representa 1 píxel:
 \begin{equation}
     [L]=\frac{[x]}{[\symrm{p\acute{\imath}xel}]}.
 \end{equation}
@@ -63,7 +63,7 @@ La ecuación~\eqref{eq::danielson} es conocida como lema Danielson-Lanczos. Lo m
 
 El caso más fácil es aquel en el que el \(N\) original es una potencia entera de 2. Es recomendable que solo se utilice la FFT con \(N^z\) con \(z\) un entero~\cite{press2007numerical}. Con esta restricción de \(N\), es evidente que es posible seguir aplicando el lema de Danielson-Lanczos hasta que se hayan dividido los datos en transformaciones de longitud uno. La transformada de Fourier de longitud unitaria es simplemente la identidad que copia su única entrada en su única salida. En otras palabras, para cada patrón de \(\log_2N\) de pares e impares, hay una transformada unitaria que es solo uno de los números de entrada \(\delta_n(x)\). Se necesitan del orden de \(N\) operaciones para pasar de un patrón de pares e impares hasta el valor de la transformada final y como hay \(\log_2N\) combinaciones, el algoritmo al completo es del orden \(N\log_2N\).
 
-Este algoritmo, tanto para la transformada directa como inversa y otras funcionalidades necesarias para su desempeño, está implementado en Python bajo el módulo \texttt{numpy.fft} y fue el que se utilizó en las simulaciones. En concreto se utilizaron los métodos \texttt{numpy.fft.ifftn} para la transformada discreta inversa tridimensional y \texttt{numpy.fft.fftfreq} para obtener las frecuencias espaciales del muestro~\eqref{eq::knumbers}.
+Este algoritmo, tanto para la transformada directa como inversa y otras funcionalidades necesarias para su desempeño, está implementado en Python bajo el módulo \texttt{numpy.fft} y fue el que se utilizó en las simulaciones. En concreto se utilizaron los métodos \texttt{numpy.fft.ifftn} para la transformada discreta inversa tridimensional y \texttt{numpy.fft.fftfreq} para obtener las frecuencias espaciales del muestreo~\eqref{eq::knumbers}.
 \subsection{Números aleatorios}
 Puede parecer insólito utilizar un ordenador, la más precisa y determinista de todas las máquinas concebidas por la mente humana, para producir números ``aleatorios''. Más que insólito, puede parecer una imposibilidad conceptual. Después de todo, cualquier programa produce un resultado totalmente predecible, por lo que no es verdaderamente ``aleatorio''. Sin embargo, generadores de números aleatorios con un ordenador son de uso común. A veces se habla de secuencias generadas por ordenador como pseudoaleatorias, mientras que la palabra aleatorio se reserva para el resultado de un proceso físico intrínsecamente aleatorio, como el tiempo transcurrido entre los clics de un contador Geiger colocado junto a una muestra de algún elemento radiactivo. En este texto no se hace esta distinción y se les consideran números aleatorios.
 
