@@ -1,16 +1,16 @@
-\chapter{Materiales y métodos}
+\chapter{Materiales y métodos}\label{ch::mym}
 En este capítulo se describe cómo fueron realizadas las simulaciones de los campos gaussianos aleatorios para poder ser replicadas. También se especifican los materiales que fueron usados durante todo el proceso.
 
 Se generaron realizaciones tridimensionales (de las que se tomaron cortes bidimensionales), así como una visualización animada de la tercera dimensión en formato GIF o MP4, del campo de fluctuaciones gaussiano para ambos espectros de potencias y diferentes valores de \(n_s\). En primer lugar para el espectro de potencias primordial \(\symrm{P}_0(k)\):
 \begin{itemize}
     \item \(n_s=0\). Ruido blanco, el fondo sobre el que se perturba. Sirvió para comprobar el funcionamiento.
-    \item \(n_s=1\). Harrison-Zel'dovich. Grandes escalas, se utilizó para comprobar un espectro \textit{blue-tilted} que se refiere a un espectro donde las longitudes de onda pequeñas (azul) fluctúan más, es decir, fluctuaciones de menor tamaño físico.
-    \item \(n_s=-3\). Pequeñas escalas del universo, sirvió para comprobar un espectro \textit{red-tilted} que es la contraparte del anterior, donde las longitudes de onda largas (rojo) fluctúan más, es decir, fluctuaciones de mayor tamaño físico.
+    \item \(n_s=1\). Harrison-Zel'dovich. Grandes escalas, se utilizó para comprobar un espectro \textit{blue-tilted} \((n_s>0)\) que se refiere a un espectro dominado por los números de onda grandes, esto son longitudes de onda pequeñas (azul). Fluctuaciones de menor tamaño físico.
+    \item \(n_s=-3\). Pequeñas escalas del universo, sirvió para comprobar un espectro \textit{red-tilted} \((n_s<0)\) que es la contraparte del anterior, donde las longitudes de onda largas (rojo) contribuyen más, es decir, fluctuaciones de mayor tamaño físico.
 \end{itemize}
 Y al final, para la simulación más realista se utilizó~\eqref{eq::espectrolineal} y~\eqref{eq::transff}:
 \begin{itemize}
     \item \(n_s=5\). En este caso, \(P(k)\propto k\) que corresponde a grandes escalas y ha de ser homogéneo con pequeñas fluctuaciones.
-    \item \(n_s=1\). Es equivalente a \(P(k)\propto k^{-3}\) que apunta a escalas más pequeñas donde las fluctuaciones son más grandes.
+    \item \(n_s=0.965\). Es el que se observa experimentalmente, apunta a escalas más pequeñas donde las fluctuaciones son más grandes y ha de ser visualmente similar al CMB.
 \end{itemize}
 
 Como no es posible simular campos infinitos, se generaron muestras del verdadero campo subyacente, es decir, ``cajas'' que son representaciones periódicas del susodicho campo. En este aspecto las transformadas de Fourier~\eqref{eq::fourierinverse} y~\eqref{eq::fourier} se tornan discretas:\footnote{Para ahorrar notación se escribe la transformada discreta en una dimensión, la cual se extiende a mayores dimensiones de manera obvia.}
@@ -30,7 +30,7 @@ donde \(\tilde{\symrm{P}}(k)\) tiene unidades \([x]^3\equiv[k]^{-3}\). El valor 
     [L]=\frac{[x]}{[\symrm{p\acute{\imath}xel}]}.
 \end{equation}
 Usando diferentes valores de \(L\) se pudieron simular zonas del universo de distintos tamaños y, observar cómo variaba el campo de fluctuaciones de la densidad \(\delta(\symbf{x})\).
-\section{Método}
+\section{Método}\label{sec::metodo}
 El algoritmo (véase~\autoref{ch::codes}) se implementó con el lenguaje de programación Python con gran soporte de la librería Numpy~\cite{harris2020array} y Powerbox~\cite{Murray2018}. Los pasos lógicos son los siguientes:
 \begin{enumerate}
     \item Dada una caja de longitud \(L\) (parámetro \texttt{boxlength}) y número de celdas a lo largo de un lado, \(N\) (parámetro \texttt{self.\_size}), se determinan los números de onda \(k\) a lo largo de este lado de acuerdo a~\eqref{eq::knumbers}.
@@ -85,4 +85,4 @@ Todo el trabajo de programación y posterior simulación se realizó en el softw
     \label{fig::entorno}
 \end{figure}
 \subsection{Gráficos}
-El último material utilizado, no menos importante, fue la librería Matplotlib~\cite{Hunter2007} de Python para generar las representaciones visuales de las realizaciones del campo aleatorio gaussiano de las fluctuaciones.
+El último material utilizado, no menos importante, fue la librería Matplotlib~\cite{Hunter2007} de Python para generar las representaciones visuales de las realizaciones del campo aleatorio gaussiano de las fluctuaciones. El archivo GIF se generó con el software online EZGIF~\cite{ltd2012}.

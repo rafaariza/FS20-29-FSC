@@ -172,7 +172,7 @@ La inflación \textit{slow-roll} es, por lo general, cuantificada por los \textb
 \end{subequations}
 donde el primero mide la pendiente del potencial y el segundo, su curvatura. Estos criterios dan la intuición exacta: el potencial debe ser plano en el sentido de tener pequeñas derivadas si el campo ha de rodar lo suficientemente lento para que inflación sea posible. Ya que \(\epsilon\ll 1\) y \(\left|\eta\right|\ll 1\) son equivalentes a \(V'/V\ll 1\) y \(V''/V\ll 1\), respectivamente, la aproximación \textit{slow-roll} es automáticamente satisfecha si \(V(\phi)\) es lo \textbf{suficientemente} plano.
 \section{Perturbaciones cosmológicas}
-El universo es homogéneo e isótropo a escalas mayores de 100 Mpc~\cite{baumann2022cosmology}, pero a escalas más pequeñas se observan grandes desviaciones de la densidad media en forma de galaxias, cúmulos de galaxias y la red cósmica formada por hojas y filamentos de galaxias. ¿Cómo crecen las estructuras en el universo y cómo se describen?
+El universo es homogéneo e isótropo a escalas mayores de 1000 Mpc~\cite{baumann2022cosmology}, pero a escalas más pequeñas se observan grandes desviaciones de la densidad media en forma de galaxias, cúmulos de galaxias y la red cósmica formada por hojas y filamentos de galaxias. ¿Cómo crecen las estructuras en el universo y cómo se describen?
 
 En el modelo estándar cosmológico que es mencionado en la~\autoref{sec::homogeneo} se supone que el universo es altamente homogéneo en sus tiempos más tempranos. Estas enormes estructuras galácticas observadas hoy en día han crecido a partir de pequeñas perturbaciones iniciales de la densidad debido a la acción de la gravedad. En este escenario, la formación de estructuras en el universo implica dos temas a tratar: (i) las propiedades de las perturbaciones de densidad iniciales, y (ii) la evolución temporal de las perturbaciones cosmológicas en un universo en expansión. Para entender la estructura a gran escala del universo, se han de introducir perturbaciones y, mientras sean lo suficientemente pequeñas (régimen lineal), estudiar las propiedades estadísticas dadas por sus correspondientes funciones de distribución.
 
@@ -267,11 +267,11 @@ Cualquier combinación lineal de variables gaussianas tiene también distribuci�
 Cada punto del espacio tendrá una pareja \(\left(\left|\delta(\symbf{k})\right|,\phi_{\symbf{k}}\right)\) asignada en la simulación. Destacar que el espectro de potencias \(\symrm{P}(k)\), relacionado con la función de dos puntos \(\xi(r)\) por~\eqref{eq::relation}, es la única función necesaria para definir completamente un campo aleatorio gaussiano.
 
 Los campos aleatorios gaussianos son especialmente fáciles de manejar. La cuestión importante, por supuesto, es si el campo de densidad inicial es gaussiano o no. Por el momento, hay al menos tres razones para preferir un campo gaussiano a uno no gaussiano. En primer lugar, un campo de perturbación gaussiano surge naturalmente de las fluctuaciones cuánticas durante inflación. Dado que un campo gaussiano sigue siendo gaussiano durante la evolución lineal, la predicción genérica de los modelos inflacionarios es, pues, que \(\delta(\symbf{x})\) en el régimen lineal sigue la estadística gaussiana. En segundo lugar, según el teorema del límite central, la distribución de la suma de un gran número de variables independientes se aproxima a una distribución gaussiana sin tener en cuenta las funciones de distribución de las variables individuales. El campo de perturbación de la densidad inicial \(\delta(\symbf{x})\) es una suma de un gran número de modos de Fourier, por lo que el teorema del límite central garantiza una distribución gaussiana. Y en tercer lugar, actualmente no hay evidencia observacional convincente que sugiera que el campo de densidad lineal es no gaussiano.
-\subsection{Espectro de potencias lineal y condiciones iniciales}
+\subsection{Espectro de potencias lineal y condiciones iniciales}\label{sec::espectrolin}
 \begin{figure}[t]
     \centering
     \includegraphics[scale=.7]{img/Cmb_inpaint_T_smica_v1-min.png}
-    \caption[Mapa del fondo cósmico de microondas]{Mapa del fondo cósmico de microondas (Tomada de~\cite{collaboration2020planck4})}
+    \caption[Mapa del fondo cósmico de microondas]{Mapa del fondo cósmico de microondas a todas las escalas (Tomada de~\cite{collaboration2020planck4})}
     \label{fig::cmbpng}
 \end{figure}
 Incluso en ausencia de un mecanismo que produzca las perturbaciones en el universo primitivo y mucho antes de la idea de la inflación, existía un \textit{ansatz} para el espectro de potencias inicial de la forma~\cite{harrison1970,zel1970hypothesis,peebles1970primeval}
@@ -280,7 +280,7 @@ Incluso en ausencia de un mecanismo que produzca las perturbaciones en el univer
 \end{equation}
 con \(n_s\) conocido por \textbf{índice espectral}. El valor \(n_s=1\), donde el espectro resultante es conocido como espectro de Harrison-Zel'dovich y es invariante de escala porque el espectro de potencias adimensional del potencial gravitatorio \(\Delta(k)\propto k^3\symrm{P}(k)_{\symrm{potencial}}\propto k^{-1}\symrm{P}(k)\) es independiente de \(k\) para \(n_s=1\)~\cite{baumann2022cosmology}. El caso \(n_s=1\) da lugar a un campo de fluctuaciones muy uniforme en grandes escalas (\(>1000\) Mpc) pero con fluctuaciones notables en escalas más pequeñas.
 
-De cualquier manera, hay razones justas para limitar los valores del índice espectral \(-3<n_s<4\)~\cite{peacock1998cosmological}. Observaciones del fondo cósmico de microondas, mostrado en la~\autoref{fig::cmbpng}, han encontrado que el índice espectral vale~\cite{collaboration2020planck}
+De cualquier manera, hay razones justas para limitar los valores del índice espectral \(-3<n_s<4\)~\cite{peacock1998cosmological}. Observaciones del fondo cósmico de microondas (CMB), mostrado en la~\autoref{fig::cmbpng}, han encontrado que el índice espectral vale~\cite{collaboration2020planck}
 \begin{equation}
     n_s=0.965\pm 0.004.\label{eq::theoryns}
 \end{equation}

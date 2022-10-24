@@ -1,2 +1,90 @@
-\chapter{Resultados}
+\chapter{Resultados y discusión}
+En este capítulo se presentan los resultados obtenidos tras las simulaciones en forma de cortes bidimensionales de una simulación tridimensional que se presenta como una animación GIF. En un primer apartado se muestran las imágenes correspondientes al espectro de potencias primordial \(\symrm{P}_0(k)\) ---puramente proporcional a \(k^{n_s}\). En el segundo punto del capítulo, se observan las simulaciones con la función de transferencia~\eqref{eq::transff} que son más acordes a las fluctuaciones del fondo cósmico de microondas, ya que se tiene en cuenta cierta evolución gravitatoria en las perturbaciones. En la última sección se añade un código QR para visualizar el campo tridimensional. Todos los resultados tienen como entrada los mismos números aleatorios, haciendo posible la comparación entre ellos.
 
+En las figuras se están representando, tanto en el eje horizontal como en el vertical, distancias medidas en Mpc. La barra de color indica los valores que toma el campo de fluctuaciones de densidad de energía para un tiempo fijo, \(\delta(\symbf{x})\). Se utiliza el código de colores del CMB en orden a interpretar mejor las imágenes:
+\begin{itemize}
+    \item El color blanco ---siempre centrado--- representa \(\delta(\symbf{x})=0\) que, de acuerdo a~\eqref{eq::campofluct}, significa que la densidad de energía en ese punto \(\rho(\symbf{x})\) es igual a la densidad del fondo homogéneo \(\overbar{\rho}\). No hay fluctuación.
+    \item El color rojo es para fluctuaciones positivas \(\rho(\symbf{x})>\overbar{\rho}\).
+    \item El color azul es para fluctuaciones negativas \(\rho(\symbf{x})<\overbar{\rho}\).
+\end{itemize}
+Mediante la función \texttt{numpy.clip}, el campo final que se genera es para todo \(\symbf{x}\) (por requisito físico \(\rho(\symbf{x})\geq 0\)) mayor o igual que -1 (\(\delta(\symbf{x})\geq -1\)). Aunque en las figuras aparecen valores menores que -1 en la barra de color por el hecho de centrarla en 0.
+
+A continuación, se muestra en la~\autoref{fig::ejemplo} un ejemplo de las imágenes que se obtienen. Cada píxel es un cuadrado de lado \(L\) megapársecs, cuyo color representa el valor de \(\delta(\symbf{x})\) y donde el número de píxeles de la imagen está parametrizado con la variable \(N\) (véase~\autoref{ch::mym}).
+\begin{figure}[ht]
+    \centering
+    \scalebox{.9}{\input{pgf/ejemplo.pgf}}
+    \caption[Ejemplo de un campo gaussiano aleatorio con \(L=1\) Mpc/píxel]{Ejemplo de un campo gaussiano aleatorio con \(L=1\) Mpc/píxel. Ampliado a escala de 1 píxel.}
+    \label{fig::ejemplo}
+\end{figure}
+\section{Campos gaussianos a partir del espectro de potencias primordial}
+\subsection{Ruido blanco}
+En este escenario, el espectro de potencias es constante. Esto significa que para cualquier valor de \(k\), según~\eqref{eq::relation}, no existe correlación entre las fluctuaciones de densidad de diferentes puntos del espacio real, es decir, ningún tamaño es privilegiado en las manchas que aparecen. El correspondiente \(\delta(\symbf{x})\) tiene un aspecto de ``ruido'' donde todas las frecuencias espaciales aportan (igual que la luz blanca contiene todas las frecuencias) y es mostrado en la~\autoref{fig::ruidoblanco32} para \(N=32\) y en la~\autoref{fig::ruidoblanco128} para \(N=256\) píxeles. En definitiva, se ajusta a una distribución de materia constituida por la localización aleatoria de partículas.
+
+Con esta simulación se comprueba que el~\autoref{lst::script} funciona y se prosigue con el resto de las simulaciones.
+\begin{figure}[ht]
+    \centering
+    \scalebox{.85}{\input{pgf/ruidoblanco32.pgf}}
+    \caption[Ruido blanco \(N=32\) píxeles y \(L=1\) Mpc/píxel]{Campo gaussiano aleatorio de ruido blanco con \(L=1\) Mpc/píxel. Las fluctuaciones no guardan correlación entre sí haciendo que no aparezcan manchas sino píxeles sueltos con valores de \(\delta(\symbf{x})\) aleatorios.}
+    \label{fig::ruidoblanco32}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \scalebox{.85}{\input{pgf/ruidoblanco128.pgf}}
+    \caption[Ruido blanco \(N=256\) píxeles y \(L=1\) Mpc/píxel]{Campo gaussiano aleatorio de ruido blanco con \(L=1\) Mpc/píxel. Con mayor número de píxeles se aprecia mejor el carácter de ruido blanco.}
+    \label{fig::ruidoblanco128}
+\end{figure}
+\clearpage
+\subsection{Espectro \textit{blue-tilted} (Harrison-Zel'dovich)}
+En los casos \textit{blue-tilted}, el espectro de potencias es monótono creciente ---para el de Harrison-Zel'dovich \(\symrm{P}_0(k)=k\). El significado de la afirmación anterior es que mientras mayor sea \(k\) (equiv. menor sea \(\lambda\)), mayor será la correlación entre las fluctuaciones de densidad en diferentes puntos espaciales, es decir, las fluctuaciones de pequeño tamaño predominan. El asociado \(\delta(\symbf{x})\) tiene un aspecto homogéneo pero con manchas de pequeño tamaño. El resultado es mostrado en la~\autoref{fig::bluetilted} para \(N=256\) píxeles.
+\begin{figure}[h]
+    \centering
+    \scalebox{.835}{\input{pgf/bluetilted.pgf}}
+    \caption[Harrison-Zel'dovich \(N=256\) píxeles y \(L=4\) Mpc/píxel]{Campo gaussiano aleatorio Harrison-Zel'dovich con \(L=4\) Mpc/píxel. Se aprecia el carácter homogéneo de las fluctuaciones.}
+    \label{fig::bluetilted}
+\end{figure}
+
+Si se amplia cualquier zona en la figura anterior, es posible apreciar como esas manchas son pequeñas pero notables (colores del mismo tono aparecen juntos) tal y como se vió en la~\autoref{sec::espectrolin}, en contraste al ruido blanco donde básicamente no se llegan a formar agrupaciones. Dicha amplificación se muestra en la~\autoref{fig::bluetiltedzoom}.
+\begin{figure}[ht]
+    \centering
+    \scalebox{.85}{\input{pgf/bluetiltedzoom.pgf}}
+    \caption{Harrison-Zel'dovich \(N=256\) píxeles y \(L=4\) Mpc/píxel ampliado}
+    \label{fig::bluetiltedzoom}
+\end{figure}
+\subsection{Espectro \textit{red-tilted}}
+Esta categoría de espectros son la contraparte a los \textit{blue-tilted} porque el espectro de potencias es monótono decreciente. Se obtiene que predominan las fluctuaciones de gran tamaño. El campo de fluctuaciones de la densidad que se obtiene es de baja homogeneidad. Dicho campo se muestra en la~\autoref{fig::redtilted} para \(N=512\) píxeles. Notar que no solo varían el tamaño de las fluctuaciones, sino la amplitud de estas. Al estar usando un volumen más pequeño del universo, la densidad de energía es menor y han de serlo sus fluctuaciones como se comprueba en la simulación.
+\begin{figure}[ht]
+    \centering
+    \scalebox{.85}{\input{pgf/redtilted.pgf}}
+    \caption[Espectro primordial \textit{red-tilted} \(N=512\) píxeles y \(L=0.25\) Mpc/píxel]{Campo gaussiano aleatorio del espectro primordial \textit{red-tilted} con \(L=0.25\) Mpc/píxel. Comienzan a aparecer manchas con forma de las estructuras que se observan en el universo.}
+    \label{fig::redtilted}
+\end{figure}
+\section{Campos gaussianos a partir del espectro de potencias lineal}
+Ahora se añade al algoritmo, a través de la función de transferencia, el procesamiento que sufre el espectro de potencias primordial por la evolución gravitatoria de las fluctuaciones.
+\subsection{Grandes escalas}
+Como ya se vió en la~\autoref{sec::espectrolin} y en la~\autoref{fig::matterpower}, cuando los números de onda \(k\) son pequeños se tiene un espectro de potencias proporcional a \(k\). Al añadir la función de transferencia se coloca \(n_s=5\) para obtener el carácter proporcional a \(k\) deseado. El campo de fluctuaciones \(\delta(\symbf{x})\) que se obtenga ha de ser similar a uno \textit{blue-tilted} donde las fluctuaciones son de pequeño tamaño. La realización se muestra en la~\autoref{fig::transfergrandes} para los mismos valores usados en la~\autoref{fig::bluetilted}. De este modo, al compararlas, se encuentra gran similitud visual como se esperaba. La amplitud de las fluctuaciones, en cambio, es mayor que en el caso del espectro primordial, pudiendo ser esto debido a la evolución gravitatoria de las mismas.
+\begin{figure}[ht]
+    \centering
+    \scalebox{.85}{\input{pgf/transfergrandes.pgf}}
+    \caption[Espectro lineal \(N=256\) píxeles y \(L=4\) Mpc/píxel]{Campo gaussiano aleatorio del espectro lineal con \(L=4\) Mpc/píxel. Las fluctuaciones son homogéneas como se espera en grandes escalas.}
+    \label{fig::transfergrandes}
+\end{figure}
+\clearpage
+\subsection{Valores del CMB}
+El último resultado que se presenta es el que más se acerca a lo observado por los radiotelescopios en el CMB. Incluyendo en la función de transferencia el valor medido en el fondo cósmico de microondas para el índice espectral \(n_s=0.965\), se obtiene un espectro de potencias de carácter \textit{red-tilted}. En este caso, las fluctuaciones tienen que ser de gran tamaño. La imagen extraída se muestra en la~\autoref{fig::transfercmb} para \(N=512\) píxeles. La forma de las fluctuaciones se ve ``enfocada'' respecto de la~\autoref{fig::redtilted} por la influencia de la función de transferencia. Si se compara la~\autoref{fig::transfercmb} con el CMB suavizado a grandes escalas de la~\autoref{fig::cmbpdf}, hay una gran similitud en el resultado con experimentos reales.
+\begin{figure}[ht]
+    \centering
+    \scalebox{.85}{\input{pgf/transfercmb.pgf}}
+    \caption[Valores del CMB \(N=512\) píxeles y \(L=0.25\) Mpc/píxel]{Campo gaussiano aleatorio del espectro lineal con \(L=0.25\) Mpc/píxel. Se ha suavizado la forma de las fluctuaciones debido a la función de transferencia.}
+    \label{fig::transfercmb}
+\end{figure}
+\begin{figure}[t]
+    \centering
+    \includegraphics[scale=.6]{img/Planck_2018_Pol_CMB.pdf}
+    \caption[Mapa del fondo cósmico de microondas a grandes escalas]{Mapa del fondo cósmico de microondas suavizado a grandes escalas (Tomada de~\cite{collaboration2020planck4})}
+    \label{fig::cmbpdf}
+\end{figure}
+\section{Campo gaussiano tridimensional con los valores del CMB}
+Usando los mismos parámetros que para generar la~\autoref{fig::transfercmb}, se añade la tercera dimensión tomando diferentes cortes (se recorren los números de onda~\eqref{eq::knumbers} en esta dimensión) y haciendo una animación con ellos. El resultado se puede visualizar escaneando el siguiente código QR:
+\begin{center}
+    {\hypersetup{urlcolor=.}\textcolor{qrblue}{\qrcode[height=.8in]{https://rafaariza.github.io/rafaariza/assets/images/FS2029FSC.gif}}}
+\end{center}

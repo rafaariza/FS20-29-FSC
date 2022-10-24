@@ -55,7 +55,7 @@
 \usepackage[activate={true,nocompatibility},factor=1100,stretch=10,shrink=10]{microtype}
 \linespread{1.25}
 \usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=2cm]{geometry}
-\usepackage{booktabs,xcolor,tikz,svg,graphicx,subfigure,float,appendix,titlesec,pgf}
+\usepackage{booktabs,xcolor,tikz,svg,graphicx,subcaption,float,appendix,titlesec,pgf}
 \usepackage[labelfont=bf,labelsep=period,font={footnotesize},hypcap=true]{caption}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -123,7 +123,7 @@
 \definecolor{webtinto}{rgb}{0.73,0.00,0.00}
 \definecolor{gray96}{gray}{.96}
 \usepackage{tocbibind}
-\graphicspath{{./img/}{../scripts64/img/}{./svg/}}
+\graphicspath{{./pgf/}{./img/}{../scripts64/img/}{./svg/}}
 \definecolor{migris}{HTML}{636363}
 \DeclareCaptionFont{white}{\color{white}}
 \DeclareCaptionFormat{table}{\colorbox{migris!75}{\parbox{0.887\textwidth}{\textbf{#1#2}#3}}}
@@ -133,6 +133,7 @@
   \renewcommand{\figureautorefname}{figura}%
   \renewcommand{\tableautorefname}{tabla}%
   \renewcommand{\sectionautorefname}{sección}%
+  \renewcommand{\subsectionautorefname}{subsección}%
   \renewcommand{\appendixautorefname}{apéndice}%
   \def\lstlistingautorefname{algoritmo}%
   \renewcommand{\lstlistlistingname}{Índice de algoritmos}%
