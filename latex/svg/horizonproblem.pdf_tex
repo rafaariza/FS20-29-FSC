@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{320.84807437bp}%
+    \setlength{\unitlength}{333.19831818bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,22 +50,25 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.95641841)%
+  \begin{picture}(1,0.92096805)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{horizonproblem.pdf}}%
-    \put(0.70122213,0.9066747){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small hoy\end{tabular}}}}%
-    \put(0.70122213,0.66679841){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small recombinación\end{tabular}}}}%
-    \put(0.70122213,0.62534689){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small singularidad\end{tabular}}}}%
-    \put(0.33862778,0.15898268){\color[rgb]{0.74901961,0.74901961,0.74901961}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small superficie de\end{tabular}}}}%
-    \put(0.33976179,0.12718935){\color[rgb]{0.74901961,0.74901961,0.74901961}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small última dispersión\end{tabular}}}}%
-    \put(0.60277963,0.28162073){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(p\)\end{tabular}}}}%
-    \put(0.60636009,0.69047815){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(p\)\end{tabular}}}}%
-    \put(0.08727463,0.69047709){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(q\)\end{tabular}}}}%
-    \put(0.07927799,0.28162073){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(q\)\end{tabular}}}}%
-    \put(0.46313203,0.29972466){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small 2°\end{tabular}}}}%
+    \put(0.71229655,0.87306813){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small hoy\end{tabular}}}}%
+    \put(0.71229655,0.64208303){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small recombinación\end{tabular}}}}%
+    \put(0.71229655,0.60216794){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small singularidad\end{tabular}}}}%
+    \put(0.36314203,0.15308987){\color[rgb]{0.74901961,0.74901961,0.74901961}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small superficie de\end{tabular}}}}%
+    \put(0.36423401,0.12247498){\color[rgb]{0.74901961,0.74901961,0.74901961}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small última dispersión\end{tabular}}}}%
+    \put(0.61750289,0.27118225){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(p\)\end{tabular}}}}%
+    \put(0.62095065,0.66488506){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(p\)\end{tabular}}}}%
+    \put(0.12110547,0.66488404){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(q\)\end{tabular}}}}%
+    \put(0.11340524,0.27118225){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(q\)\end{tabular}}}}%
+    \put(0.48303144,0.28861514){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small 2°\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{horizonproblem.pdf}}%
-    \put(0.79296428,0.46303109){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small horizonte\end{tabular}}}}%
-    \put(0.79098596,0.43580396){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small de partículas\end{tabular}}}}%
+    \put(0.80063821,0.4458685){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small horizonte\end{tabular}}}}%
+    \put(0.79873322,0.41965056){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\small de partículas\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{horizonproblem.pdf}}%
+    \put(0.01488091,0.90418669){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\(t\)\end{tabular}}}}%
+    \put(0.01488091,0.57105166){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\(0\)\end{tabular}}}}%
   \end{picture}%
 \endgroup%

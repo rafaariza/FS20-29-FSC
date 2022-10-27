@@ -38,7 +38,7 @@
   \newcommand*\fsize{\dimexpr\f@size pt\relax}%
   \newcommand*\lineheight[1]{\fontsize{\fsize}{#1\fsize}\selectfont}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{328.4617427bp}%
+    \setlength{\unitlength}{343.12829806bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -50,16 +50,19 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.62589497)%
+  \begin{picture}(1,0.62510124)%
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{horizonproblemsol.pdf}}%
-    \put(0.68448007,0.57730432){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small hoy\end{tabular}}}}%
-    \put(0.68448007,0.3429883){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small recombinación\end{tabular}}}}%
-    \put(0.68448007,0.30249762){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small recalentamiento\end{tabular}}}}%
-    \put(0.59181691,0.36611915){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(p\)\end{tabular}}}}%
-    \put(0.08476373,0.36611811){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(q\)\end{tabular}}}}%
+    \put(0.69796654,0.57858753){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small hoy\end{tabular}}}}%
+    \put(0.69796654,0.35428704){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small recombinación\end{tabular}}}}%
+    \put(0.69796654,0.31552707){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small recalentamiento\end{tabular}}}}%
+    \put(0.60926415,0.37642919){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(p\)\end{tabular}}}}%
+    \put(0.12388427,0.37642819){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(q\)\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{horizonproblemsol.pdf}}%
-    \put(0.68448007,0.00565937){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\small singularidad\end{tabular}}}}%
+    \put(0.01445026,0.60561845){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\(t\)\end{tabular}}}}%
+    \put(0.01445026,0.00234515){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\(0\)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{horizonproblemsol.pdf}}%
+    \put(0.16300271,0.16899831){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}inflación\end{tabular}}}}%
   \end{picture}%
 \endgroup%

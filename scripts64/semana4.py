@@ -87,12 +87,13 @@ class FS2029FSC():
         planck_cmap.set_bad("gray")
         planck_cmap.set_under("white")
         cmap = planck_cmap
-        for ind, realization in enumerate(self._x_realize[::10]):
-            fig, ax = plt.subplots(figsize=(5,5))
-            fig.subplots_adjust(top = 1, bottom = 0.1, right = 1, left = 0)
+        for ind, realization in enumerate(self._x_realize[::self._size]):
+            fig, ax = plt.subplots(figsize=(4.5,4.5))
+            ax.yaxis.get_major_locator().set_params(integer=True)
+            fig.subplots_adjust(top = 0.95, bottom = 0.12, right = 1, left = 0)
             ax.set_box_aspect(1)
             plot = ax.imshow(realization, norm=CenteredNorm(), cmap=cmap, extent=(0,self._boxlength*self._size,0,self._boxlength*self._size))
-            cbar = fig.colorbar(plot, orientation='horizontal', fraction=0.042, pad=0.1)
+            cbar = fig.colorbar(plot, orientation='horizontal', fraction=0.042, pad=0.15)
             cbar.set_label(r'$\delta(\mathbf{x})$', rotation=0, size=12)
             ax.set_xlabel(r'$x$ (Mpc)')
             ax.set_ylabel(r'$y$ (Mpc)')
@@ -106,7 +107,7 @@ class FS2029FSC():
 
 def transferfunction_k(amplitude, modulus, power):
     """
-    Espectro de potencias lineal.
+    espectro de potencias en época de recombinación.
     """
     q = modulus/(0.14*k0)
     L0 = np.log(2 * np.exp(1) + 1.8 * q)
@@ -115,14 +116,13 @@ def transferfunction_k(amplitude, modulus, power):
     name = "transfer"
     return amplitude * np.power(q, 1 * power) * np.power(T0, 2), name
 
-
 def k_pol(amplitude, modulus, power):
     """
-    Espectro de potencias primordial.
+    Espectro de potencias inicial.
     """
     name = "pdek"
     return amplitude * (modulus/k0) ** power, name
 
-delta_x = FS2029FSC(amplitude=2.101E-9, power=0.965, size=9, dimensions=3, show=False, method=transferfunction_k, boxlength=0.25)
+delta_x = FS2029FSC(amplitude=2.101E-9, power=0.965, size=9, dimensions=3, show=True, method=transferfunction_k, boxlength=0.25)
 delta_x.generator()
 delta_x.show_x_realize()

@@ -25,9 +25,9 @@
      inkscape:document-units="mm"
      showgrid="false"
      showguides="false"
-     inkscape:zoom="2.9540686"
-     inkscape:cx="118.81918"
-     inkscape:cy="73.119495"
+     inkscape:zoom="1.4770343"
+     inkscape:cx="90.045302"
+     inkscape:cy="113.74143"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
@@ -277,6 +277,25 @@
          d="M 253.70703,355.32031 481.79297,127.23438 310.72656,-43.828125 82.644531,184.25781 Z m 0,0"
          id="path408-0" />
     </clipPath>
+    <marker
+       style="overflow:visible"
+       id="TriangleStart-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="TriangleStart"
+       markerWidth="5.3244081"
+       markerHeight="6.155385"
+       viewBox="0 0 5.3244081 6.1553851"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-1" />
+    </marker>
   </defs>
   <g
      inkscape:label="Capa 1"
@@ -787,5 +806,31 @@
          style="stroke-width:0.2"
          x="96.437614"
          y="59.687336">\small de partículas</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.365;stroke-miterlimit:9.7;stroke-dasharray:none;stroke-dashoffset:7.19018;marker-end:url(#TriangleStart-3)"
+       d="M 3.6739064,37.372272 V 4.4652812"
+       id="path1632" />
+    <text
+       xml:space="preserve"
+       style="font-size:1.41111px;line-height:1.25;font-family:sans-serif;text-align:start;text-decoration-color:#000000;text-anchor:start;fill:#000000;stroke-width:0.264999;-inkscape-stroke:none;stop-color:#000000"
+       x="4.2997246"
+       y="2.7325552"
+       id="text1931"><tspan
+         sodipodi:role="line"
+         id="tspan1929"
+         style="font-size:1.41111px;text-align:start;text-anchor:start;stroke-width:0.265"
+         x="4.2997246"
+         y="2.7325552">\(t\)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:1.41111px;line-height:1.25;font-family:sans-serif;text-align:start;text-decoration-color:#000000;text-anchor:start;fill:#000000;stroke-width:0.264999;-inkscape-stroke:none;stop-color:#000000"
+       x="4.2997246"
+       y="41.8909"
+       id="text1985"><tspan
+         sodipodi:role="line"
+         id="tspan1983"
+         style="font-size:1.41111px;text-align:start;text-anchor:start;stroke-width:0.265"
+         x="4.2997246"
+         y="41.8909">\(0\)</tspan></text>
   </g>
 </svg>

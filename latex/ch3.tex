@@ -1,19 +1,9 @@
 \chapter{Materiales y métodos}\label{ch::mym}
 En este capítulo se describe cómo fueron realizadas las simulaciones de los campos gaussianos aleatorios para poder ser replicadas. También se especifican los materiales que fueron usados durante todo el proceso.
 
-Se generaron realizaciones tridimensionales (de las que se tomaron cortes bidimensionales), así como una visualización animada de la tercera dimensión en formato GIF o MP4, del campo de fluctuaciones gaussiano para ambos espectros de potencias y diferentes valores de \(n_s\). En primer lugar para el espectro de potencias primordial \(\symrm{P}_0(k)\):
-\begin{itemize}
-    \item \(n_s=0\). Ruido blanco, el fondo sobre el que se perturba. Sirvió para comprobar el funcionamiento.
-    \item \(n_s=1\). Harrison-Zel'dovich. Grandes escalas, se utilizó para comprobar un espectro \textit{blue-tilted} \((n_s>0)\) que se refiere a un espectro dominado por los números de onda grandes, esto son longitudes de onda pequeñas (azul). Fluctuaciones de menor tamaño físico.
-    \item \(n_s=-3\). Pequeñas escalas del universo, sirvió para comprobar un espectro \textit{red-tilted} \((n_s<0)\) que es la contraparte del anterior, donde las longitudes de onda largas (rojo) contribuyen más, es decir, fluctuaciones de mayor tamaño físico.
-\end{itemize}
-Y al final, para la simulación más realista se utilizó~\eqref{eq::espectrolineal} y~\eqref{eq::transff}:
-\begin{itemize}
-    \item \(n_s=5\). En este caso, \(P(k)\propto k\) que corresponde a grandes escalas y ha de ser homogéneo con pequeñas fluctuaciones.
-    \item \(n_s=0.965\). Es el que se observa experimentalmente, apunta a escalas más pequeñas donde las fluctuaciones son más grandes y ha de ser visualmente similar al CMB.
-\end{itemize}
+Se generaron realizaciones tridimensionales (de las que se tomaron cortes bidimensionales), así como una visualización animada de la tercera dimensión en formato GIF o MP4, del campo de fluctuaciones gaussiano para ambos espectros de potencias y diferentes valores de \(n_s\).
 
-Como no es posible simular campos infinitos, se generaron muestras del verdadero campo subyacente, es decir, ``cajas'' que son representaciones periódicas del susodicho campo. En este aspecto las transformadas de Fourier~\eqref{eq::fourierinverse} y~\eqref{eq::fourier} se tornan discretas:\footnote{Para ahorrar notación se escribe la transformada discreta en una dimensión, la cual se extiende a mayores dimensiones de manera obvia.}
+Como no es posible simular campos infinitos, se generaron muestras del verdadero campo subyacente, es decir, ``cajas'' que son representaciones periódicas del susodicho campo. Cada lado de dichas cajas se divide en celdas (elementos finitos). En este aspecto las transformadas de Fourier~\eqref{eq::fourierinverse} y~\eqref{eq::fourier} se tornan discretas:\footnote{Para ahorrar notación se escribe la transformada discreta en una dimensión, la cual se extiende a mayores dimensiones de manera directa.}
 \begin{equation}
     \delta_m(k)\equiv\frac{1}{L}\sum_{n=0}^{N-1}\delta_n(x)\ \symrm{e}^{-\symrm{i}nm/N}=\frac{\mathcal{F}\left[\delta({x})\right]}{L}\qquad m=0,\ldots,n-1,\label{eq::discrete}
 \end{equation}
@@ -40,7 +30,7 @@ El algoritmo (véase~\autoref{ch::codes}) se implementó con el lenguaje de prog
     \item Se computa el \textit{array} del campo de fluctuaciones en el espacio de Fourier \(\delta(\symbf{k})=G\,\sqrt{\symrm{P}(k_j)}\). Se multiplica por la raíz de \(\symrm{P}(k_j)\) para pasar a desviación típica \(\symrm{P}(k)\).
     \item Se determina el campo de fluctuaciones en el espacio real mediante la transformada inversa de Fourier \(\delta(\symbf{x})=L^3\mathcal{F}^{-1}\left[\delta(\symbf{k})\right]\).
 \end{enumerate}
-El índice espectral \(n_s\) es el parámetro \texttt{power} y la amplitud del espectro de potencias lineal \(A_0\) es \texttt{amplitude} para \(k_0=0.05\) Mpc\textsuperscript{-1}. Al fijar \(k_0\) en estas unidades, la unidad de distancia física obtenida fue el megapársec, \([x]=\text{Mpc}\).
+El índice espectral \(n_s\) es el parámetro \texttt{power} y la amplitud del espectro de potencias en época de recombinación \(A_0\) es \texttt{amplitude} para \(k_0=0.05\) Mpc\textsuperscript{-1}. Al fijar \(k_0\) en estas unidades, la unidad de distancia física obtenida fue el megapársec, \([x]=\text{Mpc}\).
 
 Para poder replicar los resultados que se obtuvieron, la semilla inicial que da lugar a los números aleatorios se fijó con el parámetro \texttt{seed} del módulo \texttt{numpy.random} de Python.
 \section{Materiales}
@@ -72,13 +62,16 @@ Una definición práctica de aleatoriedad en el contexto de las secuencias gener
 El generador de números aleatorios que se utilizó se encuentra bajo el módulo \texttt{numpy.random} que produce números aleatorios usando combinaciones de un \textit{BitGenerator} para crear secuencias y un \textit{Generator} para usar esas secuencias en el muestreo de diferentes distribuciones estadísticas:
 \begin{itemize}
     \item \textit{BitGenerators}: Objetos que generan números aleatorios. Suelen ser enteros sin signo rellenos de palabras con secuencias aleatorias de 32 o 64 bits.
+\end{itemize}
+\newpage
+\begin{itemize}
     \item \textit{Generators}: Objetos que transforman secuencias aleatorias de bits del \textit{BitGenerator} en secuencias de números que siguen una determinada distribución de probabilidad. Se utilizaron la uniforme (\texttt{numpy.random.Generator.uniform}) y la gaussiana (\texttt{numpy.random.Generator.normal}).
 \end{itemize}
 
 El \textit{BitGenerator} utilizado fue PCG64~\cite{o2014pcg}. La semilla que inicializa el \textit{BitGenerator} se fijó con la función \texttt{numpy.random.default\_rng(seed=42)} y sirvió para que las diferentes realizaciones estuvieran basadas en los mismos números aleatorios, lo que permitió compararlas entre ellas.
 \subsection{Entorno de trabajo}
 Todo el trabajo de programación y posterior simulación se realizó en el software Visual Studio Code de Microsoft. Como se muestra en la~\autoref{fig::entorno}, se dispuso el entorno tal que la redacción del texto y las simulaciones estaban en la misma ventana, permitiendo un trabajo focalizado sin cambios de programas y una inserción de los campos generados de manera semiautomática en el texto.
-\begin{figure}[t]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{img/entorno.png}
     \caption{Entorno de trabajo en VSCode}

@@ -26,27 +26,27 @@ La teoría estándar del \textit{Hot Big Bang} es considerablemente exitosa, sup
 
 El universo se está expandiendo~\cite{hubble1929relation}. Era entonces más denso y caliente en el pasado. Las partículas colisionaban frecuentemente y el universo estaba en un estado de equilibrio térmico con una temperatura \(T\). Ajustando la constante de Boltzmann a la unidad \(k_B=1\), se mide la temperatura en unidades de energía. De este modo, midiendo las energías en electronvoltios:
 \begin{equation}
-    \symrm{eV}\approx 1.6\times 10^{-19}\,\symrm{J}\approx 1.2\times 10^{4}\,\symrm{K}.
+    1\ \symrm{eV}\approx 1.602\times 10^{-19}\,\symrm{J}\approx 1.160\times 10^{4}\,\symrm{K}.
 \end{equation}
 La relación entre la temperatura del universo temprano y su edad es~\cite{baumann2022cosmology}
 \begin{equation}
     \frac{T}{1\,\symrm{MeV}}\simeq \left(\frac{t}{1\,\symrm{s}}\right)^{-1/2}.
 \end{equation}
 Un segundo después del \textit{Big Bang} la temperatura del universo era de unos \(10^{11}\) K (o 1 MeV). Como aún había pasado poco tiempo en el universo temprano, la cadencia de las reacciones era extremadamente alta, así que pasaron muchas cosas en un corto periodo de tiempo (véase~\autoref{tab::eventos}).
-    {\renewcommand{\arraystretch}{1.1}
+    {\renewcommand{\arraystretch}{1.1}\hypersetup{citecolor=webgreentint}
         \begin{table}[t]
             \centering
-            \caption{Eventos clave en la historia del universo}
+            \caption[Eventos clave en la historia del universo]{Eventos clave en la historia del universo (tomada de~\cite{baumann2022cosmology})}
             \label{tab::eventos}
             \begin{tabular}{lrrr}
                 \toprule
                 \multicolumn{1}{c}{\textbf{Evento}}               & \textbf{temperatura}                                              & \textbf{energía}                                                  & \textbf{tiempo}                                                   \\ \midrule
                 \rowcolor{migris!50}
                 {\color[HTML]{FFFFFF} Inflación}                  & {\color[HTML]{FFFFFF} \(<10^{28}\) K}                             & {\color[HTML]{FFFFFF} \(<10^{16}\) GeV}                           & {\color[HTML]{FFFFFF} \(>10^{-34}\) s}                            \\
-                Desacoplamiento materia oscura                    & \multicolumn{1}{c}{?}                                             & \multicolumn{1}{c}{?}                                             & \multicolumn{1}{c}{?}                                             \\
+                Producción de materia oscura                    & \multicolumn{1}{c}{?}                                             & \multicolumn{1}{c}{?}                                             & \multicolumn{1}{c}{?}                                             \\
                 \rowcolor{migris!50}
-                {\color[HTML]{FFFFFF} Formación de bariones}      & \multicolumn{1}{c}{\cellcolor{migris!50}{\color[HTML]{FFFFFF} ?}} & \multicolumn{1}{c}{\cellcolor{migris!50}{\color[HTML]{FFFFFF} ?}} & \multicolumn{1}{c}{\cellcolor{migris!50}{\color[HTML]{FFFFFF} ?}} \\
-                Transición de fase electrodébil                   & \(10^{15}\) K                                                     & \(100\) GeV                                                       & \(10^{-11}\) s                                                    \\
+                {\color[HTML]{FFFFFF} Bariogénesis}      & \multicolumn{1}{c}{\cellcolor{migris!50}{\color[HTML]{FFFFFF} ?}} & \multicolumn{1}{c}{\cellcolor{migris!50}{\color[HTML]{FFFFFF} ?}} & \multicolumn{1}{c}{\cellcolor{migris!50}{\color[HTML]{FFFFFF} ?}} \\
+                Rotura simetría electrodébil                   & \(10^{15}\) K                                                     & \(100\) GeV                                                       & \(10^{-11}\) s                                                    \\
                 \rowcolor{migris!50}
                 {\color[HTML]{FFFFFF} Formación de hadrones}      & {\color[HTML]{FFFFFF} \(10^{12}\) K}                              & {\color[HTML]{FFFFFF} \(150\) MeV}                                & {\color[HTML]{FFFFFF} \(10^{-5}\) s}                              \\
                 Desacoplamiento de neutrinos                      & \(10^{10}\) K                                                     & \(1\) MeV                                                         & \(1\) s                                                           \\
@@ -58,9 +58,9 @@ Un segundo después del \textit{Big Bang} la temperatura del universo era de uno
                 Primeras estrellas                                & \(50\) K                                                          & \(4\) meV                                                         & \(100\) Ma                                                        \\
                 \rowcolor{migris!50}
                 {\color[HTML]{FFFFFF} Primeras galaxias}          & {\color[HTML]{FFFFFF} \(20\) K}                                   & {\color[HTML]{FFFFFF} \(1.7\) meV}                                & {\color[HTML]{FFFFFF} \(1\) Ga}                                   \\
-                Sistema solar                                     & \(3.8\) K                                                         & \(0.33\) meV                                                      & \(9\) Ga                                                          \\
+                Formación del Sistema solar                                     & \(3.8\) K                                                         & \(0.33\) meV                                                      & \(9\) Ga                                                          \\
                 \rowcolor{migris!50}
-                {\color[HTML]{FFFFFF} Escritura de este TFG}      & {\color[HTML]{FFFFFF} \(2.7\) K}                                  & {\color[HTML]{FFFFFF} \(0.23\) meV}                               & {\color[HTML]{FFFFFF} \(13.8\) Ga}                                \\ \bottomrule
+                {\color[HTML]{FFFFFF} Nacimiento de Einstein}     & {\color[HTML]{FFFFFF} \(2.7\) K}                                  & {\color[HTML]{FFFFFF} \(0.23\) meV}                               & {\color[HTML]{FFFFFF} \(13.8\) Ga}                                \\ \bottomrule
             \end{tabular}
         \end{table}}
 
@@ -95,14 +95,26 @@ Para visualizar el primer problema, considérense dos direcciones opuestas en el
     \caption[Solución inflacionaria al problema del horizonte]{Solución inflacionaria al problema del horizonte. La singularidad del \textit{Big Bang} estándar se sustituye por la superficie de recalentamiento. En lugar de marcar el comienzo del tiempo, ahora corresponde a la transición de la inflación a la evolución clásica del \textit{Big Bang}. Todos los puntos del CMB tienen conos de luz pasados que se superponen y, por tanto, se originan en una región del espacio conectada causalmente.}
     \label{fig::horizonproblemsol}
 \end{figure}
-En teorías inflacionarias la singularidad de la~\autoref{fig::horizonproblem} no es la singularidad inicial, sino la transición entre inflación y el \textit{Hot Big Bang}. Notar que el tiempo \(t=0\) ahora se traslada a un momento previo. La física sigue manteniendo el tiempo entre la singularidad y recombinación en \(380\,000\) años, pero los conos de luz se estiran drásticamente por la expansión inflacionaria permitiendo que estos se superpongan antes del fin de inflación. Esto es representado esquemáticamente en la~\autoref{fig::horizonproblemsol}.
+En teorías inflacionarias la singularidad de la~\autoref{fig::horizonproblem} es la época de recalentamiento, la transición entre inflación y el \textit{Hot Big Bang}. Notar que el tiempo \(t=0\) ahora se traslada a un momento previo. La física sigue manteniendo el tiempo entre recalentamiento y recombinación en \(380\,000\) años, pero los conos de luz se estiran drásticamente por la expansión inflacionaria permitiendo que estos se superpongan antes del fin de inflación. Esto es representado esquemáticamente en la~\autoref{fig::horizonproblemsol}.
 
-Para que el universo siga siendo homogéneo en tiempos posteriores, las velocidades iniciales deben tomar valores muy precisos. Si las velocidades iniciales son ligeramente demasiado pequeñas, el universo vuelve a colapsar en una fracción de segundo. Si son demasiado grandes, el universo se expande demasiado rápido y se queda casi vacío. El ajuste de las velocidades iniciales se hace aún más drástico si se considera en combinación con el problema del horizonte, ya que las velocidades de las partículas deben ajustarse a través de regiones del espacio causalmente desconectadas. Este ajuste preciso en la condición inicial de velocidad es lo que se conoce como el problema de la \textbf{planitud} y se plantea comúnmente como por qué la curvatura espacial del universo es tan pequeña, cuya relación con las velocidades viene dada por la suma de la energía cinética y potencial en una determinada región~\cite{baumann2022cosmology}.
+Según las ecuaciones de la relatividad general de Einstein, la estructura espaciotemporal se ve afectada por la presencia de materia y energía. A pequeña escala, el espacio parece plano, como la superficie de la Tierra si se observa en un área pequeña. Sin embargo, a gran escala, el espacio se curva por el efecto gravitatorio de la materia. Dado que la relatividad indica que la materia y la energía son equivalentes, este efecto también se produce por la presencia de energía (como la luz y otras radiaciones electromagnéticas) además de la materia. El grado de curvatura del universo depende de la densidad total de materia/energía presente \(\rho\). Dicha relación viene dada por la primera ecuación de Friedmann~\cite{friedmann1922125} en un universo sin constante cosmológica
+\begin{equation}
+    H^2=\frac{8\pi G}{3}\rho-\frac{kc^2}{a^2},\label{eq::friedmann}
+\end{equation}
+donde
+\begin{equation}
+    H=H(t)\equiv \frac{1}{a}\frac{\symrm{d}a}{\symrm{d}t}
+\end{equation}
+es el parámetro de Hubble, donde \(a(t)\) es el factor de escala (cantidad adimensional) del universo, el cual cuantiza el tamaño físico de este. La forma de \(a(t)\) depende de las propiedades del material dentro del universo~\cite{liddle1998introduction}. Las constantes \(G\) y \(c\) son la constante gravitacional de Newton y la velocidad de la luz, respectivamente. El parámetro de curvatura es \(k\) ---es decir, una medida del grado de curvatura del espacio-tiempo. Un valor positivo, cero o negativo de \(k\) corresponde a un universo cerrado, plano o abierto, respectivamente. Lo que se conoce como problema de la planitud es por qué el universo tenía (y tiene) un valor tan finamente ajustado para \(\rho\) tal que \(k=0\),
+\begin{equation}
+    \rho_c\equiv\frac{3H^2}{8\pi G}=\rho.
+\end{equation}
+%Para que el universo siga siendo homogéneo en tiempos posteriores, las velocidades iniciales deben tomar valores muy precisos. Si las velocidades iniciales son ligeramente demasiado pequeñas, el universo vuelve a colapsar en una fracción de segundo. Si son demasiado grandes, el universo se expande demasiado rápido y se queda casi vacío. El ajuste de las velocidades iniciales se hace aún más drástico si se considera en combinación con el problema del horizonte, ya que las velocidades de las partículas deben ajustarse a través de regiones del espacio causalmente desconectadas. Este ajuste preciso en la condición inicial de velocidad es lo que se conoce como el problema de la \textbf{planitud} y se plantea comúnmente como por qué la curvatura espacial del universo es tan pequeña, cuya relación con las velocidades viene dada por la suma de la energía cinética y potencial en una determinada región~\cite{baumann2022cosmology}.
 
-Los problemas de causalidad descritos arriba sugieren que hubo una fase antes del \textit{Hot Big Bang}, durante la cual la homogeneidad del universo y sus correspondientes fluctuaciones fueron generadas. Un periodo de expansión acelerada es suficiente para resolverlos. Pero es necesario un escenario viable para dirigir tal expansión. Los campos escalares son la receta a seguir.
+Los problemas descritos arriba sugieren que hubo una fase antes del \textit{Hot Big Bang}, durante la cual la homogeneidad del universo y sus correspondientes fluctuaciones fueron generadas. Un periodo de expansión acelerada es suficiente para resolverlos. Pero es necesario un escenario viable para dirigir tal expansión. Los campos escalares son la receta a seguir.
 \section{Inflación}
-Es sabido que para obtener una expansión acelerada, la presión efectiva debe ser negativa~\cite{dodelson2020modern}. Inflación, aparentemente, fue dirigida por una forma de energía cuya presión \(\symcal{P}<0\). La presión negativa no es algo familiar para los físicos. Así, sea lo que sea que conduce inflación, no es materia ordinaria o radiación. Tampoco puede ser una constante cosmológica: en este caso, el universo estaría en un estado de rápida inflación perpetuo, mientras que es necesario que el periodo inflacionario termine y exista una transición de la fase dominada por radiación a la fase dominada por materia, ambas conocidas.
-\newpage
+De lo que se sabe de teoría de campos escalares, para obtener una expansión acelerada, la presión efectiva debe ser negativa~\cite{dodelson2020modern}. Inflación, aparentemente, fue dirigida por una forma de energía cuya presión \(\symcal{P}<0\). La presión negativa no es algo familiar para los físicos. Así, sea lo que sea que conduce inflación, no es materia ordinaria o radiación. Tampoco puede ser una constante cosmológica: en este caso, el universo estaría en un estado de rápida inflación perpetuo, mientras que es necesario que el periodo inflacionario termine y exista una transición de la fase dominada por radiación a la fase dominada por materia, ambas conocidas.
+
 La forma más simple de generar tal época transitoria de expansión acelerada es mediante la energía potencial de un campo escalar. En física de partículas, se utilizan los campos escalares para representar partículas de espín cero. Se transforman como un escalar (es decir, no cambian) bajo transformaciones de coordenadas. En un universo homogéneo, un campo escalar será función del tiempo únicamente. Notar que no hay campo escalar conocido que pueda regir inflación. Aunque se conoce un campo escalar en la naturaleza, el campo de Higgs, usarlo para dirigir inflación resulta complicado. Sus propiedades e interacciones están lo suficientemente restringidas, por ahora, para que se sepa que no puede servir como fuente de la inflación. No obstante, hay que tener en cuenta que puede ser cierto que la idea de la inflación sea correcta, pero esté impulsada por algo distinto a un campo escalar.
 \subsection{Dinámica del campo escalar}
 Se toman como punto de partida las expresiones de la densidad de energía y presión efectivas de un campo escalar \(\phi\left(t,\symbf{x}\right)\) que se denominará \textbf{inflatón}. Como se indica en la notación, el valor del campo depende del tiempo \(t\) y de la posición \(\symbf{x}\). Asociado a cada valor del campo hay una densidad de energía potencial \(V(\phi)\). Cuando el campo es dinámico (cambia con el tiempo) entonces también incluye una densidad de energía cinética \(\frac{1}{2}\dot{\phi}^2\). Si la energía asociada al campo escalar domina el universo, entonces sirve como fuente de la evolución de este en el modelo FLRW~\cite{baumann2022cosmology}, donde se tiene al mismo ocupado por un fluido perfecto. Dichas expresiones de la densidad de energía y presión, se obtienen por comparación del tensor energía-momento (ecuaciones relatividad general de Einstein) del campo escalar con el de un fluido perfecto, y son
@@ -114,7 +126,7 @@ Se toman como punto de partida las expresiones de la densidad de energía y pres
     \label{eq::eqscampo}
 \end{subequations}
 respectivamente, donde \(\dot{\phi}\) indica derivada temporal.
-
+\newpage
 En lo sucesivo son utilizadas las unidades naturales, esto es, \(c=\hbar=1\). Sea definida la ecuación de estado de un fluido perfecto con el número adimensional \(\symscr{w}\):
 \begin{equation}
     \symscr{w}\equiv\frac{\symcal{P}_\phi}{\rho_\phi}.
@@ -125,11 +137,7 @@ En el marco FLRW, el campo escalar es homogéneo y por tanto, solo depende del t
 \begin{equation}
     \ddot{\phi}+3H\dot{\phi}+V'(\phi)=0,\label{eq::eqmovcampo}
 \end{equation}
-donde \(V'(\phi)=\symrm{d}V/\symrm{d}\phi\) y
-\begin{equation}
-    H=H(t)\equiv \frac{1}{a}\frac{\symrm{d}a}{\symrm{d}t}
-\end{equation}
-es el parámetro de Hubble, donde \(a(t)\) es el factor de escala (cantidad adimensional) del universo, el cual cuantiza el tamaño físico de este. La forma de \(a(t)\) depende de las propiedades del material dentro del universo~\cite{liddle1998introduction}. El término \(\dot{\phi}^2/2\) en~\eqref{eq::eqscampo} es como la ``energía cinética'' del campo y \(3H\dot{\phi}\) en~\eqref{eq::eqmovcampo} viene de la expansión del universo y actúa como una fricción. Con las expresiones en~\eqref{eq::eqscampo}, la ecuación de estado del campo escalar es
+donde \(V'(\phi)=\symrm{d}V/\symrm{d}\phi\). El término \(\dot{\phi}^2/2\) en~\eqref{eq::eqscampo} es como la ``energía cinética'' del campo y \(3H\dot{\phi}\) en~\eqref{eq::eqmovcampo} viene de la expansión del universo y actúa como una fricción. Con las expresiones en~\eqref{eq::eqscampo}, la ecuación de estado del campo escalar es
 \begin{equation}
     \symscr{w}(t)=\frac{\frac{1}{2}\dot{\phi}^2-V(\phi)}{\frac{1}{2}\dot{\phi}^2+V(\phi)}\label{eq::estado}
 \end{equation}
@@ -143,7 +151,7 @@ Hasta ahora, la forma del potencial \(V(\phi)\) está indeterminada y hay bastan
     \caption[Ejemplo de un potencial \textit{slow-roll}]{Ejemplo de un potencial \textit{slow-roll}. Inflación ocurre en la parte sombreada.}
     \label{fig::potential}
 \end{figure}
-\newpage
+
 Estos modelos contienen un solo campo escalar \(\phi\) (inflatón) y resolver la ecuación de movimiento~\eqref{eq::eqmovcampo} se vuelve accesible haciendo la aproximación \textit{slow-roll} donde el término \(\ddot{\phi}\) es despreciable. La motivación física aquí es que interesa más un comportamiento de expansión, así el potencial domina en la densidad de energía~\cite{peacock1998cosmological}. La condición es
 \begin{equation}
     \frac{\dot{\phi}^2}{2}\ll V(\phi);
@@ -156,13 +164,13 @@ tal y como se buscaba. De este modo, se tiene una simple ecuación \textit{slow-
 \begin{equation}
     3H\dot{\phi}=-V'(\phi).
 \end{equation}
-Combinando la ecuación anterior con la ecuación de Friedmann~\cite{friedmann1922125}, usando las unidades naturales,
+Combinando la ecuación anterior con la ecuación de Friedmann~\eqref{eq::friedmann} en un universo plano y usando las unidades naturales,
 \begin{equation}
     H^2=\frac{8\pi G}{3}\left(\frac{\dot{\phi}^2}{2}+V(\phi)\right)\simeq \frac{8\pi G}{3}V(\phi),
 \end{equation}
-donde \(G\) es la constante de gravitación universal, se obtiene un potente y simple aparato para deducir la historia de la expansión de cualquier modelo inflacionario.
+se obtiene un potente y simple aparato para deducir la historia de la expansión de cualquier modelo inflacionario.
 
-La inflación \textit{slow-roll} es, por lo general, cuantificada por los \textbf{parámetros adimensionales de \textit{slow-roll}}\footnote{Notar que \(\epsilon\) es positivo por definición y \(\eta\) puede ser positivo o negativo}
+La inflación \textit{slow-roll} es, por lo general, cuantificada por los \textbf{parámetros adimensionales de \textit{slow-roll}}\footnote{Notar que \(\epsilon\) es positivo por definición y \(\eta\) puede ser positivo o negativo}~\cite{liddle1998introduction}
 \begin{subequations}
     \begin{align}
         \epsilon          & \equiv\frac{1}{16\pi G}\left(\frac{V'}{V}\right)^2\ll 1 \\
@@ -267,11 +275,11 @@ Cualquier combinación lineal de variables gaussianas tiene también distribuci�
 Cada punto del espacio tendrá una pareja \(\left(\left|\delta(\symbf{k})\right|,\phi_{\symbf{k}}\right)\) asignada en la simulación. Destacar que el espectro de potencias \(\symrm{P}(k)\), relacionado con la función de dos puntos \(\xi(r)\) por~\eqref{eq::relation}, es la única función necesaria para definir completamente un campo aleatorio gaussiano.
 
 Los campos aleatorios gaussianos son especialmente fáciles de manejar. La cuestión importante, por supuesto, es si el campo de densidad inicial es gaussiano o no. Por el momento, hay al menos tres razones para preferir un campo gaussiano a uno no gaussiano. En primer lugar, un campo de perturbación gaussiano surge naturalmente de las fluctuaciones cuánticas durante inflación. Dado que un campo gaussiano sigue siendo gaussiano durante la evolución lineal, la predicción genérica de los modelos inflacionarios es, pues, que \(\delta(\symbf{x})\) en el régimen lineal sigue la estadística gaussiana. En segundo lugar, según el teorema del límite central, la distribución de la suma de un gran número de variables independientes se aproxima a una distribución gaussiana sin tener en cuenta las funciones de distribución de las variables individuales. El campo de perturbación de la densidad inicial \(\delta(\symbf{x})\) es una suma de un gran número de modos de Fourier, por lo que el teorema del límite central garantiza una distribución gaussiana. Y en tercer lugar, actualmente no hay evidencia observacional convincente que sugiera que el campo de densidad lineal es no gaussiano.
-\subsection{Espectro de potencias lineal y condiciones iniciales}\label{sec::espectrolin}
+\subsection{Espectro de potencias en recombinación y condiciones iniciales}\label{sec::espectrolin}
 \begin{figure}[t]
     \centering
     \includegraphics[scale=.7]{img/Cmb_inpaint_T_smica_v1-min.png}
-    \caption[Mapa del fondo cósmico de microondas]{Mapa del fondo cósmico de microondas a todas las escalas (Tomada de~\cite{collaboration2020planck4})}
+    \caption[Mapa del fondo cósmico de microondas]{Mapa del fondo cósmico de microondas a todas las escalas (tomada de~\cite{collaboration2020planck4})}
     \label{fig::cmbpng}
 \end{figure}
 Incluso en ausencia de un mecanismo que produzca las perturbaciones en el universo primitivo y mucho antes de la idea de la inflación, existía un \textit{ansatz} para el espectro de potencias inicial de la forma~\cite{harrison1970,zel1970hypothesis,peebles1970primeval}
@@ -290,18 +298,11 @@ Esta pequeña desviación del espectro de Harrison-Zel'dovich es precisamente pr
 \end{equation}
 donde \(\epsilon\) y \(\eta\) son los parámetros slow-roll definidos en~\eqref{eq::slowroll}.
 
-El espectro de potencias en el régimen lineal es descrito por
+El espectro de potencias en época de recombinación es descrito por
 \begin{equation}
-    \symrm{P}(k)=A_0\symrm{P}_0(k)T^2(k)=A_0k^{n_s}T^2(k),\label{eq::espectrolineal}
+    \symrm{P}(k)=A_0\symrm{P}_0(k)T^2(k)=A_0\left(\frac{k}{k_0}\right)^{n_s}T^2(k),\label{eq::espectrolineal}
 \end{equation}
 donde \(T(k)\) se llama función de transferencia y describe el efecto de la presión y otros procesos astrofísicos en la evolución gravitatoria de las perturbaciones, cambiando la forma del espectro inicial \(\symrm{P}_0\). La constante \(A_0\) es introducida para darle un sentido a la cantidad \(k^{n_s}\) ya que \(k\) tiene dimensiones. Así, se introduce un modo de Fourier de referencia \(k_0\) para escalar las unidades de \(k\) tal que \(\left(k/k_0\right)^{n_s}\). De esta manera, la constante \(A_0\) lleva las dimensiones del espectro de potencias y depende del modo de referencia usado, por lo que un valor de \(A_0\) ha de ser declarado para el correspondiente \(k_0\). Se usará \(A_0=2.101\times 10^{-9}\) Mpc\textsuperscript{3} con \(k_0=0.05\) Mpc\textsuperscript{-1}, datos tomados de~\cite{collaboration2020planck}.
-\begin{figure}[t]
-    \centering
-    \def\svgwidth{0.95\textwidth}
-    \input{svg/matterpower.pdf_tex}
-    \caption[Espectro de potencias lineal en la época actual]{Espectro de potencias lineal en la época actual. La línea sólida negra es el modelo del espectro de potencias para el modelo de concordancia y los puntos con barras de error muestran las diferentes mediciones como se indica en la leyenda. Se aprecia que en escalas grandes (miles de Mpc) \(\symrm{P}(k)\propto k\) y en escalas pequeñas (galaxias, cúmulos, etc.) \(\symrm{P}(k)\propto k^{-3}\). (Tomada de~\cite{collaboration2020planck1})}
-    \label{fig::matterpower}
-\end{figure}
 
 La función de transferencia que se usará para describir con más     exactitud el campo de fluctuaciones, de acuerdo a~\eqref{eq::espectrolineal}, será~\cite{eisenstein1998baryonic}
 \begin{equation}
@@ -311,6 +312,13 @@ La función de transferencia que se usará para describir con más     exactitud
         C(q) & =14.2+\frac{731}{1+62.5q},
     \end{aligned}\label{eq::transff}
 \end{equation}
-donde \(q\equiv k/0.142\).
+donde \(q\equiv k/\left(0.142\ \symrm{Mpc}^{-1}\right)\).
 
-El espectro de potencias lineal para el modelo de concordancia se muestra en la~\autoref{fig::matterpower}. En escalas grandes el espectro de potencias está dado básicamente por el espectro inicial y en escalas pequeñas queda afectado por diferentes procesos físicos (por ejemplo, efecto Meszaros) ---que dieron lugar a una variación en el espectro de potencias inicial dejando suficiente tiempo a las fluctuaciones para llegar a ser las galaxias y cúmulos que se tienen hoy--- de modo que \(\symrm{P}(k)\propto k^{-3}\) como se esperaba por la función de transferencia \(T(k)\). El solapamiento de las diferentes mediciones mostradas en la~\autoref{fig::matterpower} demuestra de forma impresionante el éxito y la consistencia del paradigma de la formación de estructuras en el régimen lineal.
+El espectro de potencias en época de recombinación para el modelo de concordancia se muestra en la~\autoref{fig::matterpower}. En escalas grandes el espectro de potencias está dado básicamente por el espectro inicial y en escalas pequeñas queda afectado por diferentes procesos físicos ---que dieron lugar a una variación en el espectro de potencias inicial dejando suficiente tiempo a las fluctuaciones para llegar a ser las galaxias y cúmulos que se tienen hoy--- de modo que \(\symrm{P}(k)\propto k^{-3}\) como se esperaba por la función de transferencia \(T(k)\). El solapamiento de las diferentes mediciones mostradas en la~\autoref{fig::matterpower} demuestra de forma impresionante el éxito y la consistencia del paradigma de la formación de estructuras en el régimen lineal.
+\begin{figure}[h]
+    \centering
+    \def\svgwidth{0.95\textwidth}
+    \input{svg/matterpower.pdf_tex}
+    \caption[espectro de potencias en época de recombinación en la época actual]{espectro de potencias en época de recombinación en la época actual. La línea sólida negra es el modelo del espectro de potencias para el modelo de concordancia y los puntos con barras de error muestran las diferentes mediciones como se indica en la leyenda. Se aprecia que en escalas grandes (miles de Mpc) \(\symrm{P}(k)\propto k\) y en escalas pequeñas (galaxias, cúmulos, etc.) \(\symrm{P}(k)\propto k^{-3}\). (Tomada de~\cite{collaboration2020planck1})}
+    \label{fig::matterpower}
+\end{figure}
