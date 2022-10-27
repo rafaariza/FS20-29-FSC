@@ -87,13 +87,15 @@ class FS2029FSC():
         planck_cmap.set_bad("gray")
         planck_cmap.set_under("white")
         cmap = planck_cmap
-        for ind, realization in enumerate(self._x_realize[::self._size]):
-            fig, ax = plt.subplots(figsize=(4.5,4.5))
+        for ind, realization in enumerate(self._x_realize[::8]):
+            fig, ax = plt.subplots(figsize=(6,6))
             ax.yaxis.get_major_locator().set_params(integer=True)
             fig.subplots_adjust(top = 0.95, bottom = 0.12, right = 1, left = 0)
             ax.set_box_aspect(1)
-            plot = ax.imshow(realization, norm=CenteredNorm(), cmap=cmap, extent=(0,self._boxlength*self._size,0,self._boxlength*self._size))
-            cbar = fig.colorbar(plot, orientation='horizontal', fraction=0.042, pad=0.15)
+            plot = ax.imshow(realization, norm=CenteredNorm(), cmap=cmap,
+                extent=(0,self._boxlength*self._size,0,self._boxlength*self._size), rasterized=True)
+            cbar = fig.colorbar(plot, orientation='horizontal', fraction=0.042,
+                                pad=0.15)
             cbar.set_label(r'$\delta(\mathbf{x})$', rotation=0, size=12)
             ax.set_xlabel(r'$x$ (Mpc)')
             ax.set_ylabel(r'$y$ (Mpc)')
@@ -101,8 +103,8 @@ class FS2029FSC():
                 plt.show()
             else:
                 plt.savefig(
-                    f"R:\\Documentos\\FS20-29-FSC\\scripts64\\img\\{self._name}-({self._power})-{timestr}-{ind}.pgf",
-                        dpi=600, bbox_inches='tight', pad_inches=0.0)
+                    f"R:\\Documentos\\FS20-29-FSC\\scripts64\\img\\gif\\transfercmbgif-{ind}.pgf",
+                        dpi=900, bbox_inches='tight', pad_inches=0.0)
             plt.close(fig)
 
 def transferfunction_k(amplitude, modulus, power):
@@ -123,6 +125,6 @@ def k_pol(amplitude, modulus, power):
     name = "pdek"
     return amplitude * (modulus/k0) ** power, name
 
-delta_x = FS2029FSC(amplitude=2.101E-9, power=0.965, size=9, dimensions=3, show=True, method=transferfunction_k, boxlength=0.25)
+delta_x = FS2029FSC(amplitude=2.101E-9, power=0.965, size=9, dimensions=3, show=False, method=transferfunction_k, boxlength=0.25)
 delta_x.generator()
 delta_x.show_x_realize()
