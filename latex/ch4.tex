@@ -1,7 +1,7 @@
 \chapter{Resultados y discusión}
-En este capítulo se presentan los resultados obtenidos tras las simulaciones en forma de cortes bidimensionales de una simulación tridimensional que se presenta como una animación GIF. En un primer apartado se muestran las imágenes correspondientes al espectro de potencias inicial \(\symrm{P}_0(k)\) ---puramente proporcional a \(k^{n_s}\). En el segundo punto del capítulo, se observan las simulaciones con la función de transferencia~\eqref{eq::transff} que son más acordes a las fluctuaciones del fondo cósmico de microondas, ya que se tiene en cuenta cierta evolución gravitatoria en las perturbaciones. En la última sección se añade un código QR para visualizar el campo tridimensional. Todos los resultados tienen como entrada los mismos números aleatorios, haciendo posible la comparación entre ellos.
+En este capítulo se presentan los resultados obtenidos tras las simulaciones en forma de cortes bidimensionales de una simulación tridimensional que se presenta como una animación GIF. En un primer apartado se muestran las imágenes correspondientes al espectro de potencias primordial \(\symrm{P}_0(k)\) ---puramente proporcional a \(k^{n_s}\). En el segundo punto del capítulo, se observan las simulaciones con la función de transferencia~\eqref{eq::transff} que son más acordes a las fluctuaciones del fondo cósmico de microondas, ya que se tiene en cuenta cierta evolución gravitatoria en las perturbaciones. En la última sección se añade un código QR para visualizar el campo tridimensional. Todos los resultados tienen como entrada los mismos números aleatorios, haciendo posible la comparación entre ellos.
 
-En primer lugar para el espectro de potencias inicial \(\symrm{P}_0(k)\):
+En primer lugar para el espectro de potencias primordial \(\symrm{P}_0(k)\):
 \begin{itemize}
     \item \(n_s=0\). Ruido blanco, el fondo sobre el que se perturba. Sirvió para comprobar el funcionamiento.
     \item \(n_s=1\). Harrison-Zel'dovich. Grandes escalas, se utilizó para comprobar un espectro \textit{blue-biased} \((n_s>0)\) que se refiere a un espectro dominado por los números de onda grandes, esto son longitudes de onda pequeñas (azul). Fluctuaciones de menor tamaño físico.
@@ -28,7 +28,7 @@ A continuación, se muestra en la~\autoref{fig::ejemplo} un ejemplo de las imág
     \caption[Ejemplo de un campo gaussiano aleatorio con \(L=1\) Mpc/píxel]{Ejemplo de un campo gaussiano aleatorio con \(L=1\) Mpc/píxel. Ampliado a escala de 1 píxel.}
     \label{fig::ejemplo}
 \end{figure}
-\section{Campos gaussianos con espectro de potencias inicial}
+\section{Campos gaussianos con espectro de potencias primordial}
 \subsection{Ruido blanco (\texorpdfstring{\(n_s=0\)}{ns=0})}
 En este escenario, el espectro de potencias es constante. Esto significa que para cualquier valor de \(k\), según~\eqref{eq::relation}, no existe correlación entre las fluctuaciones de densidad de diferentes puntos del espacio real, es decir, ningún tamaño es privilegiado en las fluctuaciones que aparecen. El correspondiente \(\delta(\symbf{x})\) tiene un aspecto de ``ruido'' donde todas las frecuencias espaciales aportan (igual que la luz blanca contiene todas las frecuencias) y es mostrado en la~\autoref{fig::ruidoblanco32} para \(N=32\) y en la~\autoref{fig::ruidoblanco128} para \(N=256\) píxeles. En definitiva, se ajusta a una distribución de materia constituida por la localización aleatoria de partículas.
 
@@ -74,14 +74,14 @@ Esta categoría de espectros son la contraparte a los \textit{blue-biased} porqu
 \begin{figure}[h!]
     \centering
     {\input{pgf/redtilted.pgf}}
-    \caption[Espectro inicial \textit{red-biased} \(N=512\) píxeles y \(L=0.25\) Mpc/píxel]{Campo gaussiano aleatorio del espectro inicial \textit{red-biased} \((n_s=-3)\) con \(L=0.25\) Mpc/píxel. Comienzan a aparecer fluctuaciones con forma de las estructuras que se observan en el universo.}
+    \caption[Espectro primordial \textit{red-biased} \(N=512\) píxeles y \(L=0.25\) Mpc/píxel]{Campo gaussiano aleatorio del espectro primordial \textit{red-biased} \((n_s=-3)\) con \(L=0.25\) Mpc/píxel. Comienzan a aparecer fluctuaciones con forma de las estructuras que se observan en el universo.}
     \label{fig::redbiased}
 \end{figure}
 \clearpage
 \section{Campos gaussianos con espectro de potencias en época de recombinación}
-Ahora se añade al algoritmo, a través de la función de transferencia, el procesamiento que sufre el espectro de potencias inicial por la evolución gravitatoria de las fluctuaciones.
+Ahora se añade al algoritmo, a través de la función de transferencia, el procesamiento que sufre el espectro de potencias primordial por la evolución gravitatoria de las fluctuaciones.
 \subsection{Grandes escalas (\texorpdfstring{\(n_s=5\)}{ns=5})}
-Como ya se vió en la~\autoref{sec::espectrolin} y en la~\autoref{fig::matterpower}, cuando los números de onda \(k\) son pequeños se tiene un espectro de potencias proporcional a \(k\). Al añadir la función de transferencia se coloca \(n_s=5\) para obtener el carácter proporcional a \(k\) deseado. El campo de fluctuaciones \(\delta(\symbf{x})\) que se obtenga ha de ser similar a uno \textit{blue-biased} donde las fluctuaciones son de pequeño tamaño. La realización se muestra en la~\autoref{fig::transfergrandes} para los mismos valores de \(N\) y \(L\) usados en la~\autoref{fig::bluebiased}. Se amplia la misma zona del campo para poder compararlas. Se encuentra gran similitud visual como se esperaba. La amplitud de las fluctuaciones, en cambio, es mayor que en el caso del espectro inicial, pudiendo ser esto debido a la evolución gravitatoria de las mismas.
+Como ya se vió en la~\autoref{sec::espectrolin} y en la~\autoref{fig::matterpower}, cuando los números de onda \(k\) son pequeños se tiene un espectro de potencias proporcional a \(k\). Al añadir la función de transferencia se coloca \(n_s=5\) para obtener el carácter proporcional a \(k\) deseado. El campo de fluctuaciones \(\delta(\symbf{x})\) que se obtenga ha de ser similar a uno \textit{blue-biased} donde las fluctuaciones son de pequeño tamaño. La realización se muestra en la~\autoref{fig::transfergrandes} para los mismos valores de \(N\) y \(L\) usados en la~\autoref{fig::bluebiased}. Se amplia la misma zona del campo para poder compararlas. Se encuentra gran similitud visual como se esperaba. La amplitud de las fluctuaciones, en cambio, es mayor que en el caso del espectro primordial, pudiendo ser esto debido a la evolución gravitatoria de las mismas.
 
 Con este resultado se puede afirmar que la función de transferencia no tiene gran efecto en las fluctuaciones a grandes escalas (pequeños \(k\)).
 \begin{figure}
