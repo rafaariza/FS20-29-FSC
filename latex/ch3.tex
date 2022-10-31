@@ -15,7 +15,7 @@ Para obtener un espectro de potencias cuya magnitud fuese independiente del volu
 \begin{equation}
     \tilde{\symrm{P}}(k)=\frac{\symrm{P}(k)}{L^3},
 \end{equation}
-donde \(\tilde{\symrm{P}}(k)\) tiene unidades \([x]^3\equiv[k]^{-3}\). El valor \(L\) indica cuánta distancia física representa 1 píxel:
+donde \({\symrm{P}}(k)\) tiene unidades \([x]^3\equiv[k]^{-3}\). El valor \(L\) indica cuánta distancia física representa 1 píxel:
 \begin{equation}
     [L]=\frac{[x]}{[\symrm{p\acute{\imath}xel}]}.
 \end{equation}
@@ -30,7 +30,7 @@ El algoritmo (véase~\autoref{ch::codes}) se implementó con el lenguaje de prog
     \item Se computa el \textit{array} del campo de fluctuaciones en el espacio de Fourier \(\delta(\symbf{k})=G\,\sqrt{\symrm{P}(k_j)}\). Se multiplica por la raíz de \(\symrm{P}(k_j)\) para pasar a desviación típica \(\symrm{P}(k)\).
     \item Se determina el campo de fluctuaciones en el espacio real mediante la transformada inversa de Fourier \(\delta(\symbf{x})=L^3\mathcal{F}^{-1}\left[\delta(\symbf{k})\right]\).
 \end{enumerate}
-El índice espectral \(n_s\) es el parámetro \texttt{power} y la amplitud del espectro de potencias en época de recombinación \(A_0\) es \texttt{amplitude} para \(k_0=0.05\) Mpc\textsuperscript{-1}. Al fijar \(k_0\) en estas unidades, la unidad de distancia física obtenida fue el megapársec, \([x]=\text{Mpc}\).
+El índice espectral \(n_s\) es el parámetro \texttt{power} y la amplitud \(A_0\), del espectro de potencias primordial \(\symrm{P}_0(k)\) y en época de recombinación \(\symrm{P}(k)\), es \texttt{amplitude} para \(k_0=1\) Mpc\textsuperscript{-1}. Al fijar \(k_0\) en estas unidades, la unidad de distancia física obtenida fue el megapársec, \([x]=\text{Mpc}\).
 
 Para poder replicar los resultados que se obtuvieron, la semilla inicial que da lugar a los números aleatorios se fijó con el parámetro \texttt{seed} del módulo \texttt{numpy.random} de Python.
 \section{Materiales}

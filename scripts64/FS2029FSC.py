@@ -18,7 +18,7 @@ from powerbox.powerbox import _make_hermitian as _hermitian
 from powerbox.dft import fftfreq as _fftfreq, ifft as _ifftn
 
 timestr = "DEF"
-k0 = 0.05
+k0 = 1.0
 
 class FS2029FSC():
     """
@@ -87,8 +87,8 @@ class FS2029FSC():
         planck_cmap.set_bad("gray")
         planck_cmap.set_under("white")
         cmap = planck_cmap
-        for ind, realization in enumerate(self._x_realize[::8]):
-            fig, ax = plt.subplots(figsize=(6,6))
+        for ind, realization in enumerate(self._x_realize[::self._size]):
+            fig, ax = plt.subplots(figsize=(4.5,4.5))
             ax.yaxis.get_major_locator().set_params(integer=True)
             fig.subplots_adjust(top = 0.95, bottom = 0.12, right = 1, left = 0)
             ax.set_box_aspect(1)
@@ -103,7 +103,7 @@ class FS2029FSC():
                 plt.show()
             else:
                 plt.savefig(
-                    f"R:\\Documentos\\FS20-29-FSC\\scripts64\\img\\gif\\transfercmbgif-{ind}.pgf",
+                    f"R:\\Documentos\\FS20-29-FSC\\scripts64\\img\\gif\\transfercmbgif-{ind}-{timestr}.pgf",
                         dpi=900, bbox_inches='tight', pad_inches=0.0)
             plt.close(fig)
 
@@ -111,7 +111,7 @@ def transferfunction_k(amplitude, modulus, power):
     """
     espectro de potencias en época de recombinación.
     """
-    q = modulus/(0.14*k0)
+    q = modulus/0.142
     L0 = np.log(2 * np.exp(1) + 1.8 * q)
     C0 = 14.2 + 731 * np.power(1 + 62.5 * q, -1)
     T0 = L0 * np.power(L0 + C0 * np.power(q, 2), -1)
@@ -125,6 +125,6 @@ def k_pol(amplitude, modulus, power):
     name = "pdek"
     return amplitude * (modulus/k0) ** power, name
 
-delta_x = FS2029FSC(amplitude=2.101E-9, power=0.965, size=9, dimensions=3, show=False, method=transferfunction_k, boxlength=0.25)
+delta_x = FS2029FSC(amplitude=1E-3, power=0.965, size=9, dimensions=3, show=False, method=transferfunction_k, boxlength=0.125)
 delta_x.generator()
 delta_x.show_x_realize()

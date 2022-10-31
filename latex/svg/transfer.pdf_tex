@@ -54,11 +54,9 @@
     \lineheight{1}%
     \setlength\tabcolsep{0pt}%
     \put(0,0){\includegraphics[width=\unitlength,page=1]{transfer.pdf}}%
-    \put(0.31608342,0.1360015){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(-10\)\end{tabular}}}}%
-    \put(0.40447094,0.13608895){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(-5\)\end{tabular}}}}%
-    \put(0.50041476,0.1360015){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(0\)\end{tabular}}}}%
-    \put(0.58887101,0.13608895){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(5\)\end{tabular}}}}%
-    \put(0.67725855,0.1360015){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(10\)\end{tabular}}}}%
+    \put(0.27165944,0.1360015){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(-1.5\)\end{tabular}}}}%
+    \put(0.34780322,0.13608895){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(-1.0\)\end{tabular}}}}%
+    \put(0.50041476,0.1360015){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(0.0\)\end{tabular}}}}%
     \put(0.47481742,0.09829891){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\(\delta(\symbf{x})\)\end{tabular}}}}%
     \put(0.52324907,0.21557653){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(x\) (Mpc)\end{tabular}}}}%
     \put(0.18496121,0.49341012){\color[rgb]{0,0,0}\rotatebox{90}{\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(y\) (Mpc)\end{tabular}}}}}%
@@ -75,5 +73,11 @@
     \put(0.22688443,0.64617877){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(800\)\end{tabular}}}}%
     \put(0.22307329,0.73974761){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(1000\)\end{tabular}}}}%
     \put(0,0){\includegraphics[width=\unitlength,page=2]{transfer.pdf}}%
+    \put(0.68317384,0.09830129){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\lineheight{1.25}\smash{\begin{tabular}[t]{l}\fontsize{10.000000}{12.000000}\selectfont\(\times 10^{-5}\)\end{tabular}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{transfer.pdf}}%
+    \put(0.42431468,0.13608895){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(-0.5\)\end{tabular}}}}%
+    \put(0.57673209,0.1360015){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(0.5\)\end{tabular}}}}%
+    \put(0.65225716,0.13608895){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(1.0\)\end{tabular}}}}%
+    \put(0.72876966,0.13608895){\color[rgb]{0,0,0}\makebox(0,0)[t]{\lineheight{1.25}\smash{\begin{tabular}[t]{c}\(1.5\)\end{tabular}}}}%
   \end{picture}%
 \endgroup%

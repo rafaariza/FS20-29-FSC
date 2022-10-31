@@ -32,7 +32,7 @@ La relación entre la temperatura del universo temprano y su edad es~\cite{bauma
 \begin{equation}
     \frac{T}{1\,\symrm{MeV}}\simeq \left(\frac{t}{1\,\symrm{s}}\right)^{-1/2}.
 \end{equation}
-Un segundo después del \textit{Big Bang} la temperatura del universo era de unos \(10^{11}\) K (o 1 MeV). Como aún había pasado poco tiempo en el universo temprano, la cadencia de las reacciones era extremadamente alta, así que pasaron muchas cosas en un corto periodo de tiempo (véase~\autoref{tab::eventos}).
+Un segundo después del \textit{Big Bang} la temperatura del universo era de unos \(10^{10}\) K (o 1 MeV). Como aún había pasado poco tiempo en el universo temprano, la cadencia de las reacciones era extremadamente alta, así que pasaron muchas cosas en un corto periodo de tiempo (véase~\autoref{tab::eventos}).
     {\renewcommand{\arraystretch}{1.1}\hypersetup{citecolor=webgreentint}
         \begin{table}[t]
             \centering
@@ -186,7 +186,7 @@ En el modelo estándar cosmológico que es mencionado en la~\autoref{sec::homoge
 
 Si se descomponen las perturbaciones cosmológicas en ``modos'' de Fourier, se hallará que algunos de ellos se amplifican durante la evolución lineal mientras que otros se amortiguan. Los resultados de la evolución temporal están representados por una \textbf{función de transferencia} lineal que describe el cambio en la amplitud de la perturbación como una función del modo de Fourier. La importancia de esta función de transferencia radica en que, una vez que el espectro de la perturbación (es decir, la amplitud de la perturbación en función del modo de Fourier) se establece en algún momento durante inflación, nos permite calcular el espectro de potencias de la perturbación en cualquier momento posterior. Como se verá, si las perturbaciones de densidad tienen una distribución gaussiana, entonces el campo de densidad está completamente especificado por el espectro de potencias.
 \subsection{Fluctuaciones con origen en inflación}
-Ahora se ha de considerar el mayor logro de la inflación, que no se previó cuando se propuso la teoría: proporciona un mecanismo concreto para generar las semillas de la estructura en el universo. Hay que tener presente que la evolución del campo inflatón \(\phi(t)\) gobierna la densidad de energía \(\rho(t)\)~(\eqref{eq::rho}). En esencia, la idea es que las inevitables pequeñas fluctuaciones espaciales del campo inflatón \(\delta\phi(\symbf{x})\) producidas por el principio de incertidumbre se transforman en fluctuaciones clásicas de la densidad de energía, \(\delta\rho(t,\symbf{x})\), cuando inflación ha terminado. Los detalles de este proceso son muy técnicos y se salen de la mira de este texto. Esto se ilustra en la~\autoref{fig::fluctuaciones}. Las regiones del espacio que terminen inflación primero comenzarán a diluirse y, por tanto, acabarán teniendo densidades más pequeñas. Las regiones que sienten inflación durante más tiempo tendrán densidades más altas. Vale la pena destacar que la teoría no fue diseñada para producir estas fluctuaciones, sino que su origen es una consecuencia natural de tratar inflación cuánticamente. Además, se verá que las propiedades estadísticas de las perturbaciones espaciales creadas por la inflación coinciden muy bien con las observaciones.
+Ahora se ha de considerar el mayor logro de la inflación, que no se previó cuando se propuso la teoría: proporciona un mecanismo concreto para generar las semillas de la estructura en el universo. Hay que tener presente que la evolución del campo inflatón \(\phi(t)\) gobierna la densidad de energía \(\rho(t)\)~\eqref{eq::rho}. En esencia, la idea es que las inevitables pequeñas fluctuaciones espaciales del campo inflatón \(\delta\phi(\symbf{x})\) producidas por el principio de incertidumbre se transforman en fluctuaciones clásicas de la densidad de energía, \(\delta\rho(t,\symbf{x})\), cuando inflación ha terminado. Los detalles de este proceso son muy técnicos y se salen de la mira de este texto. Esto se ilustra en la~\autoref{fig::fluctuaciones}. Las regiones del espacio que terminen inflación primero comenzarán a diluirse y, por tanto, acabarán teniendo densidades más pequeñas. Las regiones que sienten inflación durante más tiempo tendrán densidades más altas. Vale la pena destacar que la teoría no fue diseñada para producir estas fluctuaciones, sino que su origen es una consecuencia natural de tratar inflación cuánticamente. Además, se verá que las propiedades estadísticas de las perturbaciones espaciales creadas por la inflación coinciden muy bien con las observaciones.
 \begin{figure}
     \centering
     \def\svgwidth{0.75\textwidth}
@@ -236,7 +236,7 @@ Para poder hacer alguna inferencia sobre el proceso estocástico subyacente, hay
 
 Mientras que la ergodicidad tiene un preciso enunciado matemático que puede aplicarse o no a un determinado campo aleatorio, la hipótesis de la muestra razonable es más ambigua. Sin embargo, la hipótesis de la muestra razonable es más fuerte que la ergodicidad y probablemente más útil para estudiar la estructura a gran escala~\cite{watts2003statistical}, porque para obtener una muestra razonable no es necesario promediar sobre un volumen infinito, lo que es prácticamente imposible.
 \subsection{Funciones de correlación}
-Por definición, el valor medio del campo de fluctuaciones~(\eqref{eq::media}) es cero. La primera medida estadística no trivial de este campo (fijado un tiempo \(t\)) es la función de correlación de dos puntos
+Por definición, el valor medio del campo de fluctuaciones~\eqref{eq::media} es cero. La primera medida estadística no trivial de este campo (fijado un tiempo \(t\)) es la función de correlación de dos puntos
 \begin{equation}
     \xi\left(\symbf{x},\symbf{x}',t\right)\equiv\left\langle\delta(\symbf{x},t),\delta(\symbf{x}',t)\right\rangle=\int\symcal{D}\delta\,\symbb{P}\left[\delta\right]\,\delta(\symbf{x},t)\delta(\symbf{x}',t).\label{eq::corr}
 \end{equation}
@@ -300,25 +300,21 @@ donde \(\epsilon\) y \(\eta\) son los parámetros slow-roll definidos en~\eqref{
 
 El espectro de potencias en época de recombinación es descrito por
 \begin{equation}
-    \symrm{P}(k)=A_0\symrm{P}_0(k)T^2(k)=A_0\left(\frac{k}{k_0}\right)^{n_s}T^2(k),\label{eq::espectrolineal}
+    \symrm{P}(k)=\symrm{P}_0(k)T^2(k)=A_0\left(\frac{k}{k_0}\right)^{n_s}T^2(k),\label{eq::espectrolineal}
 \end{equation}
-donde \(T(k)\) se llama función de transferencia y describe el efecto de la presión y otros procesos astrofísicos en la evolución gravitatoria de las perturbaciones, cambiando la forma del espectro primordial \(\symrm{P}_0\). La constante \(A_0\) es introducida para darle un sentido a la cantidad \(k^{n_s}\) ya que \(k\) tiene dimensiones. Así, se introduce un modo de Fourier de referencia \(k_0\) para escalar las unidades de \(k\) tal que \(\left(k/k_0\right)^{n_s}\). De esta manera, la constante \(A_0\) lleva las dimensiones del espectro de potencias y depende del modo de referencia usado, por lo que un valor de \(A_0\) ha de ser declarado para el correspondiente \(k_0\). Se usará \(A_0=2.101\times 10^{-9}\) Mpc\textsuperscript{3} con \(k_0=0.05\) Mpc\textsuperscript{-1}, datos tomados de~\cite{collaboration2020planck}.
+donde \(T(k)\) se llama función de transferencia y describe el efecto de la presión y otros procesos astrofísicos en la evolución gravitatoria de las perturbaciones, cambiando la forma del espectro primordial \(\symrm{P}_0\). La constante \(A_0\) es introducida para darle un sentido a la cantidad \(k^{n_s}\) ya que \(k\) tiene dimensiones\footnote{\interfootnotelinepenalty=0 La expresión \(k^{n_s}=\symrm{e}^{n_s\ln(k)}\,\) no está bien definida en general, ya que no es posible tomar el logaritmo de una cantidad con dimensiones.}. Así, se introduce un modo de Fourier de referencia \(k_0\) para escalar las unidades de \(k\) tal que \(\left(k/k_0\right)^{n_s}\). De esta manera, la constante \(A_0\) lleva las dimensiones del espectro de potencias y depende del modo de referencia usado, por lo que un valor de \(A_0\) ha de ser declarado para el correspondiente \(k_0\). La constante \(A_0\) servirá como parámetro del modelo para asegurar que se trabaja en el régimen lineal \((\delta(\symbf{x})\ll 1)\) con \(k_0\) fijado a 1 Mpc\textsuperscript{-1} para cualquier valor de \(A_0\).
 
 La función de transferencia que se usará para describir con más     exactitud el campo de fluctuaciones, de acuerdo a~\eqref{eq::espectrolineal}, será~\cite{eisenstein1998baryonic}
 \begin{equation}
-    \begin{aligned}
-        T(q) & =\frac{L}{L+Cq^2},         \\
-        L(q) & =\ln(2\symrm{e}+1.8q),     \\
-        C(q) & =14.2+\frac{731}{1+62.5q},
-    \end{aligned}\label{eq::transff}
+    T(q)=\frac{L}{L+Cq^2},\label{eq::transff}
 \end{equation}
-donde \(q\equiv k/\left(0.142\ \symrm{Mpc}^{-1}\right)\).
+donde \(L(q)=\ln(2\symrm{e}+1.8q)\), \(C(q)=14.2+{731}\left(1+62.5q\right)^{-1}\) y \(q\equiv k/\left(0.142\ \symrm{Mpc}^{-1}\right)\).
 
 El espectro de potencias en época de recombinación para el modelo de concordancia se muestra en la~\autoref{fig::matterpower}. En escalas grandes el espectro de potencias está dado básicamente por el espectro primordial y en escalas pequeñas queda afectado por diferentes procesos físicos ---que dieron lugar a una variación en el espectro de potencias primordial dejando suficiente tiempo a las fluctuaciones para llegar a ser las galaxias y cúmulos que se tienen hoy--- de modo que \(\symrm{P}(k)\propto k^{-3}\) como se esperaba por la función de transferencia \(T(k)\). El solapamiento de las diferentes mediciones mostradas en la~\autoref{fig::matterpower} demuestra de forma impresionante el éxito y la consistencia del paradigma de la formación de estructuras en el régimen lineal.
 \begin{figure}[h]
     \centering
     \def\svgwidth{0.95\textwidth}
     \input{svg/matterpower.pdf_tex}
-    \caption[espectro de potencias en época de recombinación en la época actual]{espectro de potencias en época de recombinación en la época actual. La línea sólida negra es el modelo del espectro de potencias para el modelo de concordancia y los puntos con barras de error muestran las diferentes mediciones como se indica en la leyenda. Se aprecia que en escalas grandes (miles de Mpc) \(\symrm{P}(k)\propto k\) y en escalas pequeñas (galaxias, cúmulos, etc.) \(\symrm{P}(k)\propto k^{-3}\). (Tomada de~\cite{collaboration2020planck1})}
+    \caption[Espectro de potencias para el modelo de concordancia]{Espectro de potencias para el modelo de concordancia. La línea sólida negra es el modelo del espectro de potencias para el modelo de concordancia y los puntos con barras de error muestran las diferentes mediciones como se indica en la leyenda. Se aprecia que en escalas grandes (miles de Mpc) \(\symrm{P}(k)\propto k\) y en escalas pequeñas (galaxias, cúmulos, etc.) \(\symrm{P}(k)\propto k^{-3}\). (Tomada de~\cite{collaboration2020planck1})}
     \label{fig::matterpower}
 \end{figure}

@@ -19,13 +19,13 @@ En las figuras se están representando, tanto en el eje horizontal como en el ve
     \item El color rojo es para fluctuaciones positivas \(\rho(\symbf{x})>\overbar{\rho}\).
     \item El color azul es para fluctuaciones negativas \(\rho(\symbf{x})<\overbar{\rho}\).
 \end{itemize}
-Mediante la función \texttt{numpy.clip}, el campo final que se genera es para todo \(\symbf{x}\) (por requisito físico \(\rho(\symbf{x})\geq 0\)) mayor o igual que -1 (\(\delta(\symbf{x})\geq -1\)). Aunque en las figuras aparecen valores menores que -1 en la barra de color por el hecho de centrarla en 0.
+Mediante la función \texttt{numpy.clip}, el campo final que se genera es para todo \(\symbf{x}\) (por requisito físico \(\rho(\symbf{x})\geq 0\)) mayor o igual que -1 (\(\delta(\symbf{x})\geq -1\)). El parámetro del modelo \(A_0\) se adecúa en cada caso para dar lugar a \(\delta(\symbf{x})\sim 10^{-5}\), valor que aparece en las anisotropías del CMB.
 
 A continuación, se muestra en la~\autoref{fig::ejemplo} un ejemplo de las imágenes que se obtienen. Cada píxel es un cuadrado de lado \(L\) megapársecs, cuyo color representa el valor de \(\delta(\symbf{x})\) y donde el número de píxeles de la imagen está parametrizado con la variable \(N\) (véase~\autoref{ch::mym}).
 \begin{figure}[h!]
     \centering
-    {\input{../scripts64/img/pdek-(0)-DEF-0.pgf}}
-    \caption[Ejemplo de un campo gaussiano aleatorio con \(L=1\) Mpc/píxel]{Ejemplo de un campo gaussiano aleatorio con \(L=1\) Mpc/píxel. Ampliado a escala de 1 píxel.}
+    \scalebox{.99}{\input{pgf/ejemplo.pgf}}
+    \caption[Ejemplo de un campo gaussiano aleatorio]{Ejemplo de un campo gaussiano aleatorio con \(L=1\) Mpc/píxel y \(A_0=1\symrm{E}{-14}\) Mpc\textsuperscript{3}. Ampliado a escala de 1 píxel.}
     \label{fig::ejemplo}
 \end{figure}
 \section{Campos gaussianos con espectro de potencias primordial}
@@ -36,13 +36,13 @@ Con esta simulación se comprueba que el~\autoref{lst::script} funciona y se pro
 \begin{figure}[h!]
     \centering
     {\input{pgf/ruidoblanco32.pgf}}
-    \caption[Ruido blanco \(N=32\) píxeles y \(L=1\) Mpc/píxel]{Campo gaussiano aleatorio de ruido blanco \((n_s=0)\) con \(L=1\) Mpc/píxel. Las fluctuaciones no guardan correlación entre sí haciendo que no aparezcan fluctuaciones sino píxeles sueltos con valores de \(\delta(\symbf{x})\) aleatorios.}
+    \caption[Ruido blanco \(N=32\) píxeles]{Campo gaussiano aleatorio de ruido blanco \((n_s=0)\) con \(L=1\) Mpc/píxel y \(A_0=1\symrm{E}{-14}\) Mpc\textsuperscript{3}. Las fluctuaciones no guardan correlación entre sí haciendo que no aparezcan fluctuaciones sino píxeles sueltos con valores de \(\delta(\symbf{x})\) aleatorios.}
     \label{fig::ruidoblanco32}
 \end{figure}
 \begin{figure}[t!]
     \centering
     {\input{pgf/ruidoblanco128.pgf}}
-    \caption[Ruido blanco \(N=256\) píxeles y \(L=1\) Mpc/píxel]{Campo gaussiano aleatorio de ruido blanco \((n_s=0)\) con \(L=1\) Mpc/píxel. Con mayor número de píxeles se aprecia mejor el carácter de ruido blanco.}
+    \caption[Ruido blanco \(N=256\) píxeles]{Campo gaussiano aleatorio de ruido blanco \((n_s=0)\) con \(L=1\) Mpc/píxel y \(A_0=1\symrm{E}{-18}\) Mpc\textsuperscript{3}. Con mayor número de píxeles se aprecia mejor el carácter de ruido blanco.}
     \label{fig::ruidoblanco128}
 \end{figure}
 \newpage
@@ -59,7 +59,7 @@ Si se amplía cualquier zona en la figura anterior, es posible apreciar como esa
     \centering
     \def\svgwidth{.94\textwidth}
     \input{svg/bluetilted.pdf_tex}
-    \caption[Harrison-Zel'dovich \(N=256\) píxeles y \(L=4\) Mpc/píxel]{Campo gaussiano aleatorio Harrison-Zel'dovich \((n_s=1)\) con \(L=4\) Mpc/píxel. Se aprecia el carácter homogéneo de las fluctuaciones.}
+    \caption[Harrison-Zel'dovich \(N=256\) píxeles]{Campo gaussiano aleatorio Harrison-Zel'dovich \((n_s=1)\) con \(L=4\) Mpc/píxel y \(A_0=1\symrm{E}{-19}\) Mpc\textsuperscript{3}. Se aprecia el carácter homogéneo de las fluctuaciones.}
     \label{fig::bluebiased}
 \end{figure}
 %\begin{figure}
@@ -70,25 +70,25 @@ Si se amplía cualquier zona en la figura anterior, es posible apreciar como esa
 %\end{figure}
 \newpage
 \subsection{Espectro \textit{red-biased} (\texorpdfstring{\(n_s=-3\)}{ns=-3})}
-Esta categoría de espectros son la contraparte a los \textit{blue-biased} porque el espectro de potencias es monótono decreciente. Se obtiene que predominan las fluctuaciones de gran tamaño. El campo de fluctuaciones de la densidad que se obtiene es de baja homogeneidad. Dicho campo se muestra en la~\autoref{fig::redbiased} para \(N=512\) píxeles. Notar que no solo varían el tamaño de las fluctuaciones, sino la amplitud de estas. Al estar usando un volumen más pequeño del universo, la densidad de energía es menor y han de serlo sus fluctuaciones como se comprueba en la simulación.
+Esta categoría de espectros son la contraparte a los \textit{blue-biased} porque el espectro de potencias es monótono decreciente. Se obtiene que predominan las fluctuaciones de gran tamaño. El campo de fluctuaciones de la densidad que se obtiene es de baja homogeneidad. Dicho campo se muestra en la~\autoref{fig::redbiased} para \(N=512\) píxeles. Notar que no solo varían el tamaño de las fluctuaciones, sino la amplitud de estas. Al estar en un volumen del universo altamente heterogéneo, la amplitud de las fluctuaciones ha de ser mayor que en el caso homogéneo del espectro \textit{blue-biased} (por definición de homogeneidad). Para amplitudes \(\delta(\symbf{x})\sim 10^{-5}\), en el caso \textit{red-biased} son cinco veces mayores que en el espectro Harrison-Zel'dovich.
 \begin{figure}[h!]
     \centering
     {\input{pgf/redtilted.pgf}}
-    \caption[Espectro primordial \textit{red-biased} \(N=512\) píxeles y \(L=0.25\) Mpc/píxel]{Campo gaussiano aleatorio del espectro primordial \textit{red-biased} \((n_s=-3)\) con \(L=0.25\) Mpc/píxel. Comienzan a aparecer fluctuaciones con forma de las estructuras que se observan en el universo.}
+    \caption[Espectro primordial \textit{red-biased} \(N=512\) píxeles]{Campo gaussiano aleatorio del espectro primordial \textit{red-biased} \((n_s=-3)\) con \(L=0.125\) Mpc/píxel y \(A_0=1\symrm{E}{-9}\) Mpc\textsuperscript{3}. Comienzan a aparecer fluctuaciones con forma de las estructuras que se observan en el universo.}
     \label{fig::redbiased}
 \end{figure}
 \clearpage
 \section{Campos gaussianos con espectro de potencias en época de recombinación}
 Ahora se añade al algoritmo, a través de la función de transferencia, el procesamiento que sufre el espectro de potencias primordial por la evolución gravitatoria de las fluctuaciones.
 \subsection{Grandes escalas (\texorpdfstring{\(n_s=5\)}{ns=5})}
-Como ya se vió en la~\autoref{sec::espectrolin} y en la~\autoref{fig::matterpower}, cuando los números de onda \(k\) son pequeños se tiene un espectro de potencias proporcional a \(k\). Al añadir la función de transferencia se coloca \(n_s=5\) para obtener el carácter proporcional a \(k\) deseado. El campo de fluctuaciones \(\delta(\symbf{x})\) que se obtenga ha de ser similar a uno \textit{blue-biased} donde las fluctuaciones son de pequeño tamaño. La realización se muestra en la~\autoref{fig::transfergrandes} para los mismos valores de \(N\) y \(L\) usados en la~\autoref{fig::bluebiased}. Se amplia la misma zona del campo para poder compararlas. Se encuentra gran similitud visual como se esperaba. La amplitud de las fluctuaciones, en cambio, es mayor que en el caso del espectro primordial, pudiendo ser esto debido a la evolución gravitatoria de las mismas.
+Como ya se vió en la~\autoref{sec::espectrolin} y en la~\autoref{fig::matterpower}, cuando los números de onda \(k\) son pequeños se tiene un espectro de potencias proporcional a \(k\). Al añadir la función de transferencia se coloca \(n_s=5\) para obtener el carácter proporcional a \(k\) deseado. El campo de fluctuaciones \(\delta(\symbf{x})\) que se obtenga ha de ser similar a uno \textit{blue-biased} donde las fluctuaciones son de pequeño tamaño. La realización se muestra en la~\autoref{fig::transfergrandes} para los mismos valores de \(N\) y \(L\) usados en la~\autoref{fig::bluebiased}. Se amplia la misma zona del campo para poder compararlas. Se encuentra gran similitud visual como se esperaba. La amplitud de las fluctuaciones, en cambio, es levemente mayor que en el caso del espectro primordial, pudiendo ser esto debido a la manera de colocar los valores en la barra de color del software.
 
-Con este resultado se puede afirmar que la función de transferencia no tiene gran efecto en las fluctuaciones a grandes escalas (pequeños \(k\)).
+Con este resultado se puede afirmar que la función de transferencia no tiene gran efecto en las fluctuaciones a grandes escalas (pequeños \(k\)), tal y como se esperaba.
 \begin{figure}
     \centering
     \def\svgwidth{.94\textwidth}
     \input{svg/transfer.pdf_tex}
-    \caption[Espectro en época de recombinación \(N=256\) píxeles\protect\newline y \(L=4\) Mpc/píxel]{Campo gaussiano aleatorio del espectro en época de recombinación \((n_s=5)\) con \(L=4\) Mpc/píxel. Las fluctuaciones son homogéneas como se espera en grandes escalas.}
+    \caption[Espectro en época de recombinación \(N=256\) píxeles]{Campo gaussiano aleatorio del espectro en época de recombinación \((n_s=5)\) con \(L=4\) Mpc/píxel y \(A_0=1\symrm{E}{-19}\) Mpc\textsuperscript{3}. Las fluctuaciones son homogéneas como se espera en grandes escalas.}
     \label{fig::transfergrandes}
 \end{figure}
 \clearpage
@@ -97,11 +97,11 @@ El último resultado que se presenta es el que más se acerca a lo observado por
 \begin{figure}[h!]
     \centering
     {\input{pgf/transfercmb.pgf}}
-    \caption[Valores del CMB \(N=512\) píxeles y \(L=0.25\) Mpc/píxel]{Campo gaussiano aleatorio del espectro en época de recombinación \((n_s=0.965)\) con \(L=0.25\) Mpc/píxel. Ahora la función de transferencia sí tiene un efecto notorio, suavizando la forma y bordes de las fluctuaciones.}
+    \caption[Valores del CMB \(N=512\) píxeles]{Campo gaussiano aleatorio del espectro en época de recombinación \((n_s=0.965)\) con \(L=0.125\) Mpc/píxel y \(A_0=1\symrm{E}{-3}\) Mpc\textsuperscript{3}. Ahora la función de transferencia sí tiene un efecto notorio, suavizando la forma y bordes de las fluctuaciones.}
     \label{fig::transfercmb}
 \end{figure}
 
-Con este resultado es posible asegurar que la función de transferencia hace cuenta de los efectos gravitatorios que sienten las fluctuaciones en escalas pequeñas (grandes \(k\)).
+Para obtener fluctuaciones del orden de \(10^{-5}\) se utiliza \(A_0=1\symrm{E}{-3}\) en este caso, lo cual significa que la función de transferencia disminuye la amplitud de las fluctuaciones en un valor considerable. Con este resultado es posible asegurar que la función de transferencia hace cuenta de los efectos gravitatorios que sienten las fluctuaciones en escalas pequeñas (grandes \(k\)), permitiendo la posterior evolución de las mismas en estructuras más complejas como galaxias o cúmulos.
 \begin{figure}[t]
     \centering
     \includegraphics[scale=.6]{img/Planck_2018_Pol_CMB.pdf}
