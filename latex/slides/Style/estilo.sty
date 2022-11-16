@@ -7,8 +7,8 @@
 \usetikzlibrary{shapes}
 \usetikzlibrary{fadings}
 \usepackage{calc}
-\usepackage{svg}
-\usepackage{listings}
+\usepackage{svg,pgf}
+\usepackage{listings,enumitem}
 
 % syntax highlight
 \usepackage{Style/customlistings}
@@ -62,9 +62,9 @@
 \newcommand{\EMPH}[1]{\textbf{\color{accentcolor} #1}} 
 
 % Some custom bullets of the "itemize".
-\newcommand{\okitem}{\item[\okmark]} % OK!, "v"
+\newcommand{\okitem}{\item[\emoji{backhand-index-pointing-right}]} % OK!, "v"
 \newcommand{\ngitem}{\item[\textcolor{accentcolor}{\ngmark}\hspace{0.1em}]} % NG, "x"
-\newcommand{\thusitem}{\item[\thusmark]} % Thus, "=>"
+\newcommand{\thusitem}{\item[\textcolor{maincolor}{\thusmark}]} % Thus, "=>"
 \newcommand{\butitem}{\item[\textcolor{accentcolor}{\otherwisemark}\hspace{-0.1em}]} % But, "<->"
 \newcommand{\egitem}{\item[E.g.]} % For example, "E.g."
 
@@ -148,7 +148,7 @@
 }
 
 \newcommand*{\filledcircle}{\tikz[baseline=(char.base)]{\node(char)[]{};
-    \fill [maincolor!80] (0em, 0.35em) circle (0.4em); 
+    \fill [maincolor] (0em, 0.35em) circle (0.3em); 
   }
 }
 
@@ -237,7 +237,7 @@
 \usepackage{iftex}
 \ifluatex
   \PassOptionsToPackage{quiet,no-math}{fontspec}
-  \usepackage[mathrm=sym,warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
+  \usepackage[mathrm=sym,mathbf=sym,warnings-off={mathtools-colon,mathtools-overbracket}]{unicode-math}
   \setsansfont{FiraSans}[
      Path = R:/Documentos/FS20-29-FSC/latex/fonts/,
      Extension = .ttf,
@@ -260,7 +260,7 @@
     math-style = TeX,
     bold-style = TeX,
     RawFeature = {+ss08;+ss02;+ss03;},
-    range = {\sum, \sim, "002C, \Longleftrightarrow, \wedge, "0027, cal, scr, \ll, "003C, "003E, "003D, "002D, "002B, \simeq, \equiv, \leq, \geq}
+    range = {\sum, \sim, "002C, \longrightarrow, \Longleftrightarrow, \wedge, "0027, cal, scr, \ll, "003C, "003E, "003D, "002D, "002B, \simeq, \equiv, \leq, \geq}
   ]
   \setmonofont{FiraCode}[
     Path=C:/Users/Rafa/AppData/Local/Microsoft/Windows/Fonts/,
@@ -268,15 +268,8 @@
     UprightFont=*-Regular,
     BoldFont=*-Bold,
     Scale=0.90096774193548387,
-    Contextuals={Alternate},
-    Colour={FF6E78}
+    Contextuals={Alternate}
   ]
-  \newfontfamily\myfont[Path=C:/Users/Rafa/AppData/Local/Microsoft/Windows/Fonts/,
-  Extension=.ttf,
-  UprightFont=*-Regular,
-  BoldFont=*-Bold,
-  Scale=0.90096774193548387,
-  Contextuals={Alternate}]{FiraCode}
 \else
   \usepackage[latin1,utf8]{inputenc}
   \usepackage[T1]{fontenc}
@@ -287,4 +280,17 @@
 \usepackage[english,spanish,es-tabla,es-noindentfirst,es-nodecimaldot]{babel}
 \usepackage{scrextend}
 \usepackage[activate={true,nocompatibility},factor=1100,stretch=10,shrink=10]{microtype}
-\graphicspath{{../svg/}}
+\graphicspath{{../svg/}{../pgf/}}
+\usepackage{hyperref}
+\usepackage{emoji}
+\hypersetup{
+    pdfauthor={\textcopyright\ Rafael Jurado Ariza},
+    pdftitle={Generación de campos gaussianos en teorías inflacionarias},
+    pdfsubject={FS20-29-FSC},
+    pdfkeywords={cosmología; computacional; inflación; estructura a gran escala},
+    pdfproducer={Latex with hyperref},
+    pdfcreator={Visual Studio Code},
+    bookmarksopen=false,
+    pdfdisplaydoctitle=true,
+    pdfstartview={FitH}
+}

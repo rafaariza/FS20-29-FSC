@@ -1,0 +1,52 @@
+\section{Materiales y métodos}
+\begin{frame}[noframenumbering]{Materiales y métodos}
+    \begin{block}{FFT y números aleatorios gaussianos}
+        Al simular por ordenador la transformada de Fourier se convierte en una DFT.
+        \begin{center}
+            \begin{minipage}{.5\linewidth}
+                \begin{itemize}
+                    \item[\textcolor{ngmark}{\ngmark}] DFT (definición directa) \(\longrightarrow O(N^2)\)
+                    \item[\textcolor{okmark}{\okmark}] FFT (algoritmo ingenioso) \(\longrightarrow O(N\log_2N)\)
+                \end{itemize}
+            \end{minipage}
+        \end{center}
+        \pause
+        \vspace{.3cm}
+        El campo aleatorio gaussiano es computado mediante el uso de número aleatorios bajo una estadística normal (o gaussiana) con media nula y desviación típica \(\symrm{P}(k)\).
+    \end{block}
+\end{frame}
+\begin{frame}[fragile]{Materiales y métodos}
+    \only<1>{
+        \begin{block}{Método (librerías)}
+            \vspace*{-1em}
+            \lstinputlisting[linerange=1-18, language = Python]{../../scripts64/FS2029FSC.py}
+        \end{block}
+    }
+    \only<2>{
+        \begin{block}{Método (inicialización de la clase)}
+            \vspace*{-1em}
+            \lstinputlisting[linerange=23-42, language = Python]{../../scripts64/FS2029FSC.py}
+        \end{block}
+    }
+    \only<3>{
+        \begin{block}{Método (generador)}
+            \vspace*{-1em}
+            \lstinputlisting[linerange=44-64, language = Python]{../../scripts64/FS2029FSC.py}
+        \end{block}
+    }
+    \only<4>{
+        \begin{block}{Método (generador)}
+            \lstinputlisting[linerange=66-76, language = Python]{../../scripts64/FS2029FSC.py}
+        \end{block}
+    }
+    \only<5>{
+        \begin{block}{Método (espectro primordial)}
+            \lstinputlisting[linerange=121-126, language = Python]{../../scripts64/FS2029FSC.py}
+        \end{block}
+    }
+    \only<6>{
+        \begin{block}{Método (espectro en época de recombinación)}
+            \lstinputlisting[linerange=110-119, language = Python]{../../scripts64/FS2029FSC.py}
+        \end{block}
+    }
+\end{frame}

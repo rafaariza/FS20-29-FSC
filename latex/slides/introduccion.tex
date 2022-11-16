@@ -1,38 +1,91 @@
 \section{Introducción}
-\begin{frame}{Introducción}
+\begin{frame}[noframenumbering]{Introducción}
     \only<1>{
-    \begin{block}{Inflación}
-        En el \textit{Hot Big Bang} aparecen una serie de problemas teóricos, entre ellos: \EMPH{el problema del horizonte}
-    \end{block}}
+        \begin{block}{Inflación}
+            El Universo no es como las ecuaciones del \textit{Hot Big Bang} orquestan. Aparecen una serie de problemas teóricos, entre ellos: \EMPH{el problema del horizonte}
+        \end{block}
+    }
     \only<2>{
-    \begin{figure}
-        \centering
-        \def\svgwidth{0.7\textwidth}
-        \input{../svg/horizonproblemslides.pdf_tex}
-    \end{figure}}
+        \begin{figure}
+            \centering
+            \def\svgwidth{0.8\textwidth}
+            \input{../svg/horizonproblemslides.pdf_tex}
+        \end{figure}
+    }
     \only<3>{
-    \begin{block}{Inflación}
-    En el \textit{Hot Big Bang} aparecen una serie de problemas teóricos, entre ellos: \EMPH{el problema del horizonte} y el \EMPH{problema de la planitud}:
-    \begin{equation*}
-        H^2=\frac{8\pi G}{3}\rho-\frac{kc^2}{a^2},\qquad \rho_c\equiv\frac{3H^2}{8\pi G}=\rho.
-    \end{equation*}
-    Inflación es capaz de resolver estos dos problemas y además provee de manera natural un mecanismo generador de las fluctuaciones primordiales.
-    \end{block}}
+        \begin{block}{Inflación}
+            El Universo no es como las ecuaciones del \textit{Hot Big Bang} orquestan. Aparecen una serie de problemas teóricos, entre ellos: \EMPH{el problema del horizonte} y el \EMPH{problema de la planitud}:
+            \begin{equation*}
+                H^2=\frac{8\pi G}{3}\rho-\frac{kc^2}{a^2},\qquad \rho_c\equiv\frac{3H^2}{8\pi G}=\rho.
+            \end{equation*}
+            Inflación es capaz de resolver estos dos problemas y además provee de manera natural un mecanismo generador de las fluctuaciones primordiales.
+        \end{block}
+    }
     \only<4>{
-    \begin{figure}
-        \centering
-        \def\svgwidth{0.7\textwidth}
-        \input{../svg/horizonproblemsolslides.pdf_tex}
-    \end{figure}}
+        \begin{figure}
+            \centering
+            \def\svgwidth{0.7\textwidth}
+            \input{../svg/horizonproblemsolslides.pdf_tex}
+        \end{figure}}
     \only<5>{
-    \begin{figure}
-        \centering
-        \def\svgwidth{0.65\textwidth}
-        \input{../svg/fluctuations.pdf_tex}
-    \end{figure}}
+        \begin{block}{Inflación}
+            \begin{itemize}[topsep=0pt]
+                \okitem Marco teórico \(\longrightarrow\) Campos escalares
+                \okitem El campo escalar es el \EMPH{inflatón} \(\phi(t,\symbf{x})\)
+                \okitem Su ec. de estado \(\symscr{w}={\symcal{P_\phi}}/{\rho_\phi}<-1/3\)
+                \okitem Tiene una densidad de e. potencial \(V(\phi)\) y de e. cinética \(\dot{\phi}^2/2\)
+                \okitem Su ec. de movimiento \(\ddot{\phi}+3H\dot{\phi}+V'(\phi)=0\)
+                \okitem Escenario \textit{slow-roll}
+            \end{itemize}
+        \end{block}
+    }
+    \only<6>{
+        \begin{figure}
+            \centering
+            \def\svgwidth{0.65\textwidth}
+            \input{../svg/fluctuations.pdf_tex}
+        \end{figure}
+    }
 \end{frame}
 \begin{frame}{Introducción}
     \begin{block}{Espectro de potencias y función de transferencia}
-        Pue' eso.
+        \begin{center}
+            Fluctuaciones cuánticas \(\delta\phi(\symbf{x})\) \(\longrightarrow\) Fluctuaciones clásicas densidad de energía \(\delta\rho(t,\symbf{x})\)
+        \end{center}
+        Estas fluctuaciones son descritas en el \EMPH{régimen lineal}:
+        \begin{equation*}
+            \delta(t,\symbf{x})=\frac{\delta\rho(t,\symbf{x})}{\overbar{\rho}(t)}\ll 1.
+        \end{equation*}
+        El espacio de Fourier entra en juego para facilitar el estudio de las fluctuaciones (``modos'').\\
+        En cosmología nos importa el comportamiento estadístico de las cantidades estudiadas. El campo de fluctuaciones \(\delta\) se modela con un \EMPH{campo aleatorio}.
+    \end{block}
+\end{frame}
+\begin{frame}{Introducción}
+    \begin{block}{Espectro de potencias y función de transferencia}
+        Estamos interesados en la correlación espacial de las fluctuaciones:
+        \begin{equation*}
+            \xi\left(\symbf{x},\symbf{x}',t\right)\equiv\left\langle\delta(\symbf{x},t),\delta(\symbf{x}',t)\right\rangle=\int\symcal{D}\delta\,\symbb{P}\left[\delta\right]\,\delta(\symbf{x},t)\delta(\symbf{x}',t).
+        \end{equation*}
+        \begin{center}
+            Homogeneidad e isotropía \(\implies\xi\left(\symbf{x},\symbf{x}',t\right)=\xi(r)\).
+        \end{center}
+        En el espacio de Fourier:
+        \begin{equation*}
+            \left\langle\delta(\symbf{k})\delta^{*}(\symbf{k}')\right\rangle\equiv (2\pi)^3\,\delta_{\symrm{D}}(\symbf{k}-\symbf{k}')\,\symrm{P}(k),
+        \end{equation*}
+        donde \(\symrm{P}(k)\) es el espectro de potencias.\\[.3cm]
+        En el caso que veremos adelante, \(\symrm{P}(k)\) lleva toda la información del campo aleatorio. La evolución gravitatoria de las fluctuaciones es descrita con la \EMPH{función de transferencia} \(T(k)\).
+    \end{block}
+\end{frame}
+\begin{frame}{Introducción}
+    \begin{block}{Campos aleatorios gaussianos}
+        En este tipo de campos aleatorios, la FDP es una gaussiana en cada punto del espacio. Hay motivos de peso para tomar este campo como modelo del campo de densidad primordial.
+        \begin{center}
+            El \EMPH{espectro de potencias} define completamente un campo aleatorio gaussiano.
+        \end{center}
+        Para los diferentes vectores de onda \(\symbf{k}\):
+        \begin{equation*}
+            \delta(\symbf{k})=A_{\symbf{k}}+\symrm{i}B_{\symbf{k}}=\left|\delta(\symbf{k})\right|\,\symrm{e}^{\symrm{i}2\pi\phi_{\symbf{k}}},\quad \left|\delta(\symbf{k})\right|\sim\mathcal{N}(0,\symrm{P}^2(k))\ \wedge\ \phi_{\symbf{k}}\sim U(0,1).
+        \end{equation*}
     \end{block}
 \end{frame}
