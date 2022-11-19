@@ -12,41 +12,24 @@
         \end{center}
         \pause
         \vspace{.3cm}
-        El campo aleatorio gaussiano es computado mediante el uso de número aleatorios bajo una estadística normal (o gaussiana) con media nula y desviación típica \(\symrm{P}(k)\).
+        El \EMPH{campo aleatorio gaussiano} es computado mediante el uso de número aleatorios bajo una estadística normal (o gaussiana) con media nula y desviación típica \(\sqrt{\symrm{P}(k)}\).
     \end{block}
 \end{frame}
 \begin{frame}[fragile]{Materiales y métodos}
-    \only<1>{
-        \begin{block}{Método (librerías)}
-            \vspace*{-1em}
-            \lstinputlisting[linerange=1-18, language = Python]{../../scripts64/FS2029FSC.py}
-        \end{block}
-    }
-    \only<2>{
-        \begin{block}{Método (inicialización de la clase)}
-            \vspace*{-1em}
-            \lstinputlisting[linerange=23-42, language = Python]{../../scripts64/FS2029FSC.py}
-        \end{block}
-    }
-    \only<3>{
-        \begin{block}{Método (generador)}
-            \vspace*{-1em}
-            \lstinputlisting[linerange=44-64, language = Python]{../../scripts64/FS2029FSC.py}
-        \end{block}
-    }
-    \only<4>{
-        \begin{block}{Método (generador)}
-            \lstinputlisting[linerange=66-76, language = Python]{../../scripts64/FS2029FSC.py}
-        \end{block}
-    }
-    \only<5>{
-        \begin{block}{Método (espectro primordial)}
-            \lstinputlisting[linerange=121-126, language = Python]{../../scripts64/FS2029FSC.py}
-        \end{block}
-    }
-    \only<6>{
-        \begin{block}{Método (espectro en época de recombinación)}
-            \lstinputlisting[linerange=110-119, language = Python]{../../scripts64/FS2029FSC.py}
-        \end{block}
-    }
+    \begin{block}{Método}
+        \centering
+        \begin{tikzpicture}[node distance=1.7cm]
+            \node (uno) [block] {Caja \((L,N)\)};
+            \node (dos) [block, right of=uno, xshift=5cm] {Determinamos \(k_j=\frac{2\pi}{L}j,\quad j\in\left(-\frac{N}{2},\cdots,\frac{N}{2}\right)\)};
+            \node (tres) [block, below of=dos] {Creamos el array \(k_j=\sqrt{\sum_dk^2_{d,j}}\ \) y el \(G(0,1)\)};
+            \node (cinco) [block, below of=tres] {Calculamos el array \(\symrm{P}(k_j)\)};
+            \node (seis) [block, below of=cinco] {Computamos el array \(\delta(\symbf{k})=G\sqrt{\symrm{P}(k_j)}\)};
+            \node (siete) [block, left of=seis, xshift=-5cm, text width=4cm] {Campo de fluctuaciones real \(\delta(\symbf{x})=L^3\symcal{F}^{-1}\left[\delta(\symbf{k})\right]\)};
+            \draw [arrow] (uno) -- (dos);
+            \draw [arrow] (dos) -- (tres);
+            \draw [arrow] (tres) -- (cinco);
+            \draw [arrow] (cinco) -- (seis);
+            \draw [arrow] (seis) -- (siete);
+        \end{tikzpicture}
+    \end{block}
 \end{frame}
